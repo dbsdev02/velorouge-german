@@ -8,6 +8,7 @@ import AboutPage from "./pages/AboutPage";
 import RidesPage from "./pages/RidesPage";
 import SafeSmartPage from "./pages/SafeSmartPage";
 import ContactPage from "./pages/ContactPage";
+import FMDPage from "./pages/FMDPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/rides" element={<RidesPage />} />
           <Route path="/safe-smart" element={<SafeSmartPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/fmd" element={<FMDPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
