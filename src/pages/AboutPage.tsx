@@ -173,13 +173,15 @@ const AboutPage = () => {
             <p className="text-muted-foreground">Beginner-friendly</p>
           </div>
         </div>
-        <div className="mt-12 bg-primary text-primary-foreground py-6 overflow-hidden relative">
-          <div className="flex animate-marquee whitespace-nowrap">
-            <span className="font-display text-xl italic font-normal tracking-wide mx-4" style={{color: 'rgba(245, 240, 232, 0.9)'}}>Safe and beginner-friendly  •  Premium bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  Safe and beginner-friendly  •  Premium bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  </span>
-          </div>
-        </div>
       </div>
     </section>
+
+    {/* Trust Marquee - Full Width */}
+    <div className="w-full bg-primary text-primary-foreground py-6 overflow-hidden">
+      <div className="flex animate-marquee whitespace-nowrap">
+        <span className="font-display text-xl italic font-normal tracking-wide mx-4" style={{color: 'rgba(245, 240, 232, 0.9)'}}>Safe and beginner-friendly  •  Premium bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  Safe and beginner-friendly  •  Premium bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  </span>
+      </div>
+    </div>
 
     {/* FAQ */}
     <section className="py-24 bg-background">
