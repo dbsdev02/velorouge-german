@@ -1,9 +1,15 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import cycleImg from "@/assets/cycle.png";
-import { Check, Download, Building2, Users, FileText, Headphones } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
+import gallery1 from "@/assets/approach.png";
+import { Check, Download, Building2, Users, FileText, Headphones, ChevronDown, TrendingUp } from "lucide-react";
+import { useState } from 'react';
 
-const FMDPage = () => (
+const FMDPage = () => {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  return (
   <main>
     <Navbar />
 
@@ -34,8 +40,8 @@ const FMDPage = () => (
               </a>
             </div>
           </div>
-          <div className="aspect-square overflow-hidden rounded-lg flex items-center justify-center bg-gray-50">
-            <img src={cycleImg} alt="Professional commuting on e-bike" className="w-full h-full object-contain" />
+          <div className="aspect-square overflow-hidden rounded-lg flex items-center justify-center">
+            <img src={cycleImg} alt="Professional commuting on e-bike" className="w-full h-full object-contain mix-blend-multiply" />
           </div>
         </div>
       </div>
@@ -157,38 +163,42 @@ const FMDPage = () => (
 
     {/* Eligibility */}
     <section className="py-24 bg-dark text-dark-foreground">
-      <div className="container max-w-4xl">
-        <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-8 text-center">
-          Are VeloRouge rentals <em className="text-primary">eligible?</em>
-        </h2>
-        <div className="bg-green-100 border-2 border-green-500 rounded-lg p-8 mb-8">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-              <Check className="w-6 h-6 text-white" />
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-8">
+              Are VeloRouge rentals <em className="text-primary">eligible?</em>
+            </h2>
+            <div className="bg-green-100 border-2 border-green-500 rounded-lg p-8 mb-8">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                  <Check className="w-6 h-6 text-white" />
+                </div>
+                <span className="text-2xl font-bold text-green-800">Yes, 100% Eligible</span>
+              </div>
             </div>
-            <span className="text-2xl font-bold text-green-800">Yes, 100% Eligible</span>
+            <p className="text-dark-foreground/70 text-lg mb-6">
+              All of our rentals are fully eligible under FMD regulations:
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <span className="text-dark-foreground/70">Long-term rentals</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <span className="text-dark-foreground/70">Annual subscriptions</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <span className="text-dark-foreground/70">Corporate fleet rentals</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img src={gallery1} alt="Eligible bike rental" className="w-full h-auto rounded-lg" />
           </div>
         </div>
-        <p className="text-dark-foreground/70 text-lg mb-6">
-          All of our rentals are fully eligible under FMD regulations:
-        </p>
-        <ul className="space-y-4 mb-8">
-          <li className="flex items-start gap-3">
-            <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-            <span className="text-dark-foreground/70">Long-term rentals</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-            <span className="text-dark-foreground/70">Annual subscriptions</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-            <span className="text-dark-foreground/70">Corporate fleet rentals</span>
-          </li>
-        </ul>
-        <p className="text-dark-foreground/70">
-          We ensure invoices clearly mention commuting usage and FMD compliance.
-        </p>
       </div>
     </section>
 
@@ -229,6 +239,11 @@ const FMDPage = () => (
             <h3 className="font-display text-xl font-bold mb-3">Employee Onboarding</h3>
             <p className="text-muted-foreground text-sm">Seamless setup for your team</p>
           </div>
+          <div className="bg-background p-6 rounded-lg">
+            <TrendingUp className="w-12 h-12 text-primary mb-4" />
+            <h3 className="font-display text-xl font-bold mb-3">Tax Benefits</h3>
+            <p className="text-muted-foreground text-sm">Maximize your company's tax advantages</p>
+          </div>
         </div>
         <div className="text-center">
           <a href="#" className="inline-block bg-primary text-primary-foreground px-10 py-4 font-semibold hover:bg-primary/90 transition-colors">
@@ -244,23 +259,28 @@ const FMDPage = () => (
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-16 text-center">
           Frequently Asked <em className="text-primary">Questions</em>
         </h2>
-        <div className="space-y-6">
-          <div className="border-b border-border pb-6">
-            <h3 className="font-display text-lg font-bold mb-3">Is the €900 mandatory?</h3>
-            <p className="text-muted-foreground text-sm">No. The employer chooses the amount (up to €900 per year).</p>
-          </div>
-          <div className="border-b border-border pb-6">
-            <h3 className="font-display text-lg font-bold mb-3">Can I combine FMD with public transport reimbursement?</h3>
-            <p className="text-muted-foreground text-sm">Yes, depending on company policy.</p>
-          </div>
-          <div className="border-b border-border pb-6">
-            <h3 className="font-display text-lg font-bold mb-3">Do I need proof of commuting?</h3>
-            <p className="text-muted-foreground text-sm">Your invoice from VeloRouge is sufficient in most cases.</p>
-          </div>
-          <div className="border-b border-border pb-6">
-            <h3 className="font-display text-lg font-bold mb-3">Is this available for all employees?</h3>
-            <p className="text-muted-foreground text-sm">Yes, if the employer has implemented the FMD scheme.</p>
-          </div>
+        <div className="space-y-4">
+          {[
+            { q: "Is the €900 mandatory?", a: "No. The employer chooses the amount (up to €900 per year)." },
+            { q: "Can I combine FMD with public transport reimbursement?", a: "Yes, depending on company policy." },
+            { q: "Do I need proof of commuting?", a: "Your invoice from VeloRouge is sufficient in most cases." },
+            { q: "Is this available for all employees?", a: "Yes, if the employer has implemented the FMD scheme." }
+          ].map((faq, index) => (
+            <div key={index} className="border border-border rounded-lg">
+              <button
+                onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                className="w-full flex items-center justify-between p-6 text-left hover:bg-muted/50 transition-colors"
+              >
+                <h3 className="font-display text-lg font-bold">{faq.q}</h3>
+                <ChevronDown className={`w-5 h-5 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+              </button>
+              {openFaq === index && (
+                <div className="px-6 pb-6">
+                  <p className="text-muted-foreground">{faq.a}</p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -288,8 +308,10 @@ const FMDPage = () => (
     </section>
 
     {/* Final CTA */}
-    <section className="py-32 bg-primary text-primary-foreground text-center">
-      <div className="container max-w-3xl">
+    <section className="py-32 bg-primary text-primary-foreground text-center relative">
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }}></div>
+      <div className="absolute inset-0 bg-primary/90"></div>
+      <div className="container max-w-3xl relative z-10">
         <h2 className="font-display text-4xl md:text-6xl font-black leading-tight mb-6">
           Start Riding. Let Your Employer <em className="italic">Pay.</em>
         </h2>
@@ -309,6 +331,7 @@ const FMDPage = () => (
 
     <Footer />
   </main>
-);
+  );
+};
 
 export default FMDPage;

@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import smartHelmet from "@/assets/smart-helmet.jpg";
-import smartGps from "@/assets/smart-gps.jpg";
+import smartGps from "@/assets/gps.png";
 import { Shield, MapPin, Bell, Smartphone, Lock, Eye, Zap, Wifi } from "lucide-react";
 
 const safetyFeatures = [

@@ -31,7 +31,7 @@ const Hero = () => (
           href="#pricing"
           className="border border-dark-foreground/30 text-dark-foreground px-8 py-3 font-semibold text-sm hover:border-dark-foreground/60 transition-colors"
         >
-          SEE SUBSCRIPTION PLANS
+          EXPLORE BIKES
         </a>
       </div>
     </div>

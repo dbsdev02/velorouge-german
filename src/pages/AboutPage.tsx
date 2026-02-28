@@ -3,7 +3,9 @@ import Footer from "@/components/Footer";
 import aboutHero from "@/assets/about-hero.jpg";
 import teamPhoto from "@/assets/7.png";
 import travelersPhoto from "@/assets/gallery-1.jpg";
-import { Bike, Heart, Users, Globe } from "lucide-react";
+import ctaBg from "@/assets/hero-bg.jpg";
+import { Bike, Heart, Users, Globe, ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 const values = [
   { icon: Bike, title: "Freedom first", desc: "Mobility should feel effortless. No queues, no confusion — just explore the city at your own pace." },
@@ -33,7 +35,10 @@ const timeline = [
   { year: "2025", event: "4,500+ happy riders from over 30 countries." },
 ];
 
-const AboutPage = () => (
+const AboutPage = () => {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  return (
   <main>
     <Navbar />
 
@@ -168,24 +173,11 @@ const AboutPage = () => (
             <p className="text-muted-foreground">Beginner-friendly</p>
           </div>
         </div>
-        <ul className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-          <li className="flex items-center gap-2 text-muted-foreground">
-            <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-            Safe and beginner-friendly
-          </li>
-          <li className="flex items-center gap-2 text-muted-foreground">
-            <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-            Premium bikes and Segways
-          </li>
-          <li className="flex items-center gap-2 text-muted-foreground">
-            <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-            Flexible booking and app-based access
-          </li>
-          <li className="flex items-center gap-2 text-muted-foreground">
-            <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-            Multilingual support
-          </li>
-        </ul>
+        <div className="mt-12 bg-primary text-primary-foreground py-6 overflow-hidden relative">
+          <div className="flex animate-marquee whitespace-nowrap">
+            <span className="font-display text-xl italic font-normal tracking-wide mx-4" style={{color: 'rgba(245, 240, 232, 0.9)'}}>Safe and beginner-friendly  •  Premium bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  Safe and beginner-friendly  •  Premium bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  </span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -197,11 +189,21 @@ const AboutPage = () => (
           <br />
           <em className="text-primary">questions.</em>
         </h2>
-        <div className="space-y-6">
+        <div className="space-y-4">
           {faqs.map((faq, i) => (
-            <div key={i} className="border-b border-border pb-6">
-              <h3 className="font-display text-lg font-bold mb-3">{faq.q}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
+            <div key={i} className="border border-border rounded-lg overflow-hidden">
+              <button
+                onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                className="w-full flex items-center justify-between p-6 text-left hover:bg-muted/50 transition-colors"
+              >
+                <h3 className="font-display text-lg font-bold pr-4">{faq.q}</h3>
+                <ChevronDown className={`w-5 h-5 flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} />
+              </button>
+              {openFaq === i && (
+                <div className="px-6 pb-6">
+                  <p className="text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -209,8 +211,10 @@ const AboutPage = () => (
     </section>
 
     {/* Tourist CTA */}
-    <section className="py-24 bg-dark text-dark-foreground text-center">
-      <div className="container max-w-2xl">
+    <section className="relative py-24 text-dark-foreground text-center overflow-hidden">
+      <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-dark/80" />
+      <div className="container max-w-2xl relative z-10">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
           Ready to explore
           <br />
@@ -230,6 +234,7 @@ const AboutPage = () => (
 
     <Footer />
   </main>
-);
+  );
+};
 
 export default AboutPage;
