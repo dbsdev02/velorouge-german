@@ -1,7 +1,7 @@
 import { Bike, MapPin, Clock } from "lucide-react";
 
 const stats = [
-  { icon: Bike, value: "80+", label: "Bikes available" },
+  { icon: Bike, value: "80+", label: "E-bikes available" },
   { icon: MapPin, value: "12", label: "Routes curated" },
   { icon: Clock, value: "4,500+", label: "Happy riders" },
 ];
@@ -10,10 +10,10 @@ const About = () => (
   <section className="py-24 bg-background">
     <div className="container">
       <h2 className="font-display text-4xl md:text-5xl font-black leading-tight max-w-lg">
-        Not your typical <em className="text-primary">bike rental.</em>
+        Not your typical <em className="text-primary">e-bike rental.</em>
       </h2>
       <p className="mt-6 text-muted-foreground max-w-xl text-lg">
-        VeloRouge is a premium bike subscription & ride experience platform based in Strasbourg. 
+        VeloRouge is a premium e-bike subscription & ride experience platform based in Strasbourg. 
         We believe every ride should tell a story.
       </p>
 

@@ -1,4 +1,4 @@
-import logo from "@/assets/logo3.png";
+import logo from "@/assets/logo.png";
 
 const Footer = () => (
   <footer className="bg-dark border-t border-dark-surface text-dark-foreground/60 py-12">
@@ -8,7 +8,7 @@ const Footer = () => (
           <a href="#" className="flex items-center">
             <img src={logo} alt="VeloRouge" className="h-10" />
           </a>
-          <p className="mt-2 text-sm max-w-xs">Premium bike experiences in Strasbourg, France.</p>
+          <p className="mt-2 text-sm max-w-xs">Premium e-bike experiences in Strasbourg, France.</p>
         </div>
         <div className="flex gap-12 text-sm">
           <div className="space-y-2">

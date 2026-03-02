@@ -1,6 +1,6 @@
 import differenceimg from "@/assets/difference.png";
 const features = [
-  { title: "Zero Downtime Guarantee", desc: "If your bike has a problem mid-ride, we deliver a replacement. No questions." },
+  { title: "Zero Downtime Guarantee", desc: "If your e-bike has a problem mid-ride, we deliver a replacement. No questions." },
   { title: "Full Maintenance Included", desc: "Every rental and subscription includes complete mechanical cover." },
   { title: "Central Location", desc: "3-minute walk from Place Kléber. Easy pickup, easy return." },
   { title: "Flexible Plans", desc: "Hourly tourists to monthly residents — we have your ride covered." },
@@ -21,7 +21,7 @@ const Difference = () => (
         </h2>
         
         <p className="text-[#7a726e] text-lg mb-12 leading-relaxed italic">
-          Every bike is maintained daily. Every route is ridden monthly.<br />
+          Every e-bike is maintained daily. Every route is ridden monthly.<br />
           We don't rent out equipment — we hand you a city.
         </p>
         
@@ -46,7 +46,7 @@ const Difference = () => (
       <div className="absolute bottom-20 left-14 bg-primary p-9 w-60">
         <div className="font-display text-white text-6xl font-bold leading-none">98%</div>
         <div className="text-white/75 text-[10px] tracking-[0.12em] uppercase mt-2.5 leading-relaxed">
-          BIKE AVAILABILITY RATE.<br />INDUSTRY STANDARD IS 71%.
+          E-BIKE AVAILABILITY RATE.<br />INDUSTRY STANDARD IS 71%.
         </div>
       </div>
     </div>

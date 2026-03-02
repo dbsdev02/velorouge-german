@@ -18,7 +18,7 @@ const Hero = () => (
         at dusk.
       </h1>
       <p className="mt-6 text-dark-foreground/70 max-w-md text-lg">
-        Discover Strasbourg like never before on our curated bike experiences.
+        Discover Strasbourg like never before on our curated e-bike experiences.
       </p>
       <div className="mt-8 flex flex-wrap gap-4">
         <a
@@ -31,7 +31,7 @@ const Hero = () => (
           href="#pricing"
           className="border border-dark-foreground/30 text-dark-foreground px-8 py-3 font-semibold text-sm hover:border-dark-foreground/60 transition-colors"
         >
-          EXPLORE BIKES
+          EXPLORE E-BIKES
         </a>
       </div>
     </div>

@@ -28,8 +28,8 @@ const faqs = [
 ];
 
 const timeline = [
-  { year: "2021", event: "Founded in a garage in Petite France with 5 bikes." },
-  { year: "2022", event: "Grew to 40 bikes and launched our first curated routes." },
+  { year: "2021", event: "Founded in a garage in Petite France with 5 e-bikes." },
+  { year: "2022", event: "Grew to 40 e-bikes and launched our first curated routes." },
   { year: "2023", event: "Subscription model launched — 500 members and growing tourist bookings." },
   { year: "2024", event: "Expanded fleet and introduced guided city experiences for visitors." },
   { year: "2025", event: "4,500+ happy riders from over 30 countries." },
@@ -179,7 +179,7 @@ const AboutPage = () => {
     {/* Trust Marquee - Full Width */}
     <div className="w-full bg-primary text-primary-foreground py-6 overflow-hidden">
       <div className="flex animate-marquee whitespace-nowrap">
-        <span className="font-display text-xl italic font-normal tracking-wide mx-4" style={{color: 'rgba(245, 240, 232, 0.9)'}}>Safe and beginner-friendly  •  Premium bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  Safe and beginner-friendly  •  Premium bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  </span>
+        <span className="font-display text-xl italic font-normal tracking-wide mx-4" style={{color: 'rgba(245, 240, 232, 0.9)'}}>Safe and beginner-friendly  •  Premium e-bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  Safe and beginner-friendly  •  Premium e-bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  </span>
       </div>
     </div>
 

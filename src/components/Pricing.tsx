@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 
 const plans = [
   { 
-    name: "Tourist", 
+    name: "Tourist & Visitors", 
     price: "€29", 
     period: "/ride", 
     features: [
@@ -11,10 +11,10 @@ const plans = [
       "Photo stops & local insights",
       "Beginner-friendly training"
     ],
-    cta: "Book your ride"
+    cta: "Book Now"
   },
   { 
-    name: "Delivery Crew", 
+    name: "Residents & Students", 
     price: "€24", 
     period: "/week", 
     features: [
@@ -24,10 +24,10 @@ const plans = [
       "Priority support"
     ],
     popular: true,
-    cta: "Start riding"
+    cta: "Commit Now"
   },
   { 
-    name: "Local & Students", 
+    name: " Delivery Crew", 
     price: "€59", 
     period: "/month", 
     features: [
@@ -36,7 +36,7 @@ const plans = [
       "Smart subscription pricing",
       "Perfect for daily commute"
     ],
-    cta: "Get started"
+    cta: "Rent Now"
   },
 ];
 

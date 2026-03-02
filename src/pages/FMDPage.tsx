@@ -128,7 +128,7 @@ const FMDPage = () => {
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl font-bold text-primary">1</span>
             </div>
-            <h3 className="font-display text-xl font-bold mb-3">Rent Your Bike</h3>
+            <h3 className="font-display text-xl font-bold mb-3">Rent Your E-Bike</h3>
             <p className="text-muted-foreground text-sm">Rent your electric bike for daily commuting.</p>
           </div>
           <div className="text-center">
@@ -196,7 +196,7 @@ const FMDPage = () => {
             </ul>
           </div>
           <div>
-            <img src={gallery1} alt="Eligible bike rental" className="w-full h-auto rounded-lg" />
+            <img src={gallery1} alt="Eligible e-bike rental" className="w-full h-auto rounded-lg" />
           </div>
         </div>
       </div>

@@ -1,12 +1,12 @@
 import { Shield, Wrench, MapPin, Clock, Heart, Zap } from "lucide-react";
 
 const features = [
-  { icon: Shield, title: "Theft protection", desc: "Every bike is covered against theft and damage." },
+  { icon: Shield, title: "Theft protection", desc: "Every e-bike is covered against theft and damage." },
   { icon: Wrench, title: "Free maintenance", desc: "Regular tune-ups and repairs at no extra cost." },
   { icon: MapPin, title: "GPS tracking", desc: "Real-time location tracking for peace of mind." },
-  { icon: Clock, title: "24h delivery", desc: "Get your bike delivered within 24 hours." },
+  { icon: Clock, title: "24h delivery", desc: "Get your e-bike delivered within 24 hours." },
   { icon: Heart, title: "Curated routes", desc: "Hand-picked routes by local Strasbourg experts." },
-  { icon: Zap, title: "Swap anytime", desc: "Switch your bike model whenever you want." },
+  { icon: Zap, title: "Swap anytime", desc: "Switch your e-bike model whenever you want." },
 ];
 
 const Features = () => (

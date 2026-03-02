@@ -13,7 +13,7 @@ const DeliverSection = () => (
             Change your <em className="text-primary">life.</em>
           </h2>
           <p className="mt-6 text-dark-foreground/70 max-w-md">
-            With VeloRouge, you get a premium bike delivered right to your door. 
+            With VeloRouge, you get a premium e-bike delivered right to your door. 
             No deposits, no hassle — just hop on and ride.
           </p>
           <div className="mt-8 flex gap-8">
