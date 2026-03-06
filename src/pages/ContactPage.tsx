@@ -178,13 +178,18 @@ const ContactPage = () => {
                 ))}
               </div>
 
-              {/* Map placeholder */}
-              <div className="mt-10 aspect-video bg-muted border border-border flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <MapPin className="w-8 h-8 mx-auto mb-2 text-primary" />
-                  <p className="text-sm font-semibold">Strasbourg, France</p>
-                  <p className="text-xs">12 Rue des Moulins, 67000</p>
-                </div>
+              {/* Google Map */}
+              <div className="mt-10 aspect-video border border-border overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.4567890123456!2d7.7521!3d48.5734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c84d9c9b9b9b%3A0x9b9b9b9b9b9b9b9b!2s16%20Avenue%20De%20La%20Paix%2C%2067000%20Strasbourg%2C%20France!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="VeloRouge Location"
+                ></iframe>
               </div>
             </div>
           </div>
