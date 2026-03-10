@@ -261,10 +261,10 @@ const FMDPage = () => {
         </h2>
         <div className="space-y-4">
           {[
-            { q: "Is the €900 mandatory?", a: "No. The employer chooses the amount (up to €900 per year)." },
-            { q: "Can I combine FMD with public transport reimbursement?", a: "Yes, depending on company policy." },
-            { q: "Do I need proof of commuting?", a: "Your VeloRouge invoice is sufficient in most cases." },
-            { q: "Is this available for all employees?", a: "Yes, if the employer has implemented the FMD scheme." }
+            { q: "Les 900 € sont-ils obligatoires ?", a: "Non. C’est l’employeur qui choisit le montant (jusqu’à 900 € par an)." },
+            { q: "Puis-je cumuler le remboursement de la FMD avec celui des transports en commun ?", a: "Oui, selon la politique de l'entreprise." },
+            { q: "Ai-je besoin d'une preuve de mes déplacements domicile-travail ?", a: "Votre facture VeloRouge est suffisante dans la plupart des cas." },
+            { q: "Ce service est-il accessible à tous les employés ?", a: "Oui, si l'employeur a mis en œuvre le dispositif FMD." }
           ].map((faq, index) => (
             <div key={index} className="border border-border rounded-lg">
               <button

@@ -5,17 +5,17 @@ import smartGps from "@/assets/gps.png";
 import { Shield, MapPin, Bell, Smartphone, Lock, Eye, Zap, Wifi } from "lucide-react";
 
 const safetyFeatures = [
-  { icon: Shield, title: "Theft protection", desc: "Every VéloRouge e-bike is covered against theft. GPS-tracked 24/7 with instant alerts if moved without authorization." },
-  { icon: Lock, title: "Smart lock", desc: "Lock and unlock your e-bike from your phone. No keys, no codes — just tap and go." },
-  { icon: Bell, title: "Accident detection", desc: "Built-in sensors detect falls and impacts. Emergency contacts are notified automatically if you don't respond." },
-  { icon: Eye, title: "Night visibility", desc: "Integrated LED lights with auto-brightness. Be seen from 200m+ in any condition." },
+  { icon: Shield, title: "Protection antivol", desc: "Chaque vélo électrique VéloRouge est assuré contre le vol. Suivi GPS 24h/24 et 7j/7 avec alertes instantanées en cas de déplacement non autorisé." },
+  { icon: Lock, title: "Verrouillage intelligent", desc: "Verrouillez et déverrouillez votre vélo électrique depuis votre téléphone. Sans clés ni codes : un simple geste suffit." },
+  { icon: Bell, title: "Détection d'accidents", desc: "Des capteurs intégrés détectent les chutes et les impacts. Vos contacts d'urgence sont automatiquement prévenus si vous ne répondez pas." },
+  { icon: Eye, title: "Visibilité nocturne", desc: "Éclairage LED intégré avec luminosité automatique. Soyez visible à plus de 200 mètres, quelles que soient les conditions." },
 ];
 
 const smartFeatures = [
-  { icon: MapPin, title: "Live GPS tracking", desc: "Know where your e-bike is at all times. Real-time location visible in the VéloRouge app." },
-  { icon: Smartphone, title: "App control", desc: "Manage your e-bike, track rides, check maintenance status, and book routes — all from one app." },
-  { icon: Zap, title: "Battery monitoring", desc: "For e-bike subscribers, monitor battery level and find the nearest charging point." },
-  { icon: Wifi, title: "OTA updates", desc: "Your e-bike gets smarter over time. Firmware updates are pushed wirelessly, improving performance automatically." },
+  { icon: MapPin, title: "Suivi GPS en direct", desc: "Sachez où se trouve votre vélo électrique à tout moment. Position en temps réel visible dans l'application VéloRouge." },
+  { icon: Smartphone, title: "Contrôle via l'application", desc: "Gérez votre vélo électrique, suivez vos trajets, vérifiez l'état de l'entretien et réservez des itinéraires, le tout depuis une seule application." },
+  { icon: Zap, title: "Surveillance de la batterie", desc: "Pour les abonnés, surveillez le niveau de la batterie et trouvez la borne de recharge la plus proche." },
+  { icon: Wifi, title: "Mises à jour OTA", desc: "Votre vélo électrique devient plus intelligent au fil du temps. Les mises à jour du micrologiciel sont déployées sans fil, améliorant automatiquement ses performances." },
 ];
 
 const SafeSmartPage = () => (
@@ -25,14 +25,14 @@ const SafeSmartPage = () => (
     {/* Hero */}
     <section className="pt-32 pb-16 bg-dark text-dark-foreground">
       <div className="container">
-        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">Safe & Smart</p>
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">Sécurité et intelligence</p>
         <h1 className="font-display text-5xl md:text-7xl font-black leading-[0.95] max-w-3xl">
-          Ride safe.
+          Roulez en toute sécurité.
           <br />
-          Ride <em className="text-primary">smart.</em>
+          Roulez <em className="text-primary">intelligemment.</em>
         </h1>
         <p className="mt-6 text-dark-foreground/60 max-w-lg text-lg">
-          Every VéloRouge e-bike is equipped with cutting-edge safety and smart technology.
+          Chaque vélo électrique VéloRouge est équipé de technologies de pointe en matière de sécurité et d'intelligence.
         </p>
       </div>
     </section>
@@ -43,9 +43,9 @@ const SafeSmartPage = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-              Safety is
+              La sécurité est
               <br />
-              not an <em className="text-primary">option.</em>
+              une <em className="text-primary">priorité.</em>
             </h2>
             <div className="mt-10 space-y-8">
               {safetyFeatures.map((f) => (
@@ -77,9 +77,9 @@ const SafeSmartPage = () => (
           </div>
           <div className="md:order-2">
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-              Smarter
+              Plus intelligent
               <br />
-              with every <em className="text-primary">ride.</em>
+              à chaque <em className="text-primary">trajet.</em>
             </h2>
             <div className="mt-10 space-y-8">
               {smartFeatures.map((f) => (
@@ -103,14 +103,14 @@ const SafeSmartPage = () => (
     <section className="py-24 bg-background">
       <div className="container text-center">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-          The numbers speak <em className="text-primary">for themselves.</em>
+          Les chiffres parlent <em className="text-primary">d'eux-mêmes.</em>
         </h2>
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { value: "0", label: "Accidents in 2025" },
-            { value: "99.8%", label: "Uptime reliability" },
-            { value: "<2min", label: "Avg. response time" },
-            { value: "24/7", label: "Live monitoring" },
+            { value: "0", label: "Accidents en 2025" },
+            { value: "99,8 %", label: "Fiabilité" },
+            { value: "< 2 min", label: "Temps de réponse moyen" },
+            { value: "24/7", label: "Surveillance en direct 24 h/24 et 7 j/7" },
           ].map((s) => (
             <div key={s.label}>
               <div className="font-display text-4xl font-black text-primary">{s.value}</div>

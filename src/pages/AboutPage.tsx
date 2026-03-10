@@ -15,16 +15,16 @@ const values = [
 ];
 
 const faqs = [
-  { q: "Do I need experience to ride a Segway?", a: "Not at all. Before every guided tour, our team provides a short training session to make sure you feel comfortable and confident. Most riders get the hang of it within minutes." },
-  { q: "Is it safe to ride?", a: "Yes. Safety is our top priority. All rides include basic instructions, and our vehicles are regularly inspected and maintained. Guided tours are led by trained staff to ensure a smooth and safe experience." },
-  { q: "How do I book a tour or ride?", a: "You can book directly through our website or via the VéloRouge app. Simply choose your preferred date, time, and experience, then confirm your booking in just a few clicks." },
-  { q: "Where do the tours take place?", a: "Our tours operate in Strasbourg and selected nearby areas in Alsace. Routes include historic streets, scenic canals, and key landmarks." },
-  { q: "What should I wear for the ride?", a: "We recommend comfortable clothing and flat shoes. In colder or rainy weather, a light jacket is a good idea. Please avoid very loose items that could interfere with riding." },
-  { q: "Is there an age or weight limit?", a: "Yes. Riders usually need to be at least 12–14 years old (depending on the tour type) and fall within the standard safety weight limits for Segways or e-bikes. Exact requirements are shown during booking." },
-  { q: "Do you offer student discounts?", a: "Yes! We offer special student-friendly pricing and subscription options. Student status may need to be verified through the app or during booking." },
-  { q: "How does the app-based ride work?", a: "Download the VéloRouge app, find a nearby vehicle, scan the QR code, and start your ride. Payment is handled directly in the app, and you can end your ride at designated parking zones." },
-  { q: "What happens if it rains?", a: "Light rain usually doesn't stop tours. However, for safety reasons, tours may be rescheduled in case of severe weather. If that happens, we'll help you choose a new time." },
-  { q: "Can I cancel or reschedule my booking?", a: "Yes. Cancellations or rescheduling are possible within the timeframe stated in our booking policy. Full details are provided at checkout." },
+  { q: "Ai-je besoin d'expérience pour conduire un Segway ?", a: "Pas du tout. Avant chaque visite guidée, notre équipe propose une courte session de formation pour vous assurer que vous vous sentez à l'aise et en confiance. La plupart des utilisateurs maîtrisent en quelques minutes." },
+  { q: "Est-ce sécurisé ?", a: "Oui. La sécurité est notre priorité absolue. Toutes les balades incluent des instructions de base, et nos véhicules sont régulièrement inspectés et entretenus. Les visites guidées sont menées par du personnel formé pour garantir une expérience fluide et sécurisée." },
+  { q: "Comment réserver une visite ou une balade ?", a: "Vous pouvez réserver directement via notre site web ou via l'application VéloRouge. Choisissez simplement votre date, heure et expérience préférées, puis confirmez votre réservation en quelques clics." },
+  { q: "Où se déroulent les visites ?", a: "Nos visites se déroulent à Strasbourg et dans certaines zones sélectionnées à proximité en Alsace. Les itinéraires incluent les rues historiques, les canaux pittoresques et les monuments clés." },
+  { q: "Que dois-je porter pour la balade ?", a: "Nous recommandons des vêtements confortables et des chaussures plates. Par temps froid ou pluvieux, une veste légère est une bonne idée. Évitez les vêtements trop amples qui pourraient gêner la conduite." },
+  { q: "Y a-t-il une limite d'âge ou de poids ?", a: "Oui. Les utilisateurs doivent généralement avoir au moins 12-14 ans (selon le type de visite) et respecter les limites de poids de sécurité standard pour les Segways ou vélos électriques. Les exigences exactes sont indiquées lors de la réservation." },
+  { q: "Proposez-vous des réductions étudiantes ?", a: "Oui ! Nous proposons des tarifs spéciaux pour les étudiants et des options d'abonnement. Le statut d'étudiant peut nécessiter une vérification via l'application ou lors de la réservation." },
+  { q: "Comment fonctionne la location via l'application ?", a: "Téléchargez l'application VéloRouge, trouvez un véhicule à proximité, scannez le code QR et démarrez votre trajet. Le paiement est géré directement dans l'application, et vous pouvez terminer votre trajet dans les zones de stationnement désignées." },
+  { q: "Que se passe-t-il s'il pleut ?", a: "Une pluie légère n'empêche généralement pas les visites. Cependant, pour des raisons de sécurité, les visites peuvent être reprogrammées en cas de mauvais temps sévère. Si cela se produit, nous vous aiderons à choisir un nouveau créneau." },
+  { q: "Puis-je annuler ou reprogrammer ma réservation ?", a: "Oui. Les annulations ou reprogrammations sont possibles dans le délai indiqué dans notre politique de réservation. Tous les détails sont fournis lors du paiement." },
 ];
 
 const timeline = [
@@ -187,9 +187,9 @@ const AboutPage = () => {
     <section className="py-24 bg-background">
       <div className="container max-w-3xl">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-16 text-center">
-          Frequently asked
+          Questions
           <br />
-          <em className="text-primary">questions.</em>
+          <em className="text-primary">fréquentes.</em>
         </h2>
         <div className="space-y-4">
           {faqs.map((faq, i) => (
