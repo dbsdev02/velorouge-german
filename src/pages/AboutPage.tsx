@@ -179,7 +179,7 @@ const AboutPage = () => {
     {/* Trust Marquee - Full Width */}
     <div className="w-full bg-primary text-primary-foreground py-6 overflow-hidden">
       <div className="flex animate-marquee whitespace-nowrap">
-        <span className="font-display text-xl italic font-normal tracking-wide mx-4" style={{color: 'rgba(245, 240, 232, 0.9)'}}>Safe and beginner-friendly  •  Premium e-bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  Safe and beginner-friendly  •  Premium e-bikes and Segways  •  Flexible booking and app-based access  •  Multilingual support  •  </span>
+        <span className="font-display text-xl italic font-normal tracking-wide mx-4" style={{color: 'rgba(245, 240, 232, 0.9)'}}>Sécurisé et parfait pour les débutants  •  E-bikes et Segways premium  •  Réservation flexible et accès via l'application  •  Support multilingue  •  Sécurisé et parfait pour les débutants  •  E-bikes et Segways premium  •  Réservation flexible et accès via l'application  •  Support multilingue  •  </span>
       </div>
     </div>
 
