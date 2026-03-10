@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 const plans = [
   { 
     name: "Visiteurs & Touristes", 
-    price: "29€", 
+    price: "49€", 
     period: "/balade", 
     features: [
       "Parcours guidé par un local passionné",
@@ -15,7 +15,7 @@ const plans = [
   },
   { 
     name: "Résidents & Étudiants", 
-    price: "24€", 
+    price: "15€", 
     period: "/semaine", 
     features: [
       "Votre vélo du quotidien, sans les contraintes",
@@ -28,7 +28,7 @@ const plans = [
   },
   { 
     name: "Livreurs & Coursiers", 
-    price: "150€", 
+    price: "99€", 
     period: "/mois", 
     subtitle: "propriétaire en 12 mois",
     features: [

@@ -167,36 +167,36 @@ const FMDPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-8">
-              Les locations VéloRouge sont-elles <em className="text-primary">éligibles ?</em>
+              Are VéloRouge rentals <em className="text-primary">eligible?</em>
             </h2>
             <div className="bg-green-100 border-2 border-green-500 rounded-lg p-8 mb-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
                   <Check className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-2xl font-bold text-green-800">Oui, 100% éligible</span>
+                <span className="text-2xl font-bold text-green-800">Yes, 100% Eligible</span>
               </div>
             </div>
             <p className="text-dark-foreground/70 text-lg mb-6">
-              Toutes nos locations sont entièrement éligibles selon la réglementation FMD :
+              All of our rentals are fully eligible under FMD regulations:
             </p>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <span className="text-dark-foreground/70">Locations longue durée</span>
+                <span className="text-dark-foreground/70">Long-term rentals</span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <span className="text-dark-foreground/70">Abonnements annuels</span>
+                <span className="text-dark-foreground/70">Annual subscriptions</span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <span className="text-dark-foreground/70">Flottes d'entreprise</span>
+                <span className="text-dark-foreground/70">Corporate fleet rentals</span>
               </li>
             </ul>
           </div>
           <div>
-            <img src={gallery1} alt="Location de vélo électrique éligible" className="w-full h-auto rounded-lg" />
+            <img src={gallery1} alt="Eligible e-bike rental" className="w-full h-auto rounded-lg" />
           </div>
         </div>
       </div>
@@ -257,14 +257,14 @@ const FMDPage = () => {
     <section className="py-24 bg-background">
       <div className="container max-w-3xl">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-16 text-center">
-          Questions <em className="text-primary">fréquentes</em>
+          Frequently Asked <em className="text-primary">Questions</em>
         </h2>
         <div className="space-y-4">
           {[
-            { q: "Les 900€ sont-ils obligatoires ?", a: "Non. L'employeur choisit le montant (jusqu'à 900€ par an)." },
-            { q: "Puis-je combiner le FMD avec le remboursement des transports en commun ?", a: "Oui, selon la politique de l'entreprise." },
-            { q: "Ai-je besoin d'une preuve de trajet domicile-travail ?", a: "Votre facture de VeloRouge est suffisante dans la plupart des cas." },
-            { q: "Est-ce disponible pour tous les salariés ?", a: "Oui, si l'employeur a mis en place le dispositif FMD." }
+            { q: "Is the €900 mandatory?", a: "No. The employer chooses the amount (up to €900 per year)." },
+            { q: "Can I combine FMD with public transport reimbursement?", a: "Yes, depending on company policy." },
+            { q: "Do I need proof of commuting?", a: "Your VeloRouge invoice is sufficient in most cases." },
+            { q: "Is this available for all employees?", a: "Yes, if the employer has implemented the FMD scheme." }
           ].map((faq, index) => (
             <div key={index} className="border border-border rounded-lg">
               <button
@@ -289,19 +289,19 @@ const FMDPage = () => {
     <section className="py-24 bg-dark text-dark-foreground">
       <div className="container max-w-4xl text-center">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-6">
-          Besoin d'aide pour convaincre votre <em className="text-primary">employeur ?</em>
+          Need help convincing your <em className="text-primary">employer?</em>
         </h2>
         <p className="text-dark-foreground/70 text-lg mb-8">
-          Téléchargez notre modèle d'e-mail prêt à envoyer pour demander le remboursement FMD.
+          Download our ready-to-send email template to request FMD reimbursement.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
             <Download className="w-5 h-5" />
-            Télécharger le modèle d'e-mail
+            Download Email Template
           </a>
           <a href="#" className="inline-flex items-center gap-2 border-2 border-primary text-primary px-8 py-4 font-semibold hover:bg-primary/10 transition-colors">
             <Download className="w-5 h-5" />
-            Télécharger le PDF d'info FMD
+            Download FMD Info PDF
           </a>
         </div>
       </div>
