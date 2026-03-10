@@ -167,31 +167,31 @@ const FMDPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-8">
-              Are VéloRouge rentals <em className="text-primary">eligible?</em>
+              Les locations VéloRouge sont-elles <em className="text-primary">éligibles ?</em>
             </h2>
             <div className="bg-green-100 border-2 border-green-500 rounded-lg p-8 mb-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
                   <Check className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-2xl font-bold text-green-800">Yes, 100% Eligible</span>
+                <span className="text-2xl font-bold text-green-800">Oui, 100 % éligibles</span>
               </div>
             </div>
             <p className="text-dark-foreground/70 text-lg mb-6">
-              All of our rentals are fully eligible under FMD regulations:
+              Toutes nos locations sont entièrement conformes au Forfait Mobilité Durable (FMD) :
             </p>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <span className="text-dark-foreground/70">Long-term rentals</span>
+                <span className="text-dark-foreground/70">Locations longue durée</span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <span className="text-dark-foreground/70">Annual subscriptions</span>
+                <span className="text-dark-foreground/70">Abonnements annuels</span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <span className="text-dark-foreground/70">Corporate fleet rentals</span>
+                <span className="text-dark-foreground/70">Flottes d'entreprise</span>
               </li>
             </ul>
           </div>
@@ -289,19 +289,19 @@ const FMDPage = () => {
     <section className="py-24 bg-dark text-dark-foreground">
       <div className="container max-w-4xl text-center">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-6">
-          Need help convincing your <em className="text-primary">employer?</em>
+          Besoin d'aide pour convaincre votre <em className="text-primary">employeur ?</em>
         </h2>
         <p className="text-dark-foreground/70 text-lg mb-8">
-          Download our ready-to-send email template to request FMD reimbursement.
+          Téléchargez notre modèle d'email prêt à envoyer pour demander le remboursement du Forfait Mobilité Durable.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
             <Download className="w-5 h-5" />
-            Download Email Template
+            Télécharger le modèle d'email
           </a>
           <a href="#" className="inline-flex items-center gap-2 border-2 border-primary text-primary px-8 py-4 font-semibold hover:bg-primary/10 transition-colors">
             <Download className="w-5 h-5" />
-            Download FMD Info PDF
+            Télécharger la fiche FMD
           </a>
         </div>
       </div>
