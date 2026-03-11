@@ -1,20 +1,22 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.png";
-
-const links = [
-  { label: "Accueil", to: "/" },
-  { label: "À propos", to: "/about" },
-  { label: "Visiteurs", to: "/visitors" },
-  { label: "Résidents", to: "/residents" },
-  { label: "Sécurité & Tech", to: "/safe-smart" },
-  { label: "Contact", to: "/contact" },
-];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { t, i18n } = useTranslation();
+
+  const links = [
+    { label: t('nav.home'), to: "/" },
+    { label: t('nav.about'), to: "/about" },
+    { label: t('nav.visitors'), to: "/visitors" },
+    { label: t('nav.residents'), to: "/residents" },
+    { label: t('nav.safeSmart'), to: "/safe-smart" },
+    { label: t('nav.contact'), to: "/contact" },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-dark/90 backdrop-blur-sm">
@@ -37,6 +39,28 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
+          <div className="flex gap-2 ml-4">
+            <button
+              onClick={() => i18n.changeLanguage('en')}
+              className={`px-3 py-1 text-sm rounded transition-colors ${
+                i18n.language === 'en'
+                  ? 'bg-primary text-white'
+                  : 'bg-dark-surface text-dark-foreground/70 hover:text-dark-foreground'
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => i18n.changeLanguage('fr')}
+              className={`px-3 py-1 text-sm rounded transition-colors ${
+                i18n.language === 'fr'
+                  ? 'bg-primary text-white'
+                  : 'bg-dark-surface text-dark-foreground/70 hover:text-dark-foreground'
+              }`}
+            >
+              FR
+            </button>
+          </div>
         </div>
 
 
@@ -62,6 +86,28 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
+          <div className="flex gap-2 pt-4">
+            <button
+              onClick={() => i18n.changeLanguage('en')}
+              className={`px-3 py-1 text-sm rounded transition-colors ${
+                i18n.language === 'en'
+                  ? 'bg-primary text-white'
+                  : 'bg-dark-surface text-dark-foreground/70 hover:text-dark-foreground'
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => i18n.changeLanguage('fr')}
+              className={`px-3 py-1 text-sm rounded transition-colors ${
+                i18n.language === 'fr'
+                  ? 'bg-primary text-white'
+                  : 'bg-dark-surface text-dark-foreground/70 hover:text-dark-foreground'
+              }`}
+            >
+              FR
+            </button>
+          </div>
         </div>
       )}
     </nav>

@@ -1,53 +1,57 @@
+import { useTranslation } from "react-i18next";
 import { Check } from "lucide-react";
 
-const plans = [
-  { 
-    name: "Visiteurs & Touristes", 
-    price: "49€", 
-    period: "/balade", 
-    features: [
-      "Parcours guidé par un local passionné",
-      "Itinéraires secrets, loin des foules",
-      "Pauses photo aux spots les plus instagrammables",
-      "Accessible à tous, même débutants"
-    ],
-    cta: "Réserver maintenant"
-  },
-  { 
-    name: "Résidents & Étudiants", 
-    price: "15€", 
-    period: "/semaine", 
-    features: [
-      "Votre vélo du quotidien, sans les contraintes",
-      "Formules souples à la semaine",
-      "Fiable et économique",
-      "Assistance prioritaire"
-    ],
-    popular: true,
-    cta: "Je m'abonne"
-  },
-  { 
-    name: "Livreurs & Coursiers", 
-    price: "99€", 
-    period: "/mois", 
-    subtitle: "propriétaire en 12 mois",
-    features: [
-      "Location-vente : le vélo devient le vôtre",
-      "Trajets illimités en semaine",
-      "Entretien inclus, zéro surprise",
-      "L'outil de travail qui vous appartient"
-    ],
-    cta: "Démarrer mon parcours"
-  },
-];
+const Pricing = () => {
+  const { t } = useTranslation();
+  
+  const plans = [
+    { 
+      name: t('pricing.visitors'), 
+      price: "49€", 
+      period: t('pricing.perRide'), 
+      features: [
+        t('pricing.visitorsFeature1'),
+        t('pricing.visitorsFeature2'),
+        t('pricing.visitorsFeature3'),
+        t('pricing.visitorsFeature4')
+      ],
+      cta: t('pricing.bookNow')
+    },
+    { 
+      name: t('pricing.residents'), 
+      price: "15€", 
+      period: t('pricing.perWeek'), 
+      features: [
+        t('pricing.residentsFeature1'),
+        t('pricing.residentsFeature2'),
+        t('pricing.residentsFeature3'),
+        t('pricing.residentsFeature4')
+      ],
+      popular: true,
+      cta: t('pricing.subscribe')
+    },
+    { 
+      name: t('pricing.delivery'), 
+      price: "99€", 
+      period: t('pricing.perMonth'), 
+      subtitle: t('pricing.ownerIn12'),
+      features: [
+        t('pricing.deliveryFeature1'),
+        t('pricing.deliveryFeature2'),
+        t('pricing.deliveryFeature3'),
+        t('pricing.deliveryFeature4')
+      ],
+      cta: t('pricing.startJourney')
+    },
+  ];
 
-const Pricing = () => (
+  return (
   <section id="pricing" className="py-24 bg-dark text-dark-foreground">
     <div className="container">
       <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-        Une ville.
+        {t('pricing.title')}
         <br />
-        Trois façons de la <em className="text-primary">vivre.</em>
+        {t('pricing.titleLine2')} <em className="text-primary">{t('pricing.titleHighlight')}</em>
       </h2>
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -77,13 +81,14 @@ const Pricing = () => (
                   : "border border-dark-foreground/20 text-dark-foreground hover:border-dark-foreground/40"
               }`}
             >
-              {p.cta || "Commencer"}
+              {p.cta}
             </a>
           </div>
         ))}
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default Pricing;

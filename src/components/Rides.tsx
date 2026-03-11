@@ -1,23 +1,27 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import rideSundowner from "@/assets/ride-sundowner.jpg";
 import rideMarket from "@/assets/Bar Hop Petite France.png";
 import rideRiver from "@/assets/ride-river.jpg";
 import rideLocal from "@/assets/ride-local.jpg";
 
-const rides = [
-  { img: rideSundowner, title: "Strasbourg Sundowner", price: "29€", tag: "COUP DE CŒUR" },
-  { img: rideMarket, title: "Bar Hop Petite France", price: "35€", tag: "POPULAIRE" },
-  { img: rideRiver, title: "Strasbourg Insolite", price: "24€", tag: null },
-  { img: rideLocal, title: "Échappée Franco-Allemande", price: "39€", tag: null },
-];
+const Rides = () => {
+  const { t } = useTranslation();
+  
+  const rides = [
+    { img: rideSundowner, title: t('rides.ride1'), price: "29€", tag: t('rides.favorite') },
+    { img: rideMarket, title: t('rides.ride2'), price: "35€", tag: t('rides.popular') },
+    { img: rideRiver, title: t('rides.ride3'), price: "24€", tag: null },
+    { img: rideLocal, title: t('rides.ride4'), price: "39€", tag: null },
+  ];
 
-const Rides = () => (
+  return (
   <section id="rides" className="py-24 bg-background">
     <div className="container">
       <h2 className="font-display text-4xl md:text-5xl font-black leading-tight max-w-md">
-        Quatre façons
+        {t('rides.title')}
         <br />
-        de vibrer à <em className="text-primary">Strasbourg.</em>
+        {t('rides.titleLine2')} <em className="text-primary">{t('rides.titleHighlight')}</em>
       </h2>
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -37,12 +41,13 @@ const Rides = () => (
               )}
             </div>
             <h3 className="mt-4 font-display text-lg font-bold">{r.title}</h3>
-            <p className="text-muted-foreground text-sm">À partir de {r.price}</p>
+            <p className="text-muted-foreground text-sm">{t('rides.from')} {r.price}</p>
           </Link>
         ))}
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default Rides;
