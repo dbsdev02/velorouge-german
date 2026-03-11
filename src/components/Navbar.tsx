@@ -25,21 +25,46 @@ const Navbar = () => {
           <img src={logo} alt="VeloRouge" className="h-10" />
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className={`text-sm transition-colors ${
-                location.pathname === l.to
-                  ? "text-primary font-semibold"
-                  : "text-dark-foreground/70 hover:text-dark-foreground"
-              }`}
-            >
-              {l.label}
-            </Link>
-          ))}
-          <div className="flex gap-2 ml-4">
+        <div className="flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-8">
+            {links.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className={`text-sm transition-colors ${
+                  location.pathname === l.to
+                    ? "text-primary font-semibold"
+                    : "text-dark-foreground/70 hover:text-dark-foreground"
+                }`}
+              >
+                {l.label}
+              </Link>
+            ))}
+            <div className="flex gap-2 ml-4">
+              <button
+                onClick={() => i18n.changeLanguage('en')}
+                className={`px-3 py-1 text-sm rounded transition-colors ${
+                  i18n.language === 'en'
+                    ? 'bg-primary text-white'
+                    : 'bg-dark-surface text-dark-foreground/70 hover:text-dark-foreground'
+                }`}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => i18n.changeLanguage('fr')}
+                className={`px-3 py-1 text-sm rounded transition-colors ${
+                  i18n.language === 'fr'
+                    ? 'bg-primary text-white'
+                    : 'bg-dark-surface text-dark-foreground/70 hover:text-dark-foreground'
+                }`}
+              >
+                FR
+              </button>
+            </div>
+          </div>
+
+          <div className="md:hidden flex gap-2">
             <button
               onClick={() => i18n.changeLanguage('en')}
               className={`px-3 py-1 text-sm rounded transition-colors ${
@@ -61,13 +86,11 @@ const Navbar = () => {
               FR
             </button>
           </div>
+
+          <button onClick={() => setOpen(!open)} className="md:hidden text-dark-foreground">
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-
-
-
-        <button onClick={() => setOpen(!open)} className="md:hidden text-dark-foreground">
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </div>
 
       {open && (
@@ -86,28 +109,6 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
-          <div className="flex gap-2 pt-4">
-            <button
-              onClick={() => i18n.changeLanguage('en')}
-              className={`px-3 py-1 text-sm rounded transition-colors ${
-                i18n.language === 'en'
-                  ? 'bg-primary text-white'
-                  : 'bg-dark-surface text-dark-foreground/70 hover:text-dark-foreground'
-              }`}
-            >
-              EN
-            </button>
-            <button
-              onClick={() => i18n.changeLanguage('fr')}
-              className={`px-3 py-1 text-sm rounded transition-colors ${
-                i18n.language === 'fr'
-                  ? 'bg-primary text-white'
-                  : 'bg-dark-surface text-dark-foreground/70 hover:text-dark-foreground'
-              }`}
-            >
-              FR
-            </button>
-          </div>
         </div>
       )}
     </nav>
