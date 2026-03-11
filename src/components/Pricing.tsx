@@ -1,47 +1,44 @@
-import { useTranslation } from "react-i18next";
 import { Check } from "lucide-react";
 
 const Pricing = () => {
-  const { t } = useTranslation();
-  
   const plans = [
     { 
-      name: t('pricing.visitors'), 
+      name: "Visiteurs & Touristes", 
       price: "49€", 
-      period: t('pricing.perRide'), 
+      period: "/balade", 
       features: [
-        t('pricing.visitorsFeature1'),
-        t('pricing.visitorsFeature2'),
-        t('pricing.visitorsFeature3'),
-        t('pricing.visitorsFeature4')
+        "Parcours guidé par un local passionné",
+        "Itinéraires secrets, loin des foules",
+        "Pauses photo aux spots les plus instagrammables",
+        "Accessible à tous, même débutants"
       ],
-      cta: t('pricing.bookNow')
+      cta: "Réserver maintenant"
     },
     { 
-      name: t('pricing.residents'), 
+      name: "Résidents & Étudiants", 
       price: "15€", 
-      period: t('pricing.perWeek'), 
+      period: "/semaine", 
       features: [
-        t('pricing.residentsFeature1'),
-        t('pricing.residentsFeature2'),
-        t('pricing.residentsFeature3'),
-        t('pricing.residentsFeature4')
+        "Votre vélo du quotidien, sans les contraintes",
+        "Formules souples à la semaine",
+        "Fiable et économique",
+        "Assistance prioritaire"
       ],
       popular: true,
-      cta: t('pricing.subscribe')
+      cta: "Je m'abonne"
     },
     { 
-      name: t('pricing.delivery'), 
+      name: "Livreurs & Coursiers", 
       price: "99€", 
-      period: t('pricing.perMonth'), 
-      subtitle: t('pricing.ownerIn12'),
+      period: "/mois", 
+      subtitle: "propriétaire en 12 mois",
       features: [
-        t('pricing.deliveryFeature1'),
-        t('pricing.deliveryFeature2'),
-        t('pricing.deliveryFeature3'),
-        t('pricing.deliveryFeature4')
+        "Location-vente : le vélo devient le vôtre",
+        "Trajets illimités en semaine",
+        "Entretien inclus, zéro surprise",
+        "L'outil de travail qui vous appartient"
       ],
-      cta: t('pricing.startJourney')
+      cta: "Démarrer mon parcours"
     },
   ];
 
@@ -49,9 +46,9 @@ const Pricing = () => {
   <section id="pricing" className="py-24 bg-dark text-dark-foreground">
     <div className="container">
       <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-        {t('pricing.title')}
+        Une ville.
         <br />
-        {t('pricing.titleLine2')} <em className="text-primary">{t('pricing.titleHighlight')}</em>
+        Trois façons de la <em className="text-primary">vivre.</em>
       </h2>
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

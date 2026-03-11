@@ -1,23 +1,20 @@
-import { useTranslation } from "react-i18next";
 import { Bike, MapPin, Clock } from "lucide-react";
 
 const About = () => {
-  const { t } = useTranslation();
-  
   const stats = [
-    { icon: Bike, value: "80+", label: t('about.stat1') },
-    { icon: MapPin, value: "12", label: t('about.stat2') },
-    { icon: Clock, value: "4 500+", label: t('about.stat3') },
+    { icon: Bike, value: "80+", label: "vélos disponibles" },
+    { icon: MapPin, value: "12", label: "itinéraires secrets" },
+    { icon: Clock, value: "4 500+", label: "explorateurs conquis" },
   ];
 
   return (
   <section className="py-24 bg-background">
     <div className="container">
       <h2 className="font-display text-4xl md:text-5xl font-black leading-tight max-w-lg">
-        {t('about.title')} <em className="text-primary">{t('about.titleHighlight')}</em>
+        Bien plus qu'une <em className="text-primary">simple location.</em>
       </h2>
       <p className="mt-6 text-muted-foreground max-w-xl text-lg">
-        {t('about.subtitle')}
+        VéloRouge, c'est l'expérience Strasbourg réinventée. Chaque parcours raconte une histoire. Chaque coup de pédale vous rapproche de l'âme de la ville.
       </p>
 
       <div className="mt-12 flex flex-wrap gap-8">

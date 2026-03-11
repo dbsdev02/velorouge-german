@@ -1,21 +1,19 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const { t, i18n } = useTranslation();
 
   const links = [
-    { label: t('nav.home'), to: "/" },
-    { label: t('nav.about'), to: "/about" },
-    { label: t('nav.visitors'), to: "/visitors" },
-    { label: t('nav.residents'), to: "/residents" },
-    { label: t('nav.safeSmart'), to: "/safe-smart" },
-    { label: t('nav.contact'), to: "/contact" },
+    { label: "Accueil", to: "/" },
+    { label: "À propos", to: "/about" },
+    { label: "Visiteurs", to: "/visitors" },
+    { label: "Résidents", to: "/residents" },
+    { label: "Sécurité & Tech", to: "/safe-smart" },
+    { label: "Contact", to: "/contact" },
   ];
 
   return (

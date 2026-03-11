@@ -1,16 +1,13 @@
-import { useTranslation } from "react-i18next";
 import { Shield, Wrench, MapPin, Bike, DollarSign } from "lucide-react";
 
 const Features = () => {
-  const { t } = useTranslation();
-  
   const features = [
-    { icon: MapPin, title: t('features.feature1Title'), desc: t('features.feature1Desc') },
-    { icon: Bike, title: t('features.feature2Title'), desc: t('features.feature2Desc') },
-    { icon: Shield, title: t('features.feature3Title'), desc: t('features.feature3Desc') },
-    { icon: MapPin, title: t('features.feature4Title'), desc: t('features.feature4Desc') },
-    { icon: Wrench, title: t('features.feature5Title'), desc: t('features.feature5Desc') },
-    { icon: DollarSign, title: t('features.feature6Title'), desc: t('features.feature6Desc') },
+    { icon: MapPin, title: "Localisation GPS", desc: "Suivi en temps réel pour votre tranquillité. Ne perdez jamais votre vélo." },
+    { icon: Bike, title: "Vélos & Segways premium", desc: "Adapté à tous les niveaux. Choisissez votre monture idéale pour explorer la ville." },
+    { icon: Shield, title: "Protection antivol", desc: "Chaque vélo assuré contre vol et dommages. Roulez l'esprit tranquille." },
+    { icon: MapPin, title: "Parcours sur mesure", desc: "Itinéraires conçus par des Strasbourgeois passionnés. Découvrez les secrets de la ville." },
+    { icon: Wrench, title: "Entretien offert", desc: "Révisions et réparations sans frais. Toujours prêt à rouler." },
+    { icon: DollarSign, title: "Économies garanties", desc: "Jusqu'à 23 700€ sur 5 ans. Un investissement intelligent pour votre mobilité." },
   ];
 
   return (
@@ -19,11 +16,11 @@ const Features = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
         <div>
           <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-            {t('features.title1')}
+            Tout ce qu'il faut
             <br />
-            {t('features.title2')}
+            pour rouler
             <br />
-            {t('features.title3')} <em className="text-primary">{t('features.titleHighlight')}</em>
+            l'esprit <em className="text-primary">libre.</em>
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">

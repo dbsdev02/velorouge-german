@@ -1,9 +1,6 @@
-import { useTranslation } from "react-i18next";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
-  const { t } = useTranslation();
-  
   return (
   <section className="relative min-h-screen flex items-end pb-20 bg-dark overflow-hidden">
     <img
@@ -15,25 +12,25 @@ const Hero = () => {
 
     <div className="container relative z-10">
       <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-dark-foreground leading-[0.95] max-w-3xl">
-        {t('hero.title')}
+        Strasbourg se révèle
         <br />
-        <em className="text-primary">{t('hero.titleHighlight')}</em>
+        <em className="text-primary">au crépuscule.</em>
       </h1>
       <p className="mt-6 text-dark-foreground/70 max-w-md text-lg">
-        {t('hero.subtitle')}
+        Découvrez la ville autrement. Nos balades en vélo électrique vous emmènent là où les guides n'osent pas aller.
       </p>
       <div className="mt-8 flex flex-wrap gap-4">
         <a
           href="#rides"
           className="bg-primary text-primary-foreground px-8 py-3 font-semibold text-sm hover:bg-primary/90 transition-colors"
         >
-          {t('hero.bookRide')}
+          RÉSERVER UNE BALADE
         </a>
         <a
           href="#pricing"
           className="border border-dark-foreground/30 text-dark-foreground px-8 py-3 font-semibold text-sm hover:border-dark-foreground/60 transition-colors"
         >
-          {t('hero.discoverBikes')}
+          DÉCOUVRIR NOS VÉLOS
         </a>
       </div>
     </div>
