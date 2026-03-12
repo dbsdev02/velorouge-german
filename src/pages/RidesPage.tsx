@@ -14,46 +14,46 @@ const RidesPage = () => {
     {
       img: rideSundowner,
       title: t('rides.ride1'),
-      subtitle: "Chase the last rays. The Ill canals at golden hour.",
+      subtitle: t('ridesPage.ride1Subtitle'),
       price: "29€",
-      tag: "ELECTRIC BIKE",
-      duration: "2h30",
-      time: "18h00 – 20h30",
-      groupSize: "person",
-      description: "We know exactly where to be in Strasbourg at 19h30. And it's not Cathedral Square. This is our flagship ride — the one that captures the soul of a city bathed in golden light, reflections on the water, that special buzz of early evening in France. The goal isn't to show you Strasbourg — it's to make you feel like you've discovered it.",
+      tag: t('ridesPage.electricBike'),
+      duration: t('ridesPage.ride1Duration'),
+      time: t('ridesPage.ride1Time'),
+      groupSize: t('ridesPage.ride1GroupSize'),
+      description: t('ridesPage.ride1Description'),
     },
     {
       img: rideMarket,
       title: t('rides.ride2'),
-      subtitle: "Four bars. Two wheels. Zero regrets.",
+      subtitle: t('ridesPage.ride2Subtitle'),
       price: "35€",
-      tag: "ELECTRIC BIKE",
-      duration: "3h",
-      time: "20h00 – 23h00",
-      groupSize: "person",
-      description: "This isn't a bar crawl. It's an initiation journey through four centuries of Alsatian glass culture. Strasbourg has one of France's most fascinating bar scenes — a unique blend of French wine tradition and German brewing culture, with winstubs that have barely changed since the 17th century. This ride makes it all accessible and convivial, without falling into the tourist trap.",
+      tag: t('ridesPage.electricBike'),
+      duration: t('ridesPage.ride2Duration'),
+      time: t('ridesPage.ride2Time'),
+      groupSize: t('ridesPage.ride2GroupSize'),
+      description: t('ridesPage.ride2Description'),
     },
     {
       img: rideRiver,
       title: t('rides.ride3'),
-      subtitle: "The courtyards, passages, and corners that guides forgot.",
+      subtitle: t('ridesPage.ride3Subtitle'),
       price: "24€",
-      tag: "ELECTRIC BIKE",
-      duration: "2h",
-      time: "09h00 – 11h00 or 15h00 – 17h00",
-      groupSize: "person",
-      description: "We spent six months uncovering the 11 treasures of Strasbourg that no tour ever shows. Here they are. This is the ride for the curious traveler who's 'done' the Cathedral and Petite France and wants to go deeper. Segway to connect the dots, walking to enter the spaces. A mix of architectural surprises, urban legends, and sensory details.",
+      tag: t('ridesPage.electricBike'),
+      duration: t('ridesPage.ride3Duration'),
+      time: t('ridesPage.ride3Time'),
+      groupSize: t('ridesPage.ride3GroupSize'),
+      description: t('ridesPage.ride3Description'),
     },
     {
       img: rideLocal,
       title: t('rides.ride4'),
-      subtitle: "From France to Germany in 45 minutes. Coffee on the other side.",
+      subtitle: t('ridesPage.ride4Subtitle'),
       price: "39€",
-      tag: "ELECTRIC BIKE",
-      duration: "3h30",
-      time: "10h00 – 13h30",
-      groupSize: "person",
-      description: "No other city in Europe lets you pedal leisurely between two countries before lunch. We do it every Saturday. Strasbourg's unique position at the Franco-German border is its most powerful tourist asset — and almost no operator really exploits it. This route crosses the Rhine on the Mimram Footbridge (a magnificent pedestrian bridge), passes through the Two Banks Garden, and lands in the German city of Kehl for coffee and striking cultural contrast.",
+      tag: t('ridesPage.electricBike'),
+      duration: t('ridesPage.ride4Duration'),
+      time: t('ridesPage.ride4Time'),
+      groupSize: t('ridesPage.ride4GroupSize'),
+      description: t('ridesPage.ride4Description'),
     },
   ];
 
@@ -64,14 +64,14 @@ const RidesPage = () => {
       {/* Hero */}
       <section className="pt-32 pb-16 bg-dark text-dark-foreground">
         <div className="container">
-          <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">Our rides</p>
+          <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">{t('ridesPage.tag')}</p>
           <h1 className="font-display text-5xl md:text-7xl font-black leading-[0.95] max-w-3xl">
-            Four ways to feel
+            {t('ridesPage.heroTitle1')}
             <br />
-            <em className="text-primary">Strasbourg.</em>
+            <em className="text-primary">{t('ridesPage.heroTitleHighlight')}</em>
           </h1>
           <p className="mt-6 text-dark-foreground/60 max-w-lg text-lg">
-            Each ride is designed by locals who know every cobblestone, every café, every secret canal.
+            {t('ridesPage.heroSubtitle')}
           </p>
         </div>
       </section>
@@ -103,7 +103,7 @@ const RidesPage = () => {
 
                 <div className="mt-8 flex items-center gap-6">
                   <a href="#" className="bg-primary text-primary-foreground px-8 py-3 font-semibold text-sm hover:bg-primary/90 transition-colors">
-                    BOOK — {r.price} / {r.groupSize}
+                    {t('ridesPage.bookButton')} — {r.price} / {r.groupSize}
                   </a>
                 </div>
               </div>

@@ -1,19 +1,23 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Languages } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
+  const { currentLanguage, toggleLanguage } = useLanguage();
 
   const links = [
-    { label: "Accueil", to: "/" },
-    { label: "À propos", to: "/about" },
-    { label: "Visiteurs", to: "/visitors" },
-    { label: "Résidents", to: "/residents" },
-    { label: "Sécurité & Tech", to: "/safe-smart" },
-    { label: "Contact", to: "/contact" },
+    { label: t('nav.home'), to: "/" },
+    { label: t('nav.about'), to: "/about" },
+    { label: t('nav.visitors'), to: "/visitors" },
+    { label: t('nav.residents'), to: "/residents" },
+    { label: t('nav.safeSmart'), to: "/safe-smart" },
+    { label: t('nav.contact'), to: "/contact" },
   ];
 
   return (
@@ -40,6 +44,15 @@ const Navbar = () => {
             ))}
           </div>
 
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-2 px-3 py-1.5 text-sm bg-primary/10 hover:bg-primary/20 text-primary rounded-md transition-colors"
+            title={currentLanguage === 'fr' ? 'Switch to English' : 'Passer en français'}
+          >
+            <Languages size={16} />
+            <span className="font-medium">{currentLanguage === 'fr' ? 'EN' : 'FR'}</span>
+          </button>
+
           <button onClick={() => setOpen(!open)} className="md:hidden text-dark-foreground">
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -62,6 +75,13 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-2 px-3 py-1.5 text-sm bg-primary/10 text-primary rounded-md w-full justify-center"
+          >
+            <Languages size={16} />
+            <span className="font-medium">{currentLanguage === 'fr' ? 'English' : 'Français'}</span>
+          </button>
         </div>
       )}
     </nav>

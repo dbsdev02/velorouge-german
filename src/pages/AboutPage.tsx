@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import aboutHero from "@/assets/about-hero.jpg";
@@ -7,28 +8,29 @@ import ctaBg from "@/assets/hero-bg.jpg";
 import { Bike, Heart, Users, Globe, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
-const values = [
-  { icon: Bike, title: "La liberté avant tout", desc: "Se déplacer devrait être un plaisir. Pas de files, pas de casse-tête — explorez la ville à votre rythme." },
-  { icon: Heart, title: "L'amour du local", desc: "Chaque parcours est imaginé par des gens qui vivent à Strasbourg. Les visiteurs découvrent les incontournables et les pépites secrètes." },
-  { icon: Users, title: "Porté par la communauté", desc: "Nos voyageurs et cyclistes façonnent les nouvelles expériences. Des suggestions d'itinéraires aux demandes de fonctionnalités — on écoute." },
-  { icon: Globe, title: "Engagé pour la planète", desc: "Chaque balade remplace un trajet en voiture et soutient le voyage durable. Nous rendons Strasbourg plus verte, un coup de pédale à la fois." },
-];
-
-const faqs = [
-  { q: "Ai-je besoin d'expérience pour conduire un Segway ?", a: "Pas du tout. Avant chaque visite guidée, notre équipe propose une courte session de formation pour vous assurer que vous vous sentez à l'aise et en confiance. La plupart des utilisateurs maîtrisent en quelques minutes." },
-  { q: "Est-ce sécurisé ?", a: "Oui. La sécurité est notre priorité absolue. Toutes les balades incluent des instructions de base, et nos véhicules sont régulièrement inspectés et entretenus. Les visites guidées sont menées par du personnel formé pour garantir une expérience fluide et sécurisée." },
-  { q: "Comment réserver une visite ou une balade ?", a: "Vous pouvez réserver directement via notre site web ou via l'application VéloRouge. Choisissez simplement votre date, heure et expérience préférées, puis confirmez votre réservation en quelques clics." },
-  { q: "Où se déroulent les visites ?", a: "Nos visites se déroulent à Strasbourg et dans certaines zones sélectionnées à proximité en Alsace. Les itinéraires incluent les rues historiques, les canaux pittoresques et les monuments clés." },
-  { q: "Que dois-je porter pour la balade ?", a: "Nous recommandons des vêtements confortables et des chaussures plates. Par temps froid ou pluvieux, une veste légère est une bonne idée. Évitez les vêtements trop amples qui pourraient gêner la conduite." },
-  { q: "Y a-t-il une limite d'âge ou de poids ?", a: "Oui. Les utilisateurs doivent généralement avoir au moins 12-14 ans (selon le type de visite) et respecter les limites de poids de sécurité standard pour les Segways ou vélos électriques. Les exigences exactes sont indiquées lors de la réservation." },
-  { q: "Proposez-vous des réductions étudiantes ?", a: "Oui ! Nous proposons des tarifs spéciaux pour les étudiants et des options d'abonnement. Le statut d'étudiant peut nécessiter une vérification via l'application ou lors de la réservation." },
-  { q: "Comment fonctionne la location via l'application ?", a: "Téléchargez l'application VéloRouge, trouvez un véhicule à proximité, scannez le code QR et démarrez votre trajet. Le paiement est géré directement dans l'application, et vous pouvez terminer votre trajet dans les zones de stationnement désignées." },
-  { q: "Que se passe-t-il s'il pleut ?", a: "Une pluie légère n'empêche généralement pas les visites. Cependant, pour des raisons de sécurité, les visites peuvent être reprogrammées en cas de mauvais temps sévère. Si cela se produit, nous vous aiderons à choisir un nouveau créneau." },
-  { q: "Puis-je annuler ou reprogrammer ma réservation ?", a: "Oui. Les annulations ou reprogrammations sont possibles dans le délai indiqué dans notre politique de réservation. Tous les détails sont fournis lors du paiement." },
-];
-
 const AboutPage = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { t } = useTranslation();
+
+  const values = [
+    { icon: Bike, title: t('aboutPage.value1Title'), desc: t('aboutPage.value1Desc') },
+    { icon: Heart, title: t('aboutPage.value2Title'), desc: t('aboutPage.value2Desc') },
+    { icon: Users, title: t('aboutPage.value3Title'), desc: t('aboutPage.value3Desc') },
+    { icon: Globe, title: t('aboutPage.value4Title'), desc: t('aboutPage.value4Desc') },
+  ];
+
+  const faqs = [
+    { q: t('aboutPage.faq1Q'), a: t('aboutPage.faq1A') },
+    { q: t('aboutPage.faq2Q'), a: t('aboutPage.faq2A') },
+    { q: t('aboutPage.faq3Q'), a: t('aboutPage.faq3A') },
+    { q: t('aboutPage.faq4Q'), a: t('aboutPage.faq4A') },
+    { q: t('aboutPage.faq5Q'), a: t('aboutPage.faq5A') },
+    { q: t('aboutPage.faq6Q'), a: t('aboutPage.faq6A') },
+    { q: t('aboutPage.faq7Q'), a: t('aboutPage.faq7A') },
+    { q: t('aboutPage.faq8Q'), a: t('aboutPage.faq8A') },
+    { q: t('aboutPage.faq9Q'), a: t('aboutPage.faq9A') },
+    { q: t('aboutPage.faq10Q'), a: t('aboutPage.faq10A') },
+  ];
 
   return (
   <main>
@@ -39,13 +41,13 @@ const AboutPage = () => {
       <img src={aboutHero} alt="Strasbourg aerial view" className="absolute inset-0 w-full h-full object-cover opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent" />
       <div className="container relative z-10">
-        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">À propos</p>
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">{t('aboutPage.tag')}</p>
         <h1 className="font-display text-5xl md:text-7xl font-black text-dark-foreground leading-[0.95] max-w-3xl">
-          Né à
+          {t('aboutPage.heroTitle1')}
           <br />
-          <em className="text-primary">Strasbourg.</em>
+          <em className="text-primary">{t('aboutPage.heroTitle2')}</em>
           <br />
-          Conçu pour les curieux.
+          {t('aboutPage.heroTitle3')}
         </h1>
       </div>
     </section>
@@ -56,21 +58,21 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-              Tout a commencé
+              {t('aboutPage.missionTitle1')}
               <br />
-              par une <em className="text-primary">question.</em>
+              {t('aboutPage.missionTitle2')} <em className="text-primary">{t('aboutPage.missionTitleHighlight')}</em>
             </h2>
             <p className="mt-6 text-muted-foreground text-lg max-w-md">
-              Pourquoi découvrir une ville devrait-il être lent, bondé et compliqué ?
+              {t('aboutPage.missionSubtitle')}
             </p>
             <p className="mt-4 text-muted-foreground max-w-md">
-              Plus d'attente. Plus d'itinéraires confus. Plus de trésors cachés ratés.
+              {t('aboutPage.missionDesc1')}
             </p>
             <p className="mt-4 text-muted-foreground max-w-md">
-              VéloRouge est né pour réinventer la façon dont on explore Strasbourg — que vous soyez de passage pour une journée ou résident depuis toujours.
+              {t('aboutPage.missionDesc2')}
             </p>
             <p className="mt-4 text-muted-foreground max-w-md">
-              Aujourd'hui, nous accompagnons des milliers de voyageurs et de Strasbourgeois à travers des parcours sur mesure, des visites guidées et une mobilité premium conçue pour vivre de vraies expériences.
+              {t('aboutPage.missionDesc3')}
             </p>
           </div>
           <div className="aspect-video overflow-hidden">
@@ -89,32 +91,32 @@ const AboutPage = () => {
           </div>
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-8">
-              Pensé pour les voyageurs. <br /> 
-               Adopté par les <em className="text-primary">citadins.</em>
+              {t('aboutPage.travelersTitle1')} <br /> 
+               {t('aboutPage.travelersTitle2')} <em className="text-primary">{t('aboutPage.travelersTitleHighlight')}</em>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mb-12">
-              Du premier visiteur à l'explorateur chevronné, VéloRouge vous permet de voir plus de Strasbourg en moins de temps.
+              {t('aboutPage.travelersSubtitle')}
             </p>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Visites guidées par des experts locaux</span>
+                <span className="text-muted-foreground">{t('aboutPage.travelersFeature1')}</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Itinéraires panoramiques à travers les quartiers historiques</span>
+                <span className="text-muted-foreground">{t('aboutPage.travelersFeature2')}</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Pauses photo devant les monuments emblématiques</span>
+                <span className="text-muted-foreground">{t('aboutPage.travelersFeature3')}</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Accessible aux débutants, aucune expérience requise</span>
+                <span className="text-muted-foreground">{t('aboutPage.travelersFeature4')}</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                <span className="text-muted-foreground">Formules flexibles pour les courts séjours et excursions</span>
+                <span className="text-muted-foreground">{t('aboutPage.travelersFeature5')}</span>
               </li>
             </ul>
           </div>
@@ -126,7 +128,7 @@ const AboutPage = () => {
     <section className="py-24 bg-dark text-dark-foreground">
       <div className="container">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-16">
-          Ce dont nous croyons
+          {t('aboutPage.valuesTitle1')} {t('aboutPage.valuesTitle2')}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((v) => (
@@ -144,22 +146,22 @@ const AboutPage = () => {
     <section className="py-24 bg-background">
       <div className="container">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-12 text-center">
-          Pourquoi les voyageurs choisissent
+          {t('aboutPage.trustTitle1')}
           <br />
-          <em className="text-primary">VéloRouge</em>
+          <em className="text-primary">{t('aboutPage.trustTitleHighlight')}</em>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="text-center">
             <div className="text-primary text-3xl font-bold mb-2">★★★★★</div>
-            <p className="text-muted-foreground">Élu parmi les meilleures façons de découvrir Strasbourg</p>
+            <p className="text-muted-foreground">{t('aboutPage.trustStat1')}</p>
           </div>
           <div className="text-center">
             <div className="text-primary text-3xl font-bold mb-2">30+</div>
-            <p className="text-muted-foreground">pays représentés</p>
+            <p className="text-muted-foreground">{t('aboutPage.trustStat2')}</p>
           </div>
           <div className="text-center">
             <div className="text-primary text-3xl font-bold mb-2">100%</div>
-            <p className="text-muted-foreground">accessible aux débutants</p>
+            <p className="text-muted-foreground">{t('aboutPage.trustStat3')}</p>
           </div>
         </div>
       </div>
@@ -168,7 +170,7 @@ const AboutPage = () => {
     {/* Trust Marquee - Full Width */}
     <div className="w-full bg-primary text-primary-foreground py-6 overflow-hidden">
       <div className="flex animate-marquee whitespace-nowrap">
-        <span className="font-display text-xl italic font-normal tracking-wide mx-4" style={{color: 'rgba(245, 240, 232, 0.9)'}}>Sécurisé et parfait pour les débutants  •  E-bikes et Segways premium  •  Réservation flexible et accès via l'application  •  Support multilingue  •  Sécurisé et parfait pour les débutants  •  E-bikes et Segways premium  •  Réservation flexible et accès via l'application  •  Support multilingue  •  </span>
+        <span className="font-display text-xl italic font-normal tracking-wide mx-4" style={{color: 'rgba(245, 240, 232, 0.9)'}}>{t('aboutPage.marqueeText')}</span>
       </div>
     </div>
 
@@ -176,9 +178,9 @@ const AboutPage = () => {
     <section className="py-24 bg-background">
       <div className="container max-w-3xl">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-16 text-center">
-          Questions
+          {t('aboutPage.faqTitle1')}
           <br />
-          <em className="text-primary">fréquentes.</em>
+          <em className="text-primary">{t('aboutPage.faqTitle2')}</em>
         </h2>
         <div className="space-y-4">
           {faqs.map((faq, i) => (
@@ -207,18 +209,18 @@ const AboutPage = () => {
       <div className="absolute inset-0 bg-dark/80" />
       <div className="container max-w-2xl relative z-10">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-          Prêt à explorer
+          {t('aboutPage.ctaTitle1')}
           <br />
-          <em className="text-primary">Strasbourg ?</em>
+          <em className="text-primary">{t('aboutPage.ctaTitleHighlight')}</em>
         </h2>
         <p className="mt-6 text-dark-foreground/70 text-lg">
-          Réservez votre balade guidée aujourd'hui et voyez plus en moins de temps.
+          {t('aboutPage.ctaSubtitle')}
         </p>
         <a
           href="#"
           className="inline-block mt-8 bg-primary text-primary-foreground px-10 py-4 font-semibold text-sm hover:bg-primary/90 transition-colors"
         >
-          Réserver mon expérience
+          {t('aboutPage.ctaButton')}
         </a>
       </div>
     </section>

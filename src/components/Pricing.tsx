@@ -1,44 +1,47 @@
+import { useTranslation } from "react-i18next";
 import { Check } from "lucide-react";
 
 const Pricing = () => {
+  const { t } = useTranslation();
+  
   const plans = [
     { 
-      name: "Visiteurs & Touristes", 
+      name: t('pricing.visitors'), 
       price: "49€", 
-      period: "/balade", 
+      period: t('pricing.perRide'), 
       features: [
-        "Parcours guidé par un local passionné",
-        "Itinéraires secrets, loin des foules",
-        "Pauses photo aux spots les plus instagrammables",
-        "Accessible à tous, même débutants"
+        t('pricing.visitorsFeature1'),
+        t('pricing.visitorsFeature2'),
+        t('pricing.visitorsFeature3'),
+        t('pricing.visitorsFeature4')
       ],
-      cta: "Réserver maintenant"
+      cta: t('pricing.bookNow')
     },
     { 
-      name: "Résidents & Étudiants", 
+      name: t('pricing.residents'), 
       price: "15€", 
-      period: "/semaine", 
+      period: t('pricing.perWeek'), 
       features: [
-        "Votre vélo du quotidien, sans les contraintes",
-        "Formules souples à la semaine",
-        "Fiable et économique",
-        "Assistance prioritaire"
+        t('pricing.residentsFeature1'),
+        t('pricing.residentsFeature2'),
+        t('pricing.residentsFeature3'),
+        t('pricing.residentsFeature4')
       ],
       popular: true,
-      cta: "Je m'abonne"
+      cta: t('pricing.subscribe')
     },
     { 
-      name: "Livreurs & Coursiers", 
+      name: t('pricing.delivery'), 
       price: "99€", 
-      period: "/mois", 
-      subtitle: "propriétaire en 12 mois",
+      period: t('pricing.perMonth'), 
+      subtitle: t('pricing.ownerIn12'),
       features: [
-        "Location-vente : le vélo devient le vôtre",
-        "Trajets illimités en semaine",
-        "Entretien inclus, zéro surprise",
-        "L'outil de travail qui vous appartient"
+        t('pricing.deliveryFeature1'),
+        t('pricing.deliveryFeature2'),
+        t('pricing.deliveryFeature3'),
+        t('pricing.deliveryFeature4')
       ],
-      cta: "Démarrer mon parcours"
+      cta: t('pricing.startJourney')
     },
   ];
 
@@ -46,9 +49,9 @@ const Pricing = () => {
   <section id="pricing" className="py-24 bg-dark text-dark-foreground">
     <div className="container">
       <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
-        Une ville.
+        {t('pricing.title')}
         <br />
-        Trois façons de la <em className="text-primary">vivre.</em>
+        {t('pricing.titleLine2')} <em className="text-primary">{t('pricing.titleHighlight')}</em>
       </h2>
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
