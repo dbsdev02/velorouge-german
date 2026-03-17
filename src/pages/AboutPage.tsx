@@ -175,7 +175,7 @@ const AboutPage = () => {
     </div>
 
     {/* FAQ */}
-    <section className="py-24 bg-background">
+    <section id="faq" className="py-24 bg-background">
       <div className="container max-w-3xl">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-16 text-center">
           {t('aboutPage.faqTitle1')}

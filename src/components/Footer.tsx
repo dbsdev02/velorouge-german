@@ -19,15 +19,15 @@ const Footer = () => {
         <div className="flex gap-12 text-sm">
           <div className="space-y-2">
             <div className="text-dark-foreground font-semibold mb-3">{t('footer.company')}</div>
-            <a href="#" className="block hover:text-dark-foreground transition-colors">{t('footer.about')}</a>
+            <a href="/about" className="block hover:text-dark-foreground transition-colors">{t('footer.about')}</a>
             <a href="#" className="block hover:text-dark-foreground transition-colors">{t('footer.careers')}</a>
-            <a href="#" className="block hover:text-dark-foreground transition-colors">{t('footer.contact')}</a>
+            <a href="/contact" className="block hover:text-dark-foreground transition-colors">{t('footer.contact')}</a>
           </div>
           <div className="space-y-2">
             <div className="text-dark-foreground font-semibold mb-3">{t('footer.product')}</div>
-            <a href="#" className="block hover:text-dark-foreground transition-colors">{t('footer.rides')}</a>
-            <a href="#" className="block hover:text-dark-foreground transition-colors">{t('footer.pricing')}</a>
-            <a href="#" className="block hover:text-dark-foreground transition-colors">{t('footer.faq')}</a>
+            <a href="/rides" className="block hover:text-dark-foreground transition-colors">{t('footer.rides')}</a>
+            <a href="/#pricing" className="block hover:text-dark-foreground transition-colors">{t('footer.pricing')}</a>
+            <a href="/about#faq" className="block hover:text-dark-foreground transition-colors">{t('footer.faq')}</a>
           </div>
           <div className="space-y-2">
             <div className="text-dark-foreground font-semibold mb-3">{t('footer.social')}</div>
