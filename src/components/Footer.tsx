@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import { Instagram } from "lucide-react";
 import { Music2 } from "lucide-react";
@@ -11,23 +12,23 @@ const Footer = () => {
     <div className="container">
       <div className="flex flex-col md:flex-row justify-between items-start gap-8">
         <div>
-          <a href="#" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src={logo} alt="VeloRouge" className="h-10" />
-          </a>
+          </Link>
           <p className="mt-2 text-sm max-w-xs">{t('footer.tagline')}</p>
         </div>
         <div className="flex gap-12 text-sm">
           <div className="space-y-2">
             <div className="text-dark-foreground font-semibold mb-3">{t('footer.company')}</div>
-            <a href="/about" className="block hover:text-dark-foreground transition-colors">{t('footer.about')}</a>
+            <Link to="/about" className="block hover:text-dark-foreground transition-colors">{t('footer.about')}</Link>
             <a href="#" className="block hover:text-dark-foreground transition-colors">{t('footer.careers')}</a>
-            <a href="/contact" className="block hover:text-dark-foreground transition-colors">{t('footer.contact')}</a>
+            <Link to="/contact" className="block hover:text-dark-foreground transition-colors">{t('footer.contact')}</Link>
           </div>
           <div className="space-y-2">
             <div className="text-dark-foreground font-semibold mb-3">{t('footer.product')}</div>
-            <a href="/rides" className="block hover:text-dark-foreground transition-colors">{t('footer.rides')}</a>
-            <a href="/#pricing" className="block hover:text-dark-foreground transition-colors">{t('footer.pricing')}</a>
-            <a href="/about#faq" className="block hover:text-dark-foreground transition-colors">{t('footer.faq')}</a>
+            <Link to="/visitors" className="block hover:text-dark-foreground transition-colors">{t('footer.rides')}</Link>
+            <Link to="/residents" className="block hover:text-dark-foreground transition-colors">{t('footer.pricing')}</Link>
+            <a href="#" className="block hover:text-dark-foreground transition-colors">{t('footer.faq')}</a>
           </div>
           <div className="space-y-2">
             <div className="text-dark-foreground font-semibold mb-3">{t('footer.social')}</div>
