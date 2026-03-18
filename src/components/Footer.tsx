@@ -21,14 +21,16 @@ const Footer = () => {
           <div className="space-y-2">
             <div className="text-dark-foreground font-semibold mb-3">{t('footer.company')}</div>
             <Link to="/about" className="block hover:text-dark-foreground transition-colors">{t('footer.about')}</Link>
-            <a href="#" className="block hover:text-dark-foreground transition-colors">{t('footer.careers')}</a>
+            <Link to="/visitors" className="block hover:text-dark-foreground transition-colors">{t('footer.rides')}</Link>
+            <Link to="/residents" className="block hover:text-dark-foreground transition-colors">{t('footer.residents')}</Link>
             <Link to="/contact" className="block hover:text-dark-foreground transition-colors">{t('footer.contact')}</Link>
           </div>
           <div className="space-y-2">
-            <div className="text-dark-foreground font-semibold mb-3">{t('footer.product')}</div>
-            <Link to="/visitors" className="block hover:text-dark-foreground transition-colors">{t('footer.rides')}</Link>
-            <Link to="/residents" className="block hover:text-dark-foreground transition-colors">{t('footer.pricing')}</Link>
-            <a href="#" className="block hover:text-dark-foreground transition-colors">{t('footer.faq')}</a>
+            <div className="text-dark-foreground font-semibold mb-3">{t('footer.quickLinks')}</div>
+            <Link to="/" className="block hover:text-dark-foreground transition-colors">{t('footer.home')}</Link>
+            <a href="/#pricing" className="block hover:text-dark-foreground transition-colors">{t('footer.pricing')}</a>
+            <Link to="/about" className="block hover:text-dark-foreground transition-colors">{t('footer.faq')}</Link>
+            <Link to="/safe-smart" className="block hover:text-dark-foreground transition-colors">{t('footer.safeSmart')}</Link>
           </div>
           <div className="space-y-2">
             <div className="text-dark-foreground font-semibold mb-3">{t('footer.social')}</div>
