@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Languages } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -17,6 +17,7 @@ const Navbar = () => {
     { label: t('nav.visitors'), to: "/visitors" },
     { label: t('nav.residents'), to: "/residents" },
     { label: t('nav.safeSmart'), to: "/safe-smart" },
+    // { label: "Blog", to: "/blog" },
     { label: t('nav.contact'), to: "/contact" },
   ];
 
@@ -27,33 +28,45 @@ const Navbar = () => {
           <img src={logo} alt="VeloRouge" className="h-10" />
         </Link>
 
-        <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center gap-8">
-            {links.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                className={`text-sm transition-colors ${
-                  location.pathname === l.to
-                    ? "text-primary font-semibold"
-                    : "text-dark-foreground/70 hover:text-dark-foreground"
-                }`}
-              >
-                {l.label}
-              </Link>
-            ))}
-          </div>
+        <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
+          {links.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              className={`text-sm transition-colors ${
+                location.pathname === l.to
+                  ? "text-primary font-semibold"
+                  : "text-dark-foreground/70 hover:text-dark-foreground"
+              }`}
+            >
+              {l.label}
+            </Link>
+          ))}
+        </div>
 
+        <div className="flex items-center gap-2">
           <button
-            onClick={toggleLanguage}
-            className="flex items-center gap-2 px-3 py-1.5 text-sm bg-primary/10 hover:bg-primary/20 text-primary rounded-md transition-colors"
-            title={currentLanguage === 'fr' ? 'Switch to English' : 'Passer en français'}
+            onClick={() => currentLanguage !== 'fr' && toggleLanguage()}
+            className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+              currentLanguage === 'fr'
+                ? 'bg-primary text-primary-foreground'
+                : 'text-dark-foreground/70 hover:text-dark-foreground hover:bg-dark-surface'
+            }`}
           >
-            <Languages size={16} />
-            <span className="font-medium">{currentLanguage === 'fr' ? 'EN' : 'FR'}</span>
+            FR
+          </button>
+          <button
+            onClick={() => currentLanguage !== 'en' && toggleLanguage()}
+            className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+              currentLanguage === 'en'
+                ? 'bg-primary text-primary-foreground'
+                : 'text-dark-foreground/70 hover:text-dark-foreground hover:bg-dark-surface'
+            }`}
+          >
+            EN
           </button>
 
-          <button onClick={() => setOpen(!open)} className="md:hidden text-dark-foreground">
+          <button onClick={() => setOpen(!open)} className="md:hidden text-dark-foreground ml-2">
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -75,13 +88,32 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
-          <button
-            onClick={toggleLanguage}
-            className="flex items-center gap-2 px-3 py-1.5 text-sm bg-primary/10 text-primary rounded-md w-full justify-center"
-          >
-            <Languages size={16} />
-            <span className="font-medium">{currentLanguage === 'fr' ? 'English' : 'Français'}</span>
-          </button>
+          <div className="flex gap-2 pt-2">
+            <button
+              onClick={() => {
+                if (currentLanguage !== 'fr') toggleLanguage();
+              }}
+              className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                currentLanguage === 'fr'
+                  ? 'bg-primary text-primary-foreground'
+                  : 'text-dark-foreground/70 bg-dark-surface'
+              }`}
+            >
+              FR
+            </button>
+            <button
+              onClick={() => {
+                if (currentLanguage !== 'en') toggleLanguage();
+              }}
+              className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                currentLanguage === 'en'
+                  ? 'bg-primary text-primary-foreground'
+                  : 'text-dark-foreground/70 bg-dark-surface'
+              }`}
+            >
+              EN
+            </button>
+          </div>
         </div>
       )}
     </nav>

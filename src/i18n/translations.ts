@@ -10,11 +10,12 @@ export const translations = {
         contact: "Contact"
       },
       hero: {
-        title: "Strasbourg reveals itself",
-        titleHighlight: "at dusk.",
-        subtitle: "Discover the city differently. Our electric bike tours take you where guides don't dare to go.",
-        bookRide: "BOOK A RIDE",
-        discoverBikes: "DISCOVER OUR BIKES"
+        tag: "6 EXPERIENCES • E-BIKE & SEGWAY • STRASBOURG",
+        title: "Strasbourg seen differently.",
+        titleHighlight: "At your pace, guided by sound.",
+        subtitle: "Discover the capital of Alsace on an electric bike or Segway — no guide, no group, no constraints.",
+        playStore: "Get it on Play Store",
+        appStore: "Download on App Store"
       },
       about: {
         title: "Much more than a",
@@ -363,6 +364,86 @@ export const translations = {
       },
       marquee: {
         text: "Tours in Strasbourg • 6 unique routes to discover • 100 % curated rides in Strasbourg • "
+      },
+      howItWorks: {
+        title: "How It Works",
+        step1Title: "Book online",
+        step1Desc: "In 60 seconds. Instant confirmation by email.",
+        step2Title: "Pick up your bike",
+        step2Desc: "Starting point indicated. Audio guide downloaded on your phone.",
+        step3Title: "Explore at your pace",
+        step3Desc: "The audio guide tells the story. You decide where you stop."
+      },
+      showcase: {
+        title: "Strasbourg City Showcase",
+        titlePart1: "Strasbourg City",
+        titleHighlight: "Showcase",
+        location1Title: "Petite France — Golden Hour",
+        location1Subtitle: "Hero image + Sundowner & Bar Hop experience cards",
+        location2Title: "Cathédrale — Blue Hour",
+        location2Subtitle: "City grid + Hidden Strasbourg experience card",
+        location3Title: "Neustadt — UNESCO Boulevard",
+        location3Subtitle: "Neustadt Architectural experience card",
+        location4Title: "Marché de Noël — Night",
+        location4Subtitle: "Christmas Magic card + seasonal homepage banner Nov–Dec",
+        location5Title: "Barrage Vauban / Ponts Couverts",
+        location5Subtitle: "Panoramic city grid — most iconic Strasbourg skyline view",
+        location6Title: "Rhine — Pont de l'Europe",
+        location6Subtitle: "Rhine Border Run card — hero product for German market"
+      },
+      founderStory: {
+        title: "Founder Story",
+        quote: "My name is Prashant. I discovered Strasbourg on an electric bike two years ago — and I never wanted to see it any other way again. VéloRouge was born from this belief: the best way to discover a city is at your own pace, guided by curiosity. Not by a guide.",
+        signature: "— PK, Founder"
+      },
+      cityStats: {
+        stat1: "Visitors per year",
+        stat2: "Years of history in the heart of Europe",
+        stat3Number: "UNESCO Heritage",
+        stat3Label: "Grande Île listed since 1988",
+        stat4Number: "The oldest",
+        stat4Label: "Christmas Market in Europe (since 1570)"
+      },
+      newsletter: {
+        title: "Stay in the loop",
+        subtitle: "Get exclusive offers, new routes, and Strasbourg insider tips delivered to your inbox.",
+        placeholder: "Enter your email",
+        button: "SUBSCRIBE",
+        success: "Thank you for subscribing! Check your inbox soon.",
+        privacy: "We respect your privacy. Unsubscribe anytime."
+      },
+      showcase: {
+        title: "Strasbourg City Showcase",
+        titlePart1: "Strasbourg City",
+        titleHighlight: "Showcase",
+        location1Title: "Petite France — Golden Hour",
+        location1Subtitle: "Hero image + Sundowner & Bar Hop experience cards",
+        location1Desc: "Experience the magic of Strasbourg at golden hour",
+        location2Title: "Cathédrale — Blue Hour",
+        location2Subtitle: "City grid + Hidden Strasbourg experience card",
+        location2Desc: "Discover the iconic Gothic masterpiece of Alsace",
+        location3Title: "Neustadt — UNESCO Boulevard",
+        location3Subtitle: "Neustadt Architectural experience card",
+        location3Desc: "Explore the German imperial quarter's architecture",
+        location4Title: "Marché de Noël — Night",
+        location4Subtitle: "Christmas Magic card + seasonal homepage banner Nov–Dec",
+        location4Desc: "Visit Europe's oldest and most magical Christmas market",
+        location5Title: "Barrage Vauban / Ponts Couverts",
+        location5Subtitle: "Panoramic city grid — most iconic Strasbourg skyline view",
+        location5Desc: "Admire the historic 17th-century defensive structure",
+        location6Title: "Rhine — Pont de l'Europe",
+        location6Subtitle: "Rhine Border Run card — hero product for German market",
+        location6Desc: "Cross the border between France and Germany by bike",
+        exploreNow: "EXPLORE NOW"
+      },
+      howItWorks: {
+        title: "How It Works",
+        step1Title: "Book online",
+        step1Desc: "In 60 seconds. Instant confirmation by email.",
+        step2Title: "Pick up your bike",
+        step2Desc: "Starting point indicated. Audio guide downloaded on your phone.",
+        step3Title: "Explore at your pace",
+        step3Desc: "The audio guide tells the story. You decide where you stop."
       }
     }
   },
@@ -377,11 +458,12 @@ export const translations = {
         contact: "Contact"
       },
       hero: {
-        title: "Strasbourg se révèle",
-        titleHighlight: "au crépuscule.",
-        subtitle: "Découvrez la ville autrement. Nos balades en vélo électrique vous emmènent là où les guides n'osent pas aller.",
-        bookRide: "RÉSERVER UNE BALADE",
-        discoverBikes: "DÉCOUVRIR NOS VÉLOS"
+        tag: "6 EXPÉRIENCES • VÉLO ÉLECTRIQUE & SEGWAY • STRASBOURG",
+        title: "Strasbourg vue autrement.",
+        titleHighlight: "À votre rythme, guidé par le son.",
+        subtitle: "Découvrez la capitale de l'Alsace sur un vélo électrique ou en Segway — sans guide, sans groupe, sans contrainte.",
+        playStore: "Télécharger sur Play Store",
+        appStore: "Télécharger sur App Store"
       },
       about: {
         title: "Bien plus qu'une",
@@ -730,6 +812,86 @@ export const translations = {
       },
       marquee: {
         text: "Balades à Strasbourg • 6 itinéraires uniques à découvrir • 100 % de parcours soigneusement sélectionnés à Strasbourg • "
+      },
+      howItWorks: {
+        title: "Comment ça marche",
+        step1Title: "Réservez en ligne",
+        step1Desc: "En 60 secondes. Confirmation immédiate par email.",
+        step2Title: "Récupérez votre vélo",
+        step2Desc: "Point de départ indiqué. Guide audio téléchargé sur votre téléphone.",
+        step3Title: "Explorez à votre rythme",
+        step3Desc: "Le guide audio raconte. Vous décidez où vous arrêtez."
+      },
+      showcase: {
+        title: "Vitrine de la ville de Strasbourg",
+        titlePart1: "Vitrine de la ville de",
+        titleHighlight: "Strasbourg",
+        location1Title: "Petite France — Heure dorée",
+        location1Subtitle: "Image héro + cartes d'expérience Sundowner & Bar Hop",
+        location2Title: "Cathédrale — Heure bleue",
+        location2Subtitle: "Grille urbaine + carte d'expérience Strasbourg caché",
+        location3Title: "Neustadt — Boulevard UNESCO",
+        location3Subtitle: "Carte d'expérience architecturale Neustadt",
+        location4Title: "Marché de Noël — Nuit",
+        location4Subtitle: "Carte Magie de Noël + bannière saisonnière nov–déc",
+        location5Title: "Barrage Vauban / Ponts Couverts",
+        location5Subtitle: "Grille panoramique — vue la plus emblématique de Strasbourg",
+        location6Title: "Rhin — Pont de l'Europe",
+        location6Subtitle: "Carte Rhine Border Run — produit phare pour le marché allemand"
+      },
+      founderStory: {
+        title: "Histoire du fondateur",
+        quote: "Je m'appelle Prashant. J'ai découvert Strasbourg sur un vélo électrique il y a deux ans — et je n'ai plus jamais voulu la voir autrement. VéloRouge est né de cette conviction : la plus belle façon de découvrir une ville, c'est à votre propre rythme, guidé par la curiosité. Pas par un guide.",
+        signature: "— PK, fondateur"
+      },
+      cityStats: {
+        stat1: "Visiteurs par an",
+        stat2: "Ans d'histoire au cœur de l'Europe",
+        stat3Number: "Patrimoine UNESCO",
+        stat3Label: "Grande Île classée depuis 1988",
+        stat4Number: "Le + ancien",
+        stat4Label: "Marché de Noël d'Europe (depuis 1570)"
+      },
+      newsletter: {
+        title: "Restez informé",
+        subtitle: "Recevez des offres exclusives, de nouveaux itinéraires et des conseils d'initiés sur Strasbourg dans votre boîte mail.",
+        placeholder: "Entrez votre email",
+        button: "S'ABONNER",
+        success: "Merci de vous être abonné ! Consultez bientôt votre boîte mail.",
+        privacy: "Nous respectons votre vie privée. Désabonnez-vous à tout moment."
+      },
+      showcase: {
+        title: "Vitrine de la ville de Strasbourg",
+        titlePart1: "Vitrine de la ville de",
+        titleHighlight: "Strasbourg",
+        location1Title: "Petite France — Heure dorée",
+        location1Subtitle: "Image héro + cartes d'expérience Sundowner & Bar Hop",
+        location1Desc: "Découvrez la magie de Strasbourg à l'heure dorée",
+        location2Title: "Cathédrale — Heure bleue",
+        location2Subtitle: "Grille urbaine + carte d'expérience Strasbourg caché",
+        location2Desc: "Découvrez le chef-d'œuvre gothique emblématique d'Alsace",
+        location3Title: "Neustadt — Boulevard UNESCO",
+        location3Subtitle: "Carte d'expérience architecturale Neustadt",
+        location3Desc: "Explorez l'architecture du quartier impérial allemand",
+        location4Title: "Marché de Noël — Nuit",
+        location4Subtitle: "Carte Magie de Noël + bannière saisonnière nov–déc",
+        location4Desc: "Visitez le plus ancien et magique marché de Noël d'Europe",
+        location5Title: "Barrage Vauban / Ponts Couverts",
+        location5Subtitle: "Grille panoramique — vue la plus emblématique de Strasbourg",
+        location5Desc: "Admirez la structure défensive historique du 17e siècle",
+        location6Title: "Rhin — Pont de l'Europe",
+        location6Subtitle: "Carte Rhine Border Run — produit phare pour le marché allemand",
+        location6Desc: "Traversez la frontière entre la France et l'Allemagne à vélo",
+        exploreNow: "EXPLORER MAINTENANT"
+      },
+      howItWorks: {
+        title: "Comment ça marche",
+        step1Title: "Réservez en ligne",
+        step1Desc: "En 60 secondes. Confirmation immédiate par email.",
+        step2Title: "Récupérez votre vélo",
+        step2Desc: "Point de départ indiqué. Guide audio téléchargé sur votre téléphone.",
+        step3Title: "Explorez à votre rythme",
+        step3Desc: "Le guide audio raconte. Vous décidez où vous arrêtez."
       }
     }
   }

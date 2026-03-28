@@ -11,6 +11,8 @@ import RidesPage from "./pages/RidesPage";
 import SafeSmartPage from "./pages/SafeSmartPage";
 import ContactPage from "./pages/ContactPage";
 import FMDPage from "./pages/FMDPage";
+// import BlogPage from "./pages/BlogPage";
+// import BlogDetailPage from "./pages/BlogDetailPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +33,8 @@ const App = () => (
           <Route path="/fmd" element={<FMDPage />} />
           <Route path="/safe-smart" element={<SafeSmartPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          {/* <Route path="/blog" element={<BlogPage />} /> */}
+          {/* <Route path="/blog/:slug" element={<BlogDetailPage />} /> */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

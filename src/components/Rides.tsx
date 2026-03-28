@@ -1,24 +1,61 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import rideSundowner from "@/assets/ride-sundowner.jpg";
-import rideMarket from "@/assets/Bar Hop Petite France.png";
-import rideRiver from "@/assets/ride-river.jpg";
+import { Clock } from "lucide-react";
+import rideSundowner from "@/assets/starboug-sunset.jpg";
+import rideMarket from "@/assets/bar-hop.jpg";
+import rideRiver from "@/assets/strasbourg-insolite.jpg";
 import rideLocal from "@/assets/ride-local.jpg";
 
 const Rides = () => {
   const { t } = useTranslation();
   
   const rides = [
-    { img: rideSundowner, title: t('rides.ride1'), price: "29€", tag: t('rides.favorite') },
-    { img: rideMarket, title: t('rides.ride2'), price: "35€", tag: t('rides.popular') },
-    { img: rideRiver, title: t('rides.ride3'), price: "24€", tag: null },
-    { img: rideLocal, title: t('rides.ride4'), price: "39€", tag: null },
+    { 
+      img: rideSundowner, 
+      title: t('rides.ride1'), 
+      price: "29€", 
+      tag: t('rides.favorite'),
+      duration: "2h30",
+      difficulty: "Easy",
+      hook: "Chase golden hour along the Ill canals",
+      unique: "The only tour that captures Strasbourg at its most magical moment"
+    },
+    { 
+      img: rideMarket, 
+      title: t('rides.ride2'), 
+      price: "35€", 
+      tag: t('rides.popular'),
+      duration: "3h",
+      difficulty: "Easy",
+      hook: "Four centuries of Alsatian bar culture on two wheels",
+      unique: "Access to historic winstubs unchanged since the 17th century"
+    },
+    { 
+      img: rideRiver, 
+      title: t('rides.ride3'), 
+      price: "24€", 
+      tag: null,
+      duration: "2h",
+      difficulty: "Moderate",
+      hook: "Hidden courtyards and passages guides never show",
+      unique: "11 secret treasures discovered over 6 months of research"
+    },
+    { 
+      img: rideLocal, 
+      title: t('rides.ride4'), 
+      price: "39€", 
+      tag: null,
+      duration: "3h30",
+      difficulty: "Easy",
+      hook: "Pedal from France to Germany before lunch",
+      unique: "Cross the Rhine on a stunning pedestrian bridge to Kehl"
+    },
   ];
 
   return (
   <section id="rides" className="py-24 bg-background">
     <div className="container">
-      <h2 className="font-display text-4xl md:text-5xl font-black leading-tight max-w-md">
+      <h2 className="font-display text-4xl md:text-5xl font-black leading-tight max-w-md mb-4">
         {t('rides.title')}
         <br />
         {t('rides.titleLine2')} <em className="text-primary">{t('rides.titleHighlight')}</em>
@@ -26,22 +63,51 @@ const Rides = () => {
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {rides.map((r) => (
-          <Link key={r.title} to="/visitors" className="group cursor-pointer">
+          <Link key={r.title} to="/visitors" className="group cursor-pointer block">
             <div className="relative overflow-hidden aspect-[3/4]">
               <img
                 src={r.img}
                 alt={r.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />
+              
               {r.tag && (
-                <span className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1">
+                <span className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 tracking-wider">
                   {r.tag}
                 </span>
               )}
             </div>
-            <h3 className="mt-4 font-display text-lg font-bold">{r.title}</h3>
-            <p className="text-muted-foreground text-sm">{t('rides.from')} {r.price}</p>
+            
+            <div className="mt-4">
+              <div className="flex items-center gap-3 text-xs text-muted-foreground mb-2">
+                <div className="flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5" />
+                  <span>{r.duration}</span>
+                </div>
+                <div className="w-1 h-1 rounded-full bg-muted-foreground/50" />
+                <span>{r.difficulty}</span>
+              </div>
+              
+              <h3 className="font-body text-2xl font-semibold mb-1 leading-tight">{r.title}</h3>
+              
+              <p className="text-sm text-muted-foreground mb-0.5 leading-relaxed">{r.hook}</p>
+              
+              <p className="text-xs text-muted-foreground italic mb-2 leading-snug">{r.unique}</p>
+              
+              <div className="flex items-center justify-between">
+                <div>
+                  <span className="text-xs text-muted-foreground">{t('rides.from')} </span>
+                  <span className="font-display text-xl font-bold">{r.price}</span>
+                  <span className="text-xs text-muted-foreground">/person</span>
+                </div>
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-xs font-semibold text-primary">
+                    VIEW DETAILS →
+                  </span>
+                </div>
+              </div>
+            </div>
           </Link>
         ))}
       </div>

@@ -24,6 +24,7 @@ const Footer = () => {
             <Link to="/visitors" className="block hover:text-dark-foreground transition-colors">{t('footer.rides')}</Link>
             <Link to="/residents" className="block hover:text-dark-foreground transition-colors">{t('footer.residents')}</Link>
             <Link to="/contact" className="block hover:text-dark-foreground transition-colors">{t('footer.contact')}</Link>
+            <Link to="/blog" className="block hover:text-dark-foreground transition-colors">Blog</Link>
           </div>
           <div className="space-y-2">
             <div className="text-dark-foreground font-semibold mb-3">{t('footer.quickLinks')}</div>
