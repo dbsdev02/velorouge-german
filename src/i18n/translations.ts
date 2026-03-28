@@ -114,7 +114,10 @@ export const translations = {
         faq: "FAQ",
         safeSmart: "Safety & Tech",
         social: "Social",
-        rights: "All rights reserved."
+        rights: "All rights reserved.",
+        newsletterTitle: "Subscribe to our newsletter",
+        emailPlaceholder: "Your email address",
+        subscribe: "Subscribe"
       },
       fmd: {
         eligible: "Eligible FMD",
@@ -459,8 +462,8 @@ export const translations = {
       },
       hero: {
         tag: "6 EXPÉRIENCES • VÉLO ÉLECTRIQUE & SEGWAY • STRASBOURG",
-        title: "Strasbourg vue autrement.",
-        titleHighlight: "À votre rythme, guidé par le son.",
+        title: "Strasbourg vue autrement. À votre rythme,",
+        titleHighlight: "guidé par le son.",
         subtitle: "Découvrez la capitale de l'Alsace sur un vélo électrique ou en Segway — sans guide, sans groupe, sans contrainte.",
         playStore: "Télécharger sur Play Store",
         appStore: "Télécharger sur App Store"
@@ -562,7 +565,10 @@ export const translations = {
         faq: "FAQ",
         safeSmart: "Sécurité & Tech",
         social: "Réseaux",
-        rights: "Tous droits réservés."
+        rights: "Tous droits réservés.",
+        newsletterTitle: "Abonnez-vous à notre newsletter",
+        emailPlaceholder: "Votre adresse email",
+        subscribe: "S'abonner"
       },
       fmd: {
         eligible: "Éligible FMD",

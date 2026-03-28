@@ -36,7 +36,7 @@ const Index = () => (
     <ReliableSection />
     <GigHero />
     <Features />
-    <Newsletter />
+    {/* <Newsletter /> */}
     <CTA />
     <Footer />
   </main>

@@ -25,7 +25,7 @@ const Hero = () => {
         <br />
         <em className="text-primary">{t('hero.titleHighlight')}</em>
       </h1>
-      <p className="mt-6 text-dark-foreground/70 max-w-2xl text-base md:text-lg mx-auto">
+      <p className="mt-6 text-dark-foreground/70 max-w-2xl text-lg md:text-xl mx-auto">
         {t('hero.subtitle')}
       </p>
       <div className="mt-8 flex flex-wrap gap-4 justify-center">
