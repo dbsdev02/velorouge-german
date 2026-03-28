@@ -1,52 +1,22 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import sundowner from "@/assets/sundower.jpg";
-import cathedrale from "@/assets/Cathédrale.jpg";
+import sundowner from "@/assets/petite-france.jpg";
+import cathedrale from "@/assets/Cathédrale1.jpg";
 import neustadt from "@/assets/Neustadt.jpg";
-import marcheNoel from "@/assets/marché-de-noël.jpg";
+import marcheNoel from "@/assets/marché-de-noël1.jpg";
 import barrageVauban from "@/assets/barrage-vauban.jpg";
-import rhineBorder from "@/assets/rhine-bridge.jpg";
+import rhineBorder from "@/assets/rhine1.jpeg";
 
 const Showcase = () => {
   const { t } = useTranslation();
 
   const locations = [
-    {
-      image: sundowner,
-      title: t('showcase.location1Title'),
-      subtitle: t('showcase.location1Subtitle'),
-      description: t('showcase.location1Desc')
-    },
-    {
-      image: cathedrale,
-      title: t('showcase.location2Title'),
-      subtitle: t('showcase.location2Subtitle'),
-      description: t('showcase.location2Desc')
-    },
-    {
-      image: neustadt,
-      title: t('showcase.location3Title'),
-      subtitle: t('showcase.location3Subtitle'),
-      description: t('showcase.location3Desc')
-    },
-    {
-      image: marcheNoel,
-      title: t('showcase.location4Title'),
-      subtitle: t('showcase.location4Subtitle'),
-      description: t('showcase.location4Desc')
-    },
-    {
-      image: barrageVauban,
-      title: t('showcase.location5Title'),
-      subtitle: t('showcase.location5Subtitle'),
-      description: t('showcase.location5Desc')
-    },
-    {
-      image: rhineBorder,
-      title: t('showcase.location6Title'),
-      subtitle: t('showcase.location6Subtitle'),
-      description: t('showcase.location6Desc')
-    }
+    { image: sundowner, titleKey: 'showcase.location1Title', descKey: 'showcase.location1Desc' },
+    { image: cathedrale, titleKey: 'showcase.location2Title', descKey: 'showcase.location2Desc' },
+    { image: neustadt, titleKey: 'showcase.location3Title', descKey: 'showcase.location3Desc' },
+    { image: marcheNoel, titleKey: 'showcase.location4Title', descKey: 'showcase.location4Desc' },
+    { image: barrageVauban, titleKey: 'showcase.location5Title', descKey: 'showcase.location5Desc' },
+    { image: rhineBorder, titleKey: 'showcase.location6Title', descKey: 'showcase.location6Desc' }
   ];
 
   return (
@@ -61,16 +31,16 @@ const Showcase = () => {
               <div className="h-64 overflow-hidden">
                 <img 
                   src={location.image} 
-                  alt={location.title}
+                  alt={t(location.titleKey)}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6 text-center">
                 <h3 className="font-display text-xl font-bold mb-2">
-                  {location.title}
+                  {t(location.titleKey)}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                  {location.description}
+                  {t(location.descKey)}
                 </p>
                 <Link 
                   to="/" 

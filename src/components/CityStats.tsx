@@ -60,8 +60,8 @@ const CityStats = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <div key={index} className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-3">
-                  <stat.icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-3" style={{backgroundColor: '#D52519'}}>
+                  <stat.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                 </div>
                 <div className="font-display text-xl md:text-2xl font-bold text-white mb-2 text-center min-h-[2.5rem] flex items-center justify-center whitespace-nowrap">
                   {stat.target ? `${formatNumber(counts[index])}${stat.suffix || ''}` : stat.text}
