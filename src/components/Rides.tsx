@@ -68,7 +68,7 @@ const Rides = () => {
               <img
                 src={r.img}
                 alt={r.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover object-bottom group-hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />
               

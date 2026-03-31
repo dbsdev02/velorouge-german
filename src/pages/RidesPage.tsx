@@ -82,7 +82,7 @@ const RidesPage = () => {
           {rides.map((r, i) => (
             <div key={r.title} className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "md:direction-rtl" : ""}`}>
               <div className={`aspect-[4/3] overflow-hidden ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                <img src={r.img} alt={r.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <img src={r.img} alt={r.title} className="w-full h-full object-cover object-bottom hover:scale-105 transition-transform duration-500" loading="lazy" />
               </div>
               <div className={i % 2 === 1 ? "md:order-1" : ""}>
                 {r.tag && (

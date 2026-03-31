@@ -9,7 +9,8 @@ const CityStats = () => {
   const stats = [
     {
       icon: Users,
-      target: 4000000,
+      target: 4,
+      suffix: " M",
       label: t('cityStats.stat1')
     },
     {
