@@ -1,8 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import rideSundowner from "@/assets/ride-sundowner.jpg";
-import rideMarket from "@/assets/Bar Hop Petite France.png";
-import rideRiver from "@/assets/ride-river.jpg";
+import rideSundowner from "@/assets/starboug-sunset.jpg";
+import rideMarket from "@/assets/bar-hop-petite-france.jpg";
+import rideRiver from "@/assets/strasbourg-insolite.jpg";
 import rideLocal from "@/assets/ride-local.jpg";
 import { Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -13,9 +13,9 @@ const RidesPage = () => {
   const rides = [
     {
       img: rideSundowner,
-      title: t('rides.ride1'),
+      title: t('rides.ride1Title'),
       subtitle: t('ridesPage.ride1Subtitle'),
-      price: "29€",
+      price: "49€",
       tag: t('ridesPage.electricBike'),
       duration: t('ridesPage.ride1Duration'),
       time: t('ridesPage.ride1Time'),
@@ -24,9 +24,9 @@ const RidesPage = () => {
     },
     {
       img: rideMarket,
-      title: t('rides.ride2'),
+      title: t('rides.ride2Title'),
       subtitle: t('ridesPage.ride2Subtitle'),
-      price: "35€",
+      price: "49€",
       tag: t('ridesPage.electricBike'),
       duration: t('ridesPage.ride2Duration'),
       time: t('ridesPage.ride2Time'),
@@ -35,9 +35,9 @@ const RidesPage = () => {
     },
     {
       img: rideRiver,
-      title: t('rides.ride3'),
+      title: t('rides.ride3Title'),
       subtitle: t('ridesPage.ride3Subtitle'),
-      price: "24€",
+      price: "49€",
       tag: t('ridesPage.electricBike'),
       duration: t('ridesPage.ride3Duration'),
       time: t('ridesPage.ride3Time'),
@@ -46,9 +46,9 @@ const RidesPage = () => {
     },
     {
       img: rideLocal,
-      title: t('rides.ride4'),
+      title: t('rides.ride4Title'),
       subtitle: t('ridesPage.ride4Subtitle'),
-      price: "39€",
+      price: "49€",
       tag: t('ridesPage.electricBike'),
       duration: t('ridesPage.ride4Duration'),
       time: t('ridesPage.ride4Time'),

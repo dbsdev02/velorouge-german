@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Clock } from "lucide-react";
 import rideSundowner from "@/assets/starboug-sunset.jpg";
-import rideMarket from "@/assets/bar-hop.jpg";
+import rideMarket from "@/assets/bar-hop-petite-france.jpg";
 import rideRiver from "@/assets/strasbourg-insolite.jpg";
 import rideLocal from "@/assets/ride-local.jpg";
 
@@ -12,43 +12,43 @@ const Rides = () => {
   const rides = [
     { 
       img: rideSundowner, 
-      title: t('rides.ride1'), 
-      price: "29€", 
+      title: t('rides.ride1Title'), 
+      price: "49€", 
       tag: t('rides.favorite'),
       duration: "2h30",
-      difficulty: "Easy",
-      hook: "Chase golden hour along the Ill canals",
-      unique: "The only tour that captures Strasbourg at its most magical moment"
+      difficulty: t('rides.easy'),
+      hook: t('rides.ride1Hook'),
+      unique: t('rides.ride1Unique')
     },
     { 
       img: rideMarket, 
-      title: t('rides.ride2'), 
-      price: "35€", 
+      title: t('rides.ride2Title'), 
+      price: "49€", 
       tag: t('rides.popular'),
       duration: "3h",
-      difficulty: "Easy",
-      hook: "Four centuries of Alsatian bar culture on two wheels",
-      unique: "Access to historic winstubs unchanged since the 17th century"
+      difficulty: t('rides.easy'),
+      hook: t('rides.ride2Hook'),
+      unique: t('rides.ride2Unique')
     },
     { 
       img: rideRiver, 
-      title: t('rides.ride3'), 
-      price: "24€", 
+      title: t('rides.ride3Title'), 
+      price: "49€", 
       tag: null,
       duration: "2h",
-      difficulty: "Moderate",
-      hook: "Hidden courtyards and passages guides never show",
-      unique: "11 secret treasures discovered over 6 months of research"
+      difficulty: t('rides.moderate'),
+      hook: t('rides.ride3Hook'),
+      unique: t('rides.ride3Unique')
     },
     { 
       img: rideLocal, 
-      title: t('rides.ride4'), 
-      price: "39€", 
+      title: t('rides.ride4Title'), 
+      price: "49€", 
       tag: null,
       duration: "3h30",
-      difficulty: "Easy",
-      hook: "Pedal from France to Germany before lunch",
-      unique: "Cross the Rhine on a stunning pedestrian bridge to Kehl"
+      difficulty: t('rides.easy'),
+      hook: t('rides.ride4Hook'),
+      unique: t('rides.ride4Unique')
     },
   ];
 
@@ -99,11 +99,11 @@ const Rides = () => {
                 <div>
                   <span className="text-xs text-muted-foreground">{t('rides.from')} </span>
                   <span className="font-display text-xl font-bold">{r.price}</span>
-                  <span className="text-xs text-muted-foreground">/person</span>
+                  <span className="text-xs text-muted-foreground">{t('rides.perPerson')}</span>
                 </div>
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-xs font-semibold text-primary">
-                    VIEW DETAILS →
+                    {t('rides.viewDetails')}
                   </span>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import sundowner from "@/assets/petite-france.jpg";
-import cathedrale from "@/assets/Cathédrale1.jpg";
+import cathedrale from "@/assets/cathedral.jpg";
 import neustadt from "@/assets/Neustadt.jpg";
 import marcheNoel from "@/assets/marché-de-noël1.jpg";
 import barrageVauban from "@/assets/barrage-vauban.jpg";

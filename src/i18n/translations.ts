@@ -10,7 +10,7 @@ export const translations = {
         contact: "Contact"
       },
       hero: {
-        tag: "6 EXPERIENCES • E-BIKE & SEGWAY • STRASBOURG",
+        tag: "4 EXPERIENCES • E-BIKE & SEGWAY • STRASBOURG",
         title: "Strasbourg seen differently.",
         titleHighlight: "At your pace, guided by sound.",
         subtitle: "Discover the capital of Alsace on an electric bike or Segway — no guide, no group, no constraints.",
@@ -30,12 +30,28 @@ export const translations = {
         titleLine2: "to vibe in",
         titleHighlight: "Strasbourg.",
         ride1: "Strasbourg Sundowner",
+        ride1Title: "Strasbourg Sundowner",
         ride2: "Bar Hop Petite France",
+        ride2Title: "Bar Hop Petite France",
         ride3: "Unusual Strasbourg",
+        ride3Title: "Unusual Strasbourg",
         ride4: "Franco-German Escape",
+        ride4Title: "Franco-German Escape",
         from: "From",
         favorite: "FAVORITE",
-        popular: "POPULAR"
+        popular: "POPULAR",
+        ride1Hook: "Chase golden hour along the Ill canals",
+        ride1Unique: "The only tour that captures Strasbourg at its most magical moment",
+        ride2Hook: "Four centuries of Alsatian bar culture on two wheels",
+        ride2Unique: "Access to historic winstubs unchanged since the 17th century",
+        ride3Hook: "Hidden courtyards and passages guides never show",
+        ride3Unique: "11 secret treasures discovered over 6 months of research",
+        ride4Hook: "Pedal from France to Germany before lunch",
+        ride4Unique: "Cross the Rhine on a stunning pedestrian bridge to Kehl",
+        easy: "Easy",
+        moderate: "Moderate",
+        perPerson: "/person",
+        viewDetails: "VIEW DETAILS →"
       },
       pricing: {
         title: "One city.",
@@ -366,7 +382,7 @@ export const translations = {
         feature3: "Switch models whenever you want, no fees"
       },
       marquee: {
-        text: "Tours in Strasbourg • 6 unique routes to discover • 100 % curated rides in Strasbourg • "
+        text: "Tours in Strasbourg • 4 unique routes to discover • 100 % curated rides in Strasbourg • "
       },
       howItWorks: {
         title: "How It Works",
@@ -461,7 +477,7 @@ export const translations = {
         contact: "Contact"
       },
       hero: {
-        tag: "6 EXPÉRIENCES • VÉLO ÉLECTRIQUE & SEGWAY • STRASBOURG",
+        tag: "4 EXPÉRIENCES • VÉLO ÉLECTRIQUE & SEGWAY • STRASBOURG",
         title: "Strasbourg vue autrement. À votre rythme,",
         titleHighlight: "guidé par le son.",
         subtitle: "Découvrez la capitale de l'Alsace sur un vélo électrique ou en Segway — sans guide, sans groupe, sans contrainte.",
@@ -481,12 +497,28 @@ export const translations = {
         titleLine2: "de vibrer à",
         titleHighlight: "Strasbourg.",
         ride1: "Strasbourg Sundowner",
+        ride1Title: "Coucher de Soleil à Strasbourg",
         ride2: "Bar Hop Petite France",
+        ride2Title: "Tournée des Bars Petite France",
         ride3: "Strasbourg Insolite",
+        ride3Title: "Strasbourg Insolite",
         ride4: "Échappée Franco-Allemande",
+        ride4Title: "Échappée Franco-Allemande",
         from: "À partir de",
         favorite: "COUP DE CŒUR",
-        popular: "POPULAIRE"
+        popular: "POPULAIRE",
+        ride1Hook: "Chassez l'heure dorée le long des canaux de l'Ill",
+        ride1Unique: "La seule visite qui capture Strasbourg à son moment le plus magique",
+        ride2Hook: "Quatre siècles de culture de bar alsacienne sur deux roues",
+        ride2Unique: "Accès aux winstubs historiques inchangés depuis le 17e siècle",
+        ride3Hook: "Cours cachées et passages que les guides ne montrent jamais",
+        ride3Unique: "11 trésors secrets découverts après 6 mois de recherche",
+        ride4Hook: "Pédalez de la France à l'Allemagne avant le déjeuner",
+        ride4Unique: "Traversez le Rhin sur une magnifique passerelle piétonne vers Kehl",
+        easy: "Facile",
+        moderate: "Modéré",
+        perPerson: "/personne",
+        viewDetails: "VOIR DÉTAILS →"
       },
       pricing: {
         title: "Une ville.",
@@ -817,7 +849,7 @@ export const translations = {
         feature3: "Changez de modèle quand vous voulez, sans frais"
       },
       marquee: {
-        text: "Balades à Strasbourg • 6 itinéraires uniques à découvrir • 100 % de parcours soigneusement sélectionnés à Strasbourg • "
+        text: "Balades à Strasbourg • 4 itinéraires uniques à découvrir • 100 % de parcours soigneusement sélectionnés à Strasbourg • "
       },
       howItWorks: {
         title: "Comment ça marche",
