@@ -3,6 +3,10 @@ import { useTranslation } from 'react-i18next';
 export const useLanguage = () => {
   const { i18n } = useTranslation();
 
+  const changeLanguage = (lang: 'fr' | 'en' | 'de') => {
+    i18n.changeLanguage(lang);
+  };
+
   const toggleLanguage = () => {
     const newLang = i18n.language === 'fr' ? 'en' : 'fr';
     i18n.changeLanguage(newLang);
@@ -10,8 +14,10 @@ export const useLanguage = () => {
 
   return {
     currentLanguage: i18n.language,
+    changeLanguage,
     toggleLanguage,
     isEnglish: i18n.language === 'en',
-    isFrench: i18n.language === 'fr'
+    isFrench: i18n.language === 'fr',
+    isGerman: i18n.language === 'de'
   };
 };

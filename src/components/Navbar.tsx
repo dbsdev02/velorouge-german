@@ -9,7 +9,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const { t } = useTranslation();
-  const { currentLanguage, toggleLanguage } = useLanguage();
+  const { currentLanguage, changeLanguage } = useLanguage();
 
   const links = [
     { label: t('nav.home'), to: "/" },
@@ -46,7 +46,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-2">
           <button
-            onClick={() => currentLanguage !== 'fr' && toggleLanguage()}
+            onClick={() => changeLanguage('fr')}
             className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
               currentLanguage === 'fr'
                 ? 'bg-primary text-primary-foreground'
@@ -56,7 +56,7 @@ const Navbar = () => {
             FR
           </button>
           <button
-            onClick={() => currentLanguage !== 'en' && toggleLanguage()}
+            onClick={() => changeLanguage('en')}
             className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
               currentLanguage === 'en'
                 ? 'bg-primary text-primary-foreground'
@@ -64,6 +64,16 @@ const Navbar = () => {
             }`}
           >
             EN
+          </button>
+          <button
+            onClick={() => changeLanguage('de')}
+            className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+              currentLanguage === 'de'
+                ? 'bg-primary text-primary-foreground'
+                : 'text-dark-foreground/70 hover:text-dark-foreground hover:bg-dark-surface'
+            }`}
+          >
+            DE
           </button>
 
           <button onClick={() => setOpen(!open)} className="md:hidden text-dark-foreground ml-2">
@@ -90,9 +100,7 @@ const Navbar = () => {
           ))}
           <div className="flex gap-2 pt-2">
             <button
-              onClick={() => {
-                if (currentLanguage !== 'fr') toggleLanguage();
-              }}
+              onClick={() => changeLanguage('fr')}
               className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 currentLanguage === 'fr'
                   ? 'bg-primary text-primary-foreground'
@@ -102,9 +110,7 @@ const Navbar = () => {
               FR
             </button>
             <button
-              onClick={() => {
-                if (currentLanguage !== 'en') toggleLanguage();
-              }}
+              onClick={() => changeLanguage('en')}
               className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 currentLanguage === 'en'
                   ? 'bg-primary text-primary-foreground'
@@ -112,6 +118,16 @@ const Navbar = () => {
               }`}
             >
               EN
+            </button>
+            <button
+              onClick={() => changeLanguage('de')}
+              className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                currentLanguage === 'de'
+                  ? 'bg-primary text-primary-foreground'
+                  : 'text-dark-foreground/70 bg-dark-surface'
+              }`}
+            >
+              DE
             </button>
           </div>
         </div>
