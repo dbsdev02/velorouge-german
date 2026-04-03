@@ -45,16 +45,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          <button
-            onClick={() => changeLanguage('fr')}
-            className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-              currentLanguage === 'fr'
-                ? 'bg-primary text-primary-foreground'
-                : 'text-dark-foreground/70 hover:text-dark-foreground hover:bg-dark-surface'
-            }`}
-          >
-            FR
-          </button>
+          {/* FR button hidden - French language disabled */}
           <button
             onClick={() => changeLanguage('en')}
             className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
@@ -99,16 +90,7 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="flex gap-2 pt-2">
-            <button
-              onClick={() => changeLanguage('fr')}
-              className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                currentLanguage === 'fr'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'text-dark-foreground/70 bg-dark-surface'
-              }`}
-            >
-              FR
-            </button>
+            {/* FR button hidden - French language disabled */}
             <button
               onClick={() => changeLanguage('en')}
               className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
