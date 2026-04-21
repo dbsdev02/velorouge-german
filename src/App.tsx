@@ -15,9 +15,21 @@ import FMDPage from "./pages/FMDPage";
 // import BlogDetailPage from "./pages/BlogDetailPage";
 import NotFound from "./pages/NotFound";
 
+const MAINTENANCE_MODE = true;
+
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  if (MAINTENANCE_MODE) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'sans-serif', background: '#0a0a0a', color: '#fff', textAlign: 'center', gap: '16px' }}>
+        <h1 style={{ fontSize: '2rem' }}>🚧 Website Under Maintenance</h1>
+        <p style={{ color: '#aaa' }}>We'll be back shortly. Thank you for your patience.</p>
+      </div>
+    );
+  }
+
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -41,6 +53,5 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-);
-
-export default App;
+  );
+};
