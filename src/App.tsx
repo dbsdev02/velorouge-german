@@ -16,7 +16,7 @@ import FMDPage from "./pages/FMDPage";
 import NotFound from "./pages/NotFound";
 import Maintenance from "./pages/Maintenance";
 
-const MAINTENANCE_MODE = true;
+const MAINTENANCE_MODE = false;
 
 const queryClient = new QueryClient();
 
