@@ -7,6 +7,7 @@ export const translations = {
         visitors: "Visitors",
         residents: "Residents",
         safeSmart: "Safety & Tech",
+        blog: "Blog",
         contact: "Contact"
       },
       hero: {
@@ -474,6 +475,7 @@ export const translations = {
         visitors: "Visiteurs",
         residents: "Résidents",
         safeSmart: "Sécurité & Tech",
+        blog: "Blog",
         contact: "Contact"
       },
       hero: {
@@ -941,6 +943,7 @@ export const translations = {
         visitors: "Besucher",
         residents: "Einwohner",
         safeSmart: "Sicherheit & Tech",
+        blog: "Blog",
         contact: "Kontakt"
       },
       hero: {

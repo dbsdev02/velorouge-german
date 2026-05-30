@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -25,12 +26,11 @@ const ContactPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    setError(false);
     try {
       const response = await fetch('https://formspree.io/f/mkoqnnyn', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           firstName: formData.firstName,
           lastName: formData.lastName,
@@ -41,12 +41,13 @@ const ContactPage = () => {
           _subject: `VeloRouge Contact: ${formData.subject}`
         })
       });
-      
       if (response.ok) {
         setSubmitted(true);
+      } else {
+        setError(true);
       }
-    } catch (error) {
-      console.error('Form submission error:', error);
+    } catch {
+      setError(true);
     }
   };
 
@@ -84,6 +85,11 @@ const ContactPage = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {error && (
+                    <div className="p-4 border border-destructive/30 bg-destructive/5 text-destructive text-sm">
+                      Something went wrong. Please try again or email us directly at info@velorouge.fr
+                    </div>
+                  )}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium mb-2">{t('contact.firstName')}</label>
