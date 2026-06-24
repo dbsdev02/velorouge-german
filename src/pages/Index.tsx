@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import GigHero from "@/components/GigHero";
@@ -20,6 +21,11 @@ import Footer from "@/components/Footer";
 
 const Index = () => (
   <main>
+    <SEO
+      title="VéloRouge – Premium E-Bike-Erlebnisse in Straßburg"
+      description="Entdecken Sie Straßburg auf einem E-Bike oder Segway – ohne Guide, ohne Gruppe, in Ihrem eigenen Tempo. 4 einzigartige Audioguide-Touren."
+      canonical="/"
+    />
     <Navbar />
     <Hero />
     

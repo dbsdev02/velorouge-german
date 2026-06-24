@@ -134,7 +134,17 @@ export const translations = {
         rights: "All rights reserved.",
         newsletterTitle: "Subscribe to our newsletter",
         emailPlaceholder: "Your email address",
-        subscribe: "Subscribe"
+        subscribe: "Subscribe",
+        privacyPolicy: "Privacy Policy",
+        precontractual: "Pre-contractual Info",
+        cgs: "General Terms",
+        blog: "Blog"
+      },
+      cookieBanner: {
+        text: "We use cookies to improve your experience on our website. By continuing to browse, you accept our use of cookies in accordance with our",
+        privacyLink: "privacy policy",
+        decline: "Decline",
+        accept: "Accept"
       },
       fmd: {
         eligible: "Eligible FMD",
@@ -371,7 +381,11 @@ export const translations = {
       gallery: {
         tag: "#VELOROUGE",
         title: "A day in Strasbourg,",
-        titleHighlight: "looks like this."
+        titleHighlight: "looks like this.",
+        blogTitle: "Stories from",
+        blogTitleHighlight: "Strasbourg.",
+        blogViewAll: "View all articles",
+        blogReadMore: "Read more"
       },
       reliableSection: {
         title1: "Reliable.",
@@ -392,7 +406,8 @@ export const translations = {
         step2Title: "Pick up your bike",
         step2Desc: "Starting point indicated. Audio guide downloaded on your phone.",
         step3Title: "Explore at your pace",
-        step3Desc: "The audio guide tells the story. You decide where you stop."
+        step3Desc: "The audio guide tells the story. You decide where you stop.",
+        reserve: "Book Your Ride"
       },
       showcase: {
         title: "Strasbourg City Showcase",
@@ -414,6 +429,9 @@ export const translations = {
       founderStory: {
         title: "Founder Story",
         quote: "My name is Prashant. I discovered Strasbourg on an electric bike two years ago — and I never wanted to see it any other way again. VéloRouge was born from this belief: the best way to discover a city is at your own pace, guided by curiosity. Not by a guide.",
+        para2: "Before launching VéloRouge, I spent two years testing every way to explore Strasbourg — on foot, by bus, by boat, on a regular bike. Nothing came close to the electric bike for that balance of freedom and discovery.",
+        para3: "We built our routes around the moments that most tour operators skip — the canal at 7:30 PM when the light turns gold, the winstub on a side street that hasn't changed since 1882, the pedestrian bridge where you cross from France into Germany without noticing the border.",
+        para4: "VéloRouge is not a rental company. It is a way of seeing a city.",
         signature: "— PK, Founder"
       },
       cityStats: {
@@ -602,7 +620,17 @@ export const translations = {
         rights: "Tous droits réservés.",
         newsletterTitle: "Abonnez-vous à notre newsletter",
         emailPlaceholder: "Votre adresse email",
-        subscribe: "S'abonner"
+        subscribe: "S'abonner",
+        privacyPolicy: "Politique de confidentialité",
+        precontractual: "Info précontractuelle",
+        cgs: "Conditions générales",
+        blog: "Blog"
+      },
+      cookieBanner: {
+        text: "Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant à naviguer, vous acceptez notre utilisation des cookies conformément à notre",
+        privacyLink: "politique de confidentialité",
+        decline: "Refuser",
+        accept: "Accepter"
       },
       fmd: {
         eligible: "Éligible FMD",
@@ -839,7 +867,11 @@ export const translations = {
       gallery: {
         tag: "#VÉLOROUGE",
         title: "Une journée à Strasbourg,",
-        titleHighlight: "ça ressemble à ça."
+        titleHighlight: "ça ressemble à ça.",
+        blogTitle: "Histoires depuis",
+        blogTitleHighlight: "Strasbourg.",
+        blogViewAll: "Voir tous les articles",
+        blogReadMore: "Lire la suite"
       },
       reliableSection: {
         title1: "Fiable.",
@@ -860,7 +892,8 @@ export const translations = {
         step2Title: "Récupérez votre vélo",
         step2Desc: "Point de départ indiqué. Guide audio téléchargé sur votre téléphone.",
         step3Title: "Explorez à votre rythme",
-        step3Desc: "Le guide audio raconte. Vous décidez où vous arrêtez."
+        step3Desc: "Le guide audio raconte. Vous décidez où vous arrêtez.",
+        reserve: "Réserver ma balade"
       },
       showcase: {
         title: "Vitrine de la ville de Strasbourg",
@@ -882,6 +915,9 @@ export const translations = {
       founderStory: {
         title: "Histoire du fondateur",
         quote: "Je m'appelle Prashant. J'ai découvert Strasbourg sur un vélo électrique il y a deux ans — et je n'ai plus jamais voulu la voir autrement. VéloRouge est né de cette conviction : la plus belle façon de découvrir une ville, c'est à votre propre rythme, guidé par la curiosité. Pas par un guide.",
+        para2: "Avant de lancer VéloRouge, j'ai passé deux ans à tester toutes les façons d'explorer Strasbourg — à pied, en bus, en bateau, en vélo classique. Rien n'égale le vélo électrique pour cet équilibre entre liberté et découverte.",
+        para3: "Nos itinéraires sont construits autour des moments que la plupart des opérateurs ignorent — le canal à 19h30 quand la lumière devient dorée, la winstub dans une ruelle qui n'a pas changé depuis 1882, la passerelle piétonne où l'on passe de France en Allemagne sans s'en rendre compte.",
+        para4: "VéloRouge n'est pas une entreprise de location. C'est une façon de voir une ville.",
         signature: "— PK, fondateur"
       },
       cityStats: {
@@ -967,12 +1003,26 @@ export const translations = {
         titleLine2: "Straßburg zu",
         titleHighlight: "genießen.",
         ride1: "Straßburg Sundowner",
+        ride1Title: "Straßburg Sundowner",
         ride2: "Kneipentour durch Petite France",
+        ride2Title: "Kneipentour Petite France",
         ride3: "Das ungewöhnliche Straßburg",
+        ride3Title: "Das ungewöhnliche Straßburg",
         ride4: "Französisch-Deutscher Ausflug",
+        ride4Title: "Deutsch-Französische Ausfahrt",
         from: "Ab",
         favorite: "FAVORIT",
-        popular: "BELIEBT"
+        popular: "BELIEBT",
+        ride1Hook: "Jagen Sie das goldene Licht entlang der Kanäle der Ill",
+        ride1Unique: "Die einzige Tour, die Straßburg in seinem magischsten Moment einfängt",
+        ride2Hook: "Vier Jahrhunderte elsässische Barkultur auf zwei Rädern",
+        ride2Unique: "Zugang zu historischen Winstubs, die sich seit dem 17. Jahrhundert kaum verändert haben",
+        ride3Hook: "Versteckte Höfe und Gassen, die Guides nie zeigen",
+        ride3Unique: "11 Geheimschätze, entdeckt nach 6 Monaten Recherche",
+        ride4Hook: "Radeln Sie von Frankreich nach Deutschland vor dem Mittagessen",
+        ride4Unique: "Überqueren Sie den Rhein auf einer prächtigen Fußgängerbrücke nach Kehl",
+        easy: "Leicht",
+        moderate: "Mittel"
       },
       pricing: {
         title: "Eine Stadt.",
@@ -1054,12 +1104,26 @@ export const translations = {
         rights: "Alle Rechte vorbehalten.",
         newsletterTitle: "Abonnieren Sie unseren Newsletter",
         emailPlaceholder: "Ihre E-Mail-Adresse",
-        subscribe: "Abonnieren"
+        subscribe: "Abonnieren",
+        privacyPolicy: "Datenschutzrichtlinie",
+        precontractual: "Vorvertragliche Informationen",
+        cgs: "Allgemeine Geschäftsbedingungen",
+        blog: "Blog"
+      },
+      cookieBanner: {
+        text: "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Indem Sie weiter navigieren, stimmen Sie unserer Verwendung von Cookies gemäß unserer zu.",
+        privacyLink: "Datenschutzrichtlinie",
+        decline: "Ablehnen",
+        accept: "Akzeptieren"
       },
       gallery: {
         tag: "#VELOROUGE",
         title: "Ein Tag in Straßburg,",
-        titleHighlight: "so sieht er aus."
+        titleHighlight: "so sieht er aus.",
+        blogTitle: "Geschichten aus",
+        blogTitleHighlight: "Straßburg.",
+        blogViewAll: "Alle Artikel ansehen",
+        blogReadMore: "Weiterlesen"
       },
       reliableSection: {
         title1: "Zuverlässig.",
@@ -1080,7 +1144,8 @@ export const translations = {
         step2Title: "Fahrrad abholen",
         step2Desc: "Startpunkt markiert. Audioguide auf dem Smartphone.",
         step3Title: "Erkunden in Ihrem eigenen Tempo",
-        step3Desc: "Der Audioguide erzählt die Geschichte. Sie entscheiden, wo Sie anhalten."
+        step3Desc: "Der Audioguide erzählt die Geschichte. Sie entscheiden, wo Sie anhalten.",
+        reserve: "Tour jetzt buchen"
       },
       showcase: {
         title: "Straßburg City Showcase",
@@ -1109,6 +1174,9 @@ export const translations = {
       founderStory: {
         title: "Gründergeschichte",
         quote: "Mein Name ist Prashant. Vor zwei Jahren entdeckte ich Straßburg auf einem E-Bike – und wollte die Stadt nie wieder anders erleben. Aus dieser Überzeugung entstand VéloRouge: Eine Stadt erkundet man am besten im eigenen Tempo, geleitet von Neugier. Nicht mit einem Stadtführer.",
+        para2: "Bevor ich VéloRouge gründete, verbrachte ich zwei Jahre damit, jeden möglichen Weg zu testen, Straßburg zu erkunden – zu Fuß, mit dem Bus, per Boot, mit dem normalen Fahrrad. Nichts kam dem E-Bike nahe, wenn es um diese Balance aus Freiheit und Entdeckung geht.",
+        para3: "Unsere Routen entstanden rund um Momente, die die meisten Anbieter übersehen – den Kanal um 19:30 Uhr, wenn das Licht golden wird, die Winstub in einer Seitenstraße, die sich seit 1882 kaum verändert hat, die Fußgängerbrücke, auf der man von Frankreich nach Deutschland überquert, ohne die Grenze zu bemerken.",
+        para4: "VéloRouge ist kein Verleihunternehmen. Es ist eine Art, eine Stadt zu sehen.",
         signature: "— PK, Gründer"
       },
       cityStats: {
