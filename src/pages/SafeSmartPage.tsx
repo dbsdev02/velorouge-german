@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
+import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import smartHelmet from "@/assets/smart-helmet.jpg";
-import smartGps from "@/assets/gps.png";
+import smartGps from "@/assets/tech&saftey.png";
 import { Shield, MapPin, Bell, Smartphone, Lock, Eye, Zap, Wifi } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 
@@ -31,6 +32,11 @@ const SafeSmartPage = () => {
 
   return (
   <main>
+    <SEO
+      title="Safety & Technology - VéloRouge | Smart Connected E-Bikes in Strasbourg"
+      description="Discover our smart e-bikes with GPS tracking, anti-theft protection, accident detection and real-time monitoring. Maximum safety for your rides in Strasbourg."
+      canonical="/safe-smart"
+    />
     <Navbar />
 
     {/* Hero */}
@@ -83,8 +89,8 @@ const SafeSmartPage = () => {
     <section className="py-24 bg-dark text-dark-foreground">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div className="aspect-square overflow-hidden md:order-1">
-            <img src={smartGps} alt="GPS navigation on bike" className="w-full h-full object-cover" loading="lazy" />
+          <div className="aspect-square overflow-hidden md:order-1 flex items-center justify-center">
+            <img src={smartGps} alt="GPS navigation on bike" className="w-full h-full object-contain" loading="lazy" />
           </div>
           <div className="md:order-2">
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">

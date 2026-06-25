@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import aboutHero from "@/assets/about-hero.jpg";
 import teamPhoto from "@/assets/7.png";
-import travelersPhoto from "@/assets/gallery-1.jpg";
+import travelersPhoto from "@/assets/deliver-bike.jpg";
 import ctaBg from "@/assets/hero-bg.jpg";
 import { Bike, Heart, Users, Globe, ChevronDown } from "lucide-react";
 import { useState } from "react";

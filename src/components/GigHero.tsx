@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import gigimage from "@/assets/hi.png";
+import gigimage from "@/assets/cycle2.png";
 
 const GigHero = () => {
   const { t } = useTranslation();
