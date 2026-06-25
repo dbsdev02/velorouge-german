@@ -41,7 +41,7 @@ const FMDPage = () => {
               {t('fmd.description')}
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#" className="bg-primary text-primary-foreground px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
+              <a href="/#pricing" className="bg-primary text-primary-foreground px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
                 {t('fmd.startRental')}
               </a>
               <a href="#companies" className="border-2 border-primary text-primary px-8 py-4 font-semibold hover:bg-primary/10 transition-colors">
@@ -255,7 +255,7 @@ const FMDPage = () => {
           </div>
         </div>
         <div className="text-center">
-          <a href="#" className="inline-block bg-primary text-primary-foreground px-10 py-4 font-semibold hover:bg-primary/90 transition-colors">
+          <a href="/contact" className="inline-block bg-primary text-primary-foreground px-10 py-4 font-semibold hover:bg-primary/90 transition-colors">
             {t('fmd.contactTeam')}
           </a>
         </div>
