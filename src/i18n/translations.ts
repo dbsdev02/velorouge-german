@@ -25,7 +25,7 @@ export const translations = {
         subtitle: "VeloRouge is the Strasbourg experience reinvented. Each route tells a story. Each pedal stroke brings you closer to the soul of the city.",
         stat1: "bikes available",
         stat2: "secret routes",
-        stat3: "conquered explorers"
+        stat3: "Photos, tips & highlights — in partnership with komoot"
       },
       rides: {
         title: "Four ways",
@@ -120,7 +120,7 @@ export const translations = {
         title2: "Become an owner.",
         title3: "Change your life.",
         subtitle: "Rent-to-own for only 150€/month. After 12 months, the bike is yours. Zero hidden fees, full maintenance included.",
-        price: "125 Euros/Month* excl. VAT",
+        price: "150 Euros/Month*HT",
         subscription: "12-month subscription",
         availability: "availability (vs 71% elsewhere)",
         cta: "Rent to own"
@@ -138,7 +138,7 @@ export const translations = {
         feature3Desc: "Every bike insured against theft and damage. Ride with peace of mind.",
         feature4Title: "Custom Routes",
         feature4Desc: "Routes designed by passionate Strasbourg locals. Discover the city's secrets.",
-        feature5Title: "Free Maintenance",
+        feature5Title: "Maintenance*",
         feature5Desc: "Revisions and repairs at no cost. Always ready to ride.",
         feature6Title: "Guaranteed Savings",
         feature6Desc: "Up to €23,700 over 5 years. A smart investment for your mobility."
@@ -416,7 +416,7 @@ export const translations = {
         ride4Time: "",
         ride4GroupSize: "person",
         ride4Description: "Go beyond Strasbourg and discover the authentic charm of Alsace. Pedal through picturesque villages, rolling vineyards, traditional Alsatian half-timbered houses and peaceful country roads for a genuine local experience away from the tourist crowds.",
-        electricBike: "ELECTRIC BIKE",
+        electricBike: "ELECTRIC BIKE & SEGWAYS",
         bookButton: "BOOK",
         price1Label: "Half-Day Cruise",
         price1: "18€",
@@ -440,8 +440,8 @@ export const translations = {
         title1: "Reliable.",
         title2: "Local.",
         titleHighlight: "For you.",
-        subtitle: "A VéloRouge subscription means a bike always ready, always maintained, always at your disposal. No queues, no stations — just freedom on two wheels.",
-        feature1: "A dedicated electric bike, just for you",
+        subtitle: "A VéloRouge subscription means a bike always ready, always maintained, always at your disposal. No queues, no stations — just freedom on two wheels.A dedicated electric bike, just for you",
+        feature1: "",
         feature2: "Weekly maintenance by our local team",
         feature3: "Switch models whenever you want, no fees"
       },
@@ -1046,7 +1046,7 @@ export const translations = {
         subtitle: "VeloRouge – Straßburg neu erlebt. Jede Route erzählt eine Geschichte. Jeder Tritt in die Pedale bringt dich der Seele der Stadt näher.",
         stat1: "Fahrräder verfügbar",
         stat2: "geheime Routen",
-        stat3: "bezwungene Touren"
+        stat3: "Fotos, Tipps & Highlights — in Partnerschaft mit Komoot"
       },
       rides: {
         title: "Vier Möglichkeiten,",
@@ -1139,7 +1139,7 @@ export const translations = {
         title2: "Werden Sie Eigentümer.",
         title3: "Verändern Sie Ihr Leben.",
         subtitle: "Mieten Sie mit Kaufoption für nur 150 €/Monat. Nach 12 Monaten gehört Ihnen das Fahrrad. Keine versteckten Kosten, Wartung inklusive.",
-        price: "125 Euro/Monat* zzgl. MwSt.",
+        price: "150 Euro/Monat*HT.",
         subscription: "12-Monats-Abo",
         availability: "Verfügbarkeit (gegenüber 71 % anderswo)",
         cta: "Mieten mit Kaufoption"
@@ -1157,7 +1157,7 @@ export const translations = {
         feature3Desc: "Jedes Fahrrad ist gegen Diebstahl und Beschädigung versichert. Fahren Sie unbesorgt.",
         feature4Title: "Individuelle Routen",
         feature4Desc: "Routen, die von passionierten Straßburgern entworfen wurden. Entdecken Sie die Geheimnisse der Stadt.",
-        feature5Title: "Kostenlose Wartung",
+        feature5Title: "Wartung*",
         feature5Desc: "Inspektionen und Reparaturen kostenlos. Immer fahrbereit.",
         feature6Title: "Garantierte Ersparnisse",
         feature6Desc: "Bis zu 23.700 € über 5 Jahre. Eine clevere Investition in Ihre Mobilität."
@@ -1211,8 +1211,8 @@ export const translations = {
         title1: "Zuverlässig.",
         title2: "Lokal.",
         titleHighlight: "Für Sie.",
-        subtitle: "Mit einem VéloRouge-Abo haben Sie immer ein fahrbereites, gewartetes und jederzeit verfügbares Fahrrad. Keine Warteschlangen, keine Stationen – einfach Freiheit auf zwei Rädern.",
-        feature1: "Ein eigenes E-Bike, nur für Sie",
+        subtitle: "Mit einem VéloRouge-Abo haben Sie immer ein fahrbereites, gewartetes und jederzeit verfügbares Fahrrad. Keine Warteschlangen, keine Stationen – einfach Freiheit auf zwei Rädern.Ein eigenes E-Bike, nur für Sie",
+        feature1: "",
         feature2: "Wöchentliche Wartung durch unser lokales Team",
         feature3: "Wechseln Sie das Modell jederzeit kostenlos"
       },
@@ -1366,7 +1366,7 @@ export const translations = {
         ride4Time: "",
         ride4GroupSize: "Person",
         ride4Description: "Gehen Sie über Straßburg hinaus und entdecken Sie den authentischen Charme des Elsass. Radeln Sie durch malerische Dörfer, sanfte Weinberge, traditionelle elsässische Fachwerkhäuser und ruhige Landstraßen für ein echtes lokales Erlebnis abseits der Touristenmassen.",
-        electricBike: "ELEKTRO-FAHRRAD",
+        electricBike: "ELEKTRO-FAHRRAD & SEGWAYS",
         bookButton: "BUCHEN",
         price1Label: "Halbtagestour",
         price1: "18€",

@@ -11,8 +11,6 @@ const SafeSmartPage = () => {
 
   const safetyFeatures = [
     { icon: Shield, title: t('safeSmart.antiTheft'), desc: t('safeSmart.antiTheftDesc') },
-    { icon: Lock, title: t('safeSmart.smartLock'), desc: t('safeSmart.smartLockDesc') },
-    { icon: Bell, title: t('safeSmart.accidentDetection'), desc: t('safeSmart.accidentDetectionDesc') },
     { icon: Eye, title: t('safeSmart.nightVisibility'), desc: t('safeSmart.nightVisibilityDesc') },
   ];
 
@@ -26,7 +24,7 @@ const SafeSmartPage = () => {
   const stats = [
     { value: "0", label: t('safeSmart.accidents') },
     { value: "99,8 %", label: t('safeSmart.reliability') },
-    { value: "< 2 min", label: t('safeSmart.responseTime') },
+    { value: "< 10 min", label: t('safeSmart.responseTime') },
     { value: "24/7", label: t('safeSmart.monitoring') },
   ];
 

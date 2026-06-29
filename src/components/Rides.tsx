@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Clock } from "lucide-react";
 import rideSundowner from "@/assets/Circuit Culturel.png";
 import rideMarket from "@/assets/Boucle des Canaux.png";
 import rideRiver from "@/assets/Forêt de Robertsau & Rhin.png";
@@ -10,45 +9,45 @@ const Rides = () => {
   const { t } = useTranslation();
   
   const rides = [
-    { 
-      img: rideSundowner, 
-      title: t('rides.ride1Title'), 
-      price: "49€", 
+    {
+      img: rideRiver,
+      title: t('rides.ride1Title'),
+      price: t('ridesPage.price1'),
+      priceLabel: t('ridesPage.price1Label'),
       tag: t('rides.favorite'),
       duration: "2h30",
       difficulty: t('rides.easy'),
-      hook: t('rides.ride1Hook'),
-      unique: t('rides.ride1Unique')
+      subtitle: t('ridesPage.ride1Subtitle')
     },
-    { 
-      img: rideMarket, 
-      title: t('rides.ride2Title'), 
-      price: "49€", 
+    {
+      img: rideMarket,
+      title: t('rides.ride2Title'),
+      price: t('ridesPage.price2'),
+      priceLabel: t('ridesPage.price2Label'),
       tag: t('rides.popular'),
       duration: "3h",
       difficulty: t('rides.easy'),
-      hook: t('rides.ride2Hook'),
-      unique: t('rides.ride2Unique')
+      subtitle: t('ridesPage.ride2Subtitle')
     },
-    { 
-      img: rideRiver, 
-      title: t('rides.ride3Title'), 
-      price: "49€", 
+    {
+      img: rideSundowner,
+      title: t('rides.ride3Title'),
+      price: t('ridesPage.price3'),
+      priceLabel: t('ridesPage.price3Label'),
       tag: null,
       duration: "2h",
       difficulty: t('rides.moderate'),
-      hook: t('rides.ride3Hook'),
-      unique: t('rides.ride3Unique')
+      subtitle: t('ridesPage.ride3Subtitle')
     },
-    { 
-      img: rideLocal, 
-      title: t('rides.ride4Title'), 
-      price: "49€", 
+    {
+      img: rideLocal,
+      title: t('rides.ride4Title'),
+      price: t('ridesPage.price4'),
+      priceLabel: t('ridesPage.price4Label'),
       tag: null,
       duration: "3h30",
-      difficulty: t('rides.easy'),
-      hook: t('rides.ride4Hook'),
-      unique: t('rides.ride4Unique')
+      difficulty: t('rides.moderate'),
+      subtitle: t('ridesPage.ride4Subtitle')
     },
   ];
 
@@ -81,19 +80,12 @@ const Rides = () => {
             
             <div className="mt-4">
               <div className="flex items-center gap-3 text-xs text-muted-foreground mb-2">
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5" />
-                  <span>{r.duration}</span>
-                </div>
-                <div className="w-1 h-1 rounded-full bg-muted-foreground/50" />
                 <span>{r.difficulty}</span>
               </div>
               
               <h3 className="font-body text-2xl font-semibold mb-1 leading-tight">{r.title}</h3>
               
-              <p className="text-sm text-muted-foreground mb-0.5 leading-relaxed">{r.hook}</p>
-              
-              <p className="text-xs text-muted-foreground italic mb-4 leading-snug">{r.unique}</p>
+              <p className="text-xs text-muted-foreground italic mb-6 leading-snug">{r.subtitle}</p>
 
               <span className="inline-block bg-primary text-primary-foreground text-xs font-semibold px-5 py-2.5 hover:bg-primary/90 transition-colors">
                 {t('ridesPage.bookButton')}

@@ -37,9 +37,7 @@ const HowItWorks = () => {
               <h3 className="font-display text-2xl font-bold mb-4">
                 {step.title}
               </h3>
-              <p className="text-muted-foreground text-base leading-relaxed min-h-[3rem]">
-                {step.description}
-              </p>
+
             </div>
           ))}
         </div>

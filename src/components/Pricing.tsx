@@ -25,8 +25,8 @@ const Pricing = () => {
       bokunId: "bokun_53550c4e_1e17_4fd0_9ed8_a447403c2f21",
       bokunSrc: `https://widgets.bokun.io/online-sales/${BOKUN_CHANNEL}/experience/1238059?partialView=1`,
       features: [
-        t('pricing.plan3Feature1'),
-        t('pricing.plan3Feature2'),
+        t('pricing.plan1Feature1'),
+        t('pricing.plan1Feature2'),
       ],
     },
     {
@@ -39,10 +39,8 @@ const Pricing = () => {
       bokunId: null as string | null,
       bokunSrc: null as string | null,
       features: [
-        t('pricing.plan2Feature1'),
-        t('pricing.plan2Feature2'),
-        t('pricing.plan2Feature3'),
-        t('pricing.plan2Feature4'),
+        t('pricing.plan1Feature1'),
+        t('pricing.plan1Feature2'),
       ],
     },
     {
@@ -56,7 +54,6 @@ const Pricing = () => {
       features: [
         t('pricing.plan1Feature1'),
         t('pricing.plan1Feature2'),
-        t('pricing.plan1Feature3'),
       ],
     },
     {
@@ -69,8 +66,8 @@ const Pricing = () => {
       bokunId: "bokun_0df41703_2a01_4e5b_9c07_4b6b322dd5ad",
       bokunSrc: `https://widgets.bokun.io/online-sales/${BOKUN_CHANNEL}/experience/1238095?partialView=1`,
       features: [
-        t('pricing.plan4Feature1'),
-        t('pricing.plan4Feature2'),
+        t('pricing.plan1Feature1'),
+        t('pricing.plan1Feature2'),
       ],
     },
   ];
@@ -84,9 +81,8 @@ const Pricing = () => {
     bokunId: "bokun_68bea1db_2fc1_43a4_9d42_b100473905e7",
     bokunSrc: `https://widgets.bokun.io/online-sales/${BOKUN_CHANNEL}/experience/1238065?partialView=1`,
     features: [
-      t('pricing.plan5Feature1'),
-      t('pricing.plan5Feature2'),
-      t('pricing.plan5Feature3'),
+      t('pricing.plan1Feature1'),
+      t('pricing.plan1Feature2'),
     ],
   };
 

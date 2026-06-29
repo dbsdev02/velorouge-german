@@ -5,14 +5,12 @@ import { useTranslation } from "react-i18next";
 
 /* ─── Pricing table ─── */
 const pricingDE = [
-  { product: "Segway-Verleih", price: "29 €", vehicle: "Segway Roller L60", format: "Selbstgeführt · App · 2h" },
-  { product: "E-Bike Audio-Erlebnis + Stampz", price: "49 €", vehicle: "Premium-E-Bike", format: "Selbstgeführt · IZI Travel · 3–4h" },
-  { product: "Geführte Gruppenführung", price: "59 €/Pers. · min. 4", vehicle: "Premium-E-Bike", format: "Reiseleiter · 3h · max. 8" },
+  { product: "Segway-Verleih", price: "225 €/Tageskarte", vehicle: "Segway Roller L60", format: "Selbstgeführt · App · 2h" },
+  { product: "E-Bike Audio-Erlebnis + Stampz", price: "225 €/Tageskarte", vehicle: "Premium-E-Bike", format: "Selbstgeführt · IZI Travel · 3–4h" },
 ];
 const pricingEN = [
-  { product: "Segway Rental", price: "€29", vehicle: "Segway Scooter L60", format: "Self-guided · app · 2h" },
-  { product: "E-Bike Audio Experience + Stampz", price: "€49", vehicle: "Premium electric bike", format: "Self-guided · IZI Travel · 3–4h" },
-  { product: "Guided group tour", price: "€59/pers · min 4", vehicle: "Premium electric bike", format: "Human guide · 3h · max 8" },
+  { product: "Segway Rental", price: "€225/day pass", vehicle: "Segway Scooter L60", format: "Self-guided · app · 2h" },
+  { product: "E-Bike Audio Experience + Stampz", price: "€225/day pass", vehicle: "Premium electric bike", format: "Self-guided · IZI Travel · 3–4h" },
 ];
 
 /* ─── Repairs table ─── */
@@ -151,7 +149,7 @@ const de = {
         "Stornierung zwischen 24 und 48 Stunden im Voraus: 50 % Rückerstattung.",
         "Stornierung weniger als 24 Stunden im Voraus oder Nichterscheinen: keine Rückerstattung – volle Leistung fällig.",
       ],
-      afterItems: "15.2. Stornierung durch den Anbieter (extreme Wetterbedingungen, technischer Vorfall): vollständige Rückerstattung oder kostenlose Umbuchung.\n\n15.3. Bei Buchungen über OTAs oder andere Partner gelten die Stornierungsrichtlinien dieser Anbieter. Diese ASB regeln nur die direkte Beziehung mit dem Anbieter.",
+      afterItems: "15.2. Stornierung durch den Anbieter (extreme Wetterbedingungen, technischer Vorfall): vollständige Rückerstattung oder kostenlose Umbuchung.",
     },
     {
       heading: "16. Geistiges Eigentum – Anwendung – Marke",
@@ -294,7 +292,7 @@ const en = {
         "Cancellation between 24h and 48h before: 50% refund.",
         "Cancellation less than 24h before or no-show: no refund — service due in full.",
       ],
-      afterItems: "15.2. Cancellation by the Provider (extreme weather, technical incident): full refund or free postponement.\n\n15.3. For bookings made via OTAs or other partners, please refer to the cancellation policy of those organisations. These GTC only govern the direct relationship with the Provider.",
+      afterItems: "15.2. Cancellation by the Provider (extreme weather, technical incident): full refund or free postponement.",
     },
     {
       heading: "16. Intellectual property – Application – Brand",
@@ -321,7 +319,7 @@ const en = {
     },
     {
       heading: "20. Applicable law – Dispute resolution",
-      body: "These GTC and the resulting contracts are subject to French law.\n\nThe language of the contract is French. Translations into foreign languages are provided by the Provider for information purposes only.\n\nIn the event of a dispute relating to the validity, interpretation or execution of this contract, the parties shall endeavour to reach an amicable settlement. Failing an amicable settlement within 30 days of written notification of the dispute, the dispute may be brought before the competent courts.\n\nThe Client is informed of the possibility to use a consumer mediator. The Provider has joined the Centre de la médiation de la consommation des conciliateurs de justice (CM2C)\n\nPostal address: 49 Rue de Ponthieu, 75008 Paris\nEmail address: declarer-un-litige@cm2c.net\nWebsite: https://www.cm2c.net/comment-nous-saisir.php\n\nOr MTV MEDIATION TOURISME VOYAGE — CS 30958, 75383 PARIS cedex 08 — info@mtv.travel",
+      body: "These GTC and the resulting contracts are subject to French law.\n\nThe language of the contract is French. Translations into foreign languages are provided by the Provider for information purposes only.\n\nIn the event of a dispute relating to the validity, interpretation or execution of this contract, the parties shall endeavour to reach an amicable settlement. Failing an amicable settlement within 30 days of written notification of the dispute, the dispute may be brought before the competent courts.\n\nThe Client is informed of the possibility to use a consumer mediator. The Provider has joined the Centre de la médiation de la consommation des conciliateurs de justice (CM2C)\n\nPostal address: 49 Rue de Ponthieu, 75008 Paris\nEmail address: declarer-un-litige@cm2c.net\nWebsite: https://www.cm2c.net/comment-nous-saisir.php",
     },
     {
       heading: "21. Miscellaneous provisions",

@@ -1,4 +1,4 @@
-﻿import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { useTranslation } from "react-i18next";
@@ -10,9 +10,8 @@ const pricingDE = [
 ];
 
 const pricingEN = [
-  { product: "Segway Rental", price: "€29", vehicle: "Segway Scooter L60", format: "Self-guided · app · 2h" },
-  { product: "E-Bike Audio + Stampz Guided Experience", price: "€49", vehicle: "Premium electric bike", format: "Self-guided · IZI Travel · 3–4h" },
-  { product: "Group guided tour", price: "€59/person · min 4", vehicle: "Premium electric bike", format: "Human guide · 3h · max 8" },
+  { product: "Segway Rental", price: "€225/day pass", vehicle: "Segway Scooter L60", format: "Self-guided · app · 2h" },
+  { product: "E-Bike Audio + Stampz Guided Experience", price: "€225/day pass", vehicle: "Premium electric bike", format: "Self-guided · IZI Travel · 3–4h" },
 ];
 
 const de = {
@@ -35,13 +34,13 @@ const de = {
     },
     {
       heading: "2. Beschreibung und Hauptmerkmale des Erlebnisses",
-      body: "Art der Leistung: Verleih von E-Bikes oder Segway-Rollern\n\nGeführte Touren:\n[ ] Tour X: Tourname — Route, Hauptsehenswürdigkeiten, Schwierigkeitsgrad (körperlich / technisch), Durchschnittsgeschwindigkeit / ungefähre Distanz: [●] km, Dauer\n[ ] Tour Y: Tourname — Route, Hauptsehenswürdigkeiten, Schwierigkeitsgrad (körperlich / technisch), Durchschnittsgeschwindigkeit / ungefähre Distanz: [●] km, Dauer\n[ ] Tour Z: Tourname — Route, Hauptsehenswürdigkeiten, Schwierigkeitsgrad (körperlich / technisch), Durchschnittsgeschwindigkeit / ungefähre Distanz: [●] km, Dauer\n\nFührungsart:\n[ ] über mobile App\n[ ] mit unabhängigem Reiseleiter\n\nGruppengröße für geführte Touren mit unabhängigem Reiseleiter:\n– Mindestteilnehmeranzahl: 4 Personen\n– Maximale Teilnehmeranzahl: 8 Personen\n\nSprache, in der Informationen und Erklärungen bereitgestellt werden: DE / EN / FR",
+      body: "Art der Leistung: Verleih von E-Bikes oder Segway-Rollern\n\nFührungsart:\n[ ] über mobile App\n[ ] mit unabhängigem Reiseleiter\n\nGruppengröße für geführte Touren mit unabhängigem Reiseleiter:\n– Mindestteilnehmeranzahl: 4 Personen\n– Maximale Teilnehmeranzahl: 8 Personen\n\nSprache, in der Informationen und Erklärungen bereitgestellt werden: DE / EN / FR",
       subsections: [
         {
           heading: "Von TourDeWheel bereitgestellte Ausrüstung",
           items: [
-            "E-Bike (Modell / Nennleistung: [●])",
-            "Segway-Roller (Modell / Nennleistung: [●])",
+            "E-Bike (Modell: L60E / Nennleistung: 25km/h)",
+            "Segway-Roller (Modell: L60E / Nennleistung: 25km/h)",
             "Helm",
             "Schloss",
             "Akku und Ladegerät",
@@ -138,13 +137,13 @@ const en = {
     },
     {
       heading: "2. Description and main characteristics of the experience",
-      body: "Type of service: Rental of electric bikes or Segway scooters\n\nGuided tours:\n[ ] Tour X: Tour name — Route, Main points of interest visited, Difficulty level (physical / technical), Average speed / approximate distance: [●] km, duration\n[ ] Tour Y: Tour name — Route, Main points of interest visited, Difficulty level (physical / technical), Average speed / approximate distance: [●] km, duration\n[ ] Tour Z: Tour name — Route, Main points of interest visited, Difficulty level (physical / technical), Average speed / approximate distance: [●] km, duration\n\nGuidance method:\n[ ] via mobile application\n[ ] with an independent accompanying guide\n\nGroup size for guided tours with an independent guide:\n– Minimum number of participants required: 4 people\n– Maximum number of participants: 8 people\n\nLanguage in which information and explanations are provided: DE / EN / FR",
+      body: "Type of service: Rental of electric bikes or Segway scooters\n\nGuidance method:\n[ ] via mobile application\n[ ] with an independent accompanying guide\n\nGroup size for guided tours with an independent guide:\n– Minimum number of participants required: 4 people\n– Maximum number of participants: 8 people\n\nLanguage in which information and explanations are provided: DE / EN / FR",
       subsections: [
         {
           heading: "Equipment provided by TourDeWheel",
           items: [
-            "Electric bike (model / nominal power: [●])",
-            "Segway scooters (model / nominal power: [●])",
+            "Electric bike (model: L60E / nominal power: 25km/hrs)",
+            "Segway scooters (model: L60E / nominal power: 25km/hrs)",
             "Helmet",
             "Lock",
             "Battery and charger",

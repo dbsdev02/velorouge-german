@@ -163,7 +163,7 @@ const FMDPage = () => {
           </div>
         </div>
         <div className="text-center mt-12">
-          <a href="#" className="inline-block bg-primary text-primary-foreground px-10 py-4 font-semibold hover:bg-primary/90 transition-colors">
+          <a href="mailto:Bonjour@velorouge.fr" className="inline-block bg-primary text-primary-foreground px-10 py-4 font-semibold hover:bg-primary/90 transition-colors">
             {t('fmd.startAnnual')}
           </a>
         </div>
@@ -299,11 +299,11 @@ const FMDPage = () => {
           {t('fmd.downloadTemplate')}
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
+          <a href="mailto:Bonjour@velorouge.fr" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
             <Download className="w-5 h-5" />
             {t('fmd.downloadEmail')}
           </a>
-          <a href="#" className="inline-flex items-center gap-2 border-2 border-primary text-primary px-8 py-4 font-semibold hover:bg-primary/10 transition-colors">
+          <a href="mailto:Bonjour@velorouge.fr" className="inline-flex items-center gap-2 border-2 border-primary text-primary px-8 py-4 font-semibold hover:bg-primary/10 transition-colors">
             <Download className="w-5 h-5" />
             {t('fmd.downloadSheet')}
           </a>
@@ -323,10 +323,10 @@ const FMDPage = () => {
           {t('fmd.finalDesc')}
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="#" className="bg-white text-primary px-10 py-4 font-semibold hover:bg-gray-100 transition-colors">
+          <a href="mailto:Bonjour@velorouge.fr" className="bg-white text-primary px-10 py-4 font-semibold hover:bg-gray-100 transition-colors">
             {t('fmd.seePricing')}
           </a>
-          <a href="#" className="border-2 border-white text-white px-10 py-4 font-semibold hover:bg-white/10 transition-colors">
+          <a href="mailto:Bonjour@velorouge.fr" className="border-2 border-white text-white px-10 py-4 font-semibold hover:bg-white/10 transition-colors">
             {t('fmd.contactUs')}
           </a>
         </div>

@@ -3,9 +3,27 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import { Instagram } from "lucide-react";
 import { Music2 } from "lucide-react";
+import { useState, type FormEvent } from "react";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleNewsletterSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formDataObj = new FormData();
+    formDataObj.append('access_key', '1b2e69b7-2037-4a79-9727-75b38b97c06e');
+    formDataObj.append('email', email.trim());
+    formDataObj.append('subject', 'Newsletter Subscription');
+    formDataObj.append('message', `New newsletter subscription: ${email.trim()}`);
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formDataObj });
+      const data = await response.json();
+      if (data.success) { setStatus("success"); setEmail(""); }
+      else setStatus("error");
+    } catch { setStatus("error"); }
+  };
   
   return (
   <footer className="bg-dark border-t border-dark-surface text-dark-foreground/60 py-12">
@@ -23,16 +41,25 @@ const Footer = () => {
             <h3 className="font-display text-xl font-bold text-dark-foreground mb-3">
               {t('footer.newsletterTitle')}
             </h3>
-            <div className="flex flex-col sm:flex-row gap-2 max-w-sm">
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-2 max-w-sm">
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder={t('footer.emailPlaceholder')}
+                required
                 className="flex-1 bg-dark-surface border border-dark-surface rounded-none px-4 py-2.5 text-sm text-dark-foreground placeholder:text-dark-foreground/40 focus:outline-none focus:border-primary transition-colors"
               />
-              <button className="bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap">
+              <button type="submit" className="bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap">
                 {t('footer.subscribe')}
               </button>
-            </div>
+            </form>
+            {status === "success" && (
+              <p className="mt-2 text-sm text-primary">Thanks! You've been subscribed to our newsletter.</p>
+            )}
+            {status === "error" && (
+              <p className="mt-2 text-sm text-red-400">Something went wrong. Please try again.</p>
+            )}
           </div>
         </div>
         <div className="flex gap-12 text-base">
