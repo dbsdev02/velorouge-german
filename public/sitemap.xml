@@ -2,64 +2,172 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Home -->
   <url>
     <loc>https://velorouge.de/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/"/>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- About -->
   <url>
     <loc>https://velorouge.de/about</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/about"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/about"/>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Visitors / Rides -->
   <url>
     <loc>https://velorouge.de/visitors</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/visitors"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/visitors"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/visitors"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/visitors"/>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- Residents / FMD -->
   <url>
     <loc>https://velorouge.de/residents</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/residents"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/residents"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/residents"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/residents"/>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Safe & Smart -->
   <url>
     <loc>https://velorouge.de/safe-smart</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/safe-smart"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/safe-smart"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/safe-smart"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/safe-smart"/>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <!-- Contact -->
   <url>
     <loc>https://velorouge.de/contact</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/contact"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/contact"/>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Index -->
+  <url>
+    <loc>https://velorouge.de/blog</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/blog"/>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post: Strasbourg E-Bike Where to Ride -->
+  <url>
+    <loc>https://velorouge.de/blog/strasbourg-ebike-where-to-ride</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/blog/strasbourg-ebike-where-to-ride"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/blog/strasbourg-ebike-where-to-ride"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/blog/strasbourg-ebike-where-to-ride"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/blog/strasbourg-ebike-where-to-ride"/>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Post: Strasbourg with Kids E-Bike -->
+  <url>
+    <loc>https://velorouge.de/blog/strasbourg-with-kids-ebike</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/blog/strasbourg-with-kids-ebike"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/blog/strasbourg-with-kids-ebike"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/blog/strasbourg-with-kids-ebike"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/blog/strasbourg-with-kids-ebike"/>
+    <lastmod>2025-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Post: Alsace Wine Route E-Bike -->
+  <url>
+    <loc>https://velorouge.de/blog/alsace-wine-route-ebike</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/blog/alsace-wine-route-ebike"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/blog/alsace-wine-route-ebike"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/blog/alsace-wine-route-ebike"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/blog/alsace-wine-route-ebike"/>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Post: Cross-Border E-Bike Strasbourg Germany -->
+  <url>
+    <loc>https://velorouge.de/blog/cross-border-ebike-strasbourg-germany</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/blog/cross-border-ebike-strasbourg-germany"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/blog/cross-border-ebike-strasbourg-germany"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/blog/cross-border-ebike-strasbourg-germany"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/blog/cross-border-ebike-strasbourg-germany"/>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://velorouge.de/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/privacy"/>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Precontractual -->
+  <url>
+    <loc>https://velorouge.de/precontractual</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/precontractual"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/precontractual"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/precontractual"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/precontractual"/>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- CGS (Conditions Générales de Service) -->
+  <url>
+    <loc>https://velorouge.de/cgs</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://velorouge.de/cgs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://velorouge.de/cgs"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://velorouge.de/cgs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://velorouge.de/cgs"/>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>

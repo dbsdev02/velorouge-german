@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { Calendar, ArrowLeft, User } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { useLanguage } from "@/hooks/useLanguage";
 import { blogPosts, CategoryTag } from "./BlogPage";
 
@@ -45,8 +46,25 @@ const BlogDetailPage = () => {
 
   const otherPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
+  // ISO date map for structured data
+  const isoDateMap: Record<string, string> = {
+    "strasbourg-ebike-where-to-ride": "2025-04-05",
+    "strasbourg-with-kids-ebike": "2025-04-12",
+    "alsace-wine-route-ebike": "2025-04-20",
+    "cross-border-ebike-strasbourg-germany": "2025-04-28",
+  };
+
   return (
     <main className="bg-background">
+      <SEO
+        title={`${post.title[lang]} | VéloRouge Journal`}
+        description={post.excerpt[lang]}
+        canonical={`/blog/${post.slug}`}
+        ogType="article"
+        lang={lang}
+        author={post.author}
+        publishedTime={isoDateMap[post.slug]}
+      />
       <Navbar />
 
       {/* ── Article Hero ── */}

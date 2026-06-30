@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import heroBg from "@/assets/hero-bg.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
 import imgEbike from "@/assets/Strasbourg on an E-Bike.png";
@@ -389,6 +390,18 @@ const BlogPage = () => {
 
   return (
     <main className="bg-background">
+      <SEO
+        title={isFr ? "Journal | VéloRouge" : isDe ? "Journal | VéloRouge" : "Journal | VéloRouge"}
+        description={
+          isFr
+            ? "Guides vélo, histoires de la ville et conseils pour explorer Strasbourg à deux roues."
+            : isDe
+            ? "Radführer, Stadtgeschichten und Tipps zur Erkundung Straßburgs auf zwei Rädern."
+            : "Cycling guides, city stories, and tips for exploring Strasbourg on two wheels."
+        }
+        canonical="/blog"
+        lang={lang}
+      />
       <Navbar />
 
       {/* ── Hero Banner ── */}

@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+# Block search engines from indexing utility/legal pages (optional - they're low-value)
+Disallow: /privacy
+Disallow: /precontractual
+Disallow: /cgs
+
+# Block 404 and maintenance pages
+Disallow: /404
+Disallow: /maintenance
+
 Sitemap: https://velorouge.de/sitemap.xml
