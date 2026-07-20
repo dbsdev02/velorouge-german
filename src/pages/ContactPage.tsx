@@ -29,8 +29,8 @@ const ContactPage = () => {
     { day: t('contact.dayWed'), time: "09:30–12:30 / 13:30–18:30" },
     { day: t('contact.dayThu'), time: "09:30–12:30 / 13:30–18:30" },
     { day: t('contact.dayFri'), time: "09:30–12:30 / 13:30–18:30" },
-    { day: t('contact.daySat'), time: "10:00–17:00" },
-    { day: t('contact.daySun'), time: "10:00–17:00" },
+    { day: t('contact.daySat'), time: "10:00–12:30 / 13:30–19:00" },
+    { day: t('contact.daySun'), time: "10:00–12:30 / 13:30–19:00" },
     { day: t('contact.dayMon'), time: t('contact.closed') },
   ];
 
