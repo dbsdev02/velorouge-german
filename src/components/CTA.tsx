@@ -19,12 +19,12 @@ const CTA = () => {
         {t('cta.subtitle')}
       </p>
       <div className="mt-10 flex flex-wrap justify-center gap-4">
-        <Link
-          to="/contact"
+        <a
+          href="#pricing"
           className="bg-primary text-primary-foreground px-10 py-4 font-semibold text-sm hover:bg-primary/90 transition-colors"
         >
           {t('cta.letsGo')}
-        </Link>
+        </a>
         <Link
           to="/about"
           className="border border-dark-foreground/30 text-dark-foreground px-10 py-4 font-semibold text-sm hover:border-dark-foreground/60 transition-colors"

@@ -116,10 +116,9 @@ const Pricing = () => {
                 </span>
               )}
               <div className="text-sm text-dark-foreground/60 mb-1">{p.name}</div>
-              <div className="font-display text-3xl font-bold">
-                {p.price}
-                <span className="text-sm font-body text-dark-foreground/50 ml-1">{p.period}</span>
-              </div>
+              <span className="self-start inline-block text-xs font-semibold uppercase tracking-widest text-dark-foreground/70 border border-dark-foreground/30 px-2 py-0.5">
+                {p.period.replace(/^\//, '')}
+              </span>
               <div className="mt-1 text-xs text-dark-foreground/40 italic">{p.target}</div>
               <ul className="mt-5 space-y-2 flex-1">
                 {p.features.map((f) => (
@@ -151,10 +150,9 @@ const Pricing = () => {
           {/* Featured plan as 4th card */}
           <div className="p-6 border border-primary bg-dark-surface flex flex-col">
             <div className="text-sm text-dark-foreground/60 mb-1">{featuredPlan.name}</div>
-            <div className="font-display text-3xl font-bold">
-              {featuredPlan.price}
-              <span className="text-sm font-body text-dark-foreground/50 ml-1">{featuredPlan.period}</span>
-            </div>
+            <span className="self-start inline-block text-xs font-semibold uppercase tracking-widest text-dark-foreground/70 border border-dark-foreground/30 px-2 py-0.5">
+              {featuredPlan.period.replace(/^\//, '')}
+            </span>
             <div className="mt-1 text-xs text-dark-foreground/40 italic">{featuredPlan.target}</div>
             <ul className="mt-5 space-y-2 flex-1">
               {featuredPlan.features.map((f) => (
