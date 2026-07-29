@@ -52,6 +52,10 @@ const BlogDetailPage = () => {
     "strasbourg-with-kids-ebike": "2025-04-12",
     "alsace-wine-route-ebike": "2025-04-20",
     "cross-border-ebike-strasbourg-germany": "2025-04-28",
+    "strasbourg-port-of-call-e-bike-half-day": "2025-05-15",
+    "strasbourg-christmas-market-e-bike": "2025-11-20",
+    "e-bike-or-segway-strasbourg": "2025-12-05",
+    "connected-e-bike-safety-strasbourg": "2026-01-15",
   };
 
   return (
