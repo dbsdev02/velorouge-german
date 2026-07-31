@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import rideSundowner from "@/assets/Circuit Culturel.png";
-import rideMarket from "@/assets/Boucle des Canaux.png";
-import rideRiver from "@/assets/Forêt de Robertsau & Rhin.png";
-import rideLocal from "@/assets/Découverte Campagnarde.png";
+import rideSundowner from "@/assets/Circuit Culturel.png?w=320;480;720&format=avif;webp;jpg&as=picture";
+import rideMarket from "@/assets/Boucle des Canaux.png?w=320;480;720&format=avif;webp;jpg&as=picture";
+import rideRiver from "@/assets/Forêt de Robertsau & Rhin.png?w=320;480;720&format=avif;webp;jpg&as=picture";
+import rideLocal from "@/assets/Découverte Campagnarde.png?w=320;480;720&format=avif;webp;jpg&as=picture";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const Rides = () => {
   const { t } = useTranslation();
@@ -64,11 +65,11 @@ const Rides = () => {
         {rides.map((r) => (
           <Link key={r.title} to="/visitors" className="group cursor-pointer block">
             <div className="relative overflow-hidden aspect-[3/4]">
-              <img
-                src={r.img}
+              <ResponsiveImage
+                image={r.img}
                 alt={r.title}
                 className="w-full h-full object-cover object-bottom group-hover:scale-105 transition-transform duration-700"
-                loading="lazy"
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
               />
               
               {r.tag && (

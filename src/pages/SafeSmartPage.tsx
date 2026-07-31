@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
-import smartHelmet from "@/assets/smart-helmet.jpg";
-import smartGps from "@/assets/tech&saftey.png";
+import ResponsiveImage from "@/components/ResponsiveImage";
+import smartHelmet from "@/assets/smart-helmet.jpg?w=400;640&format=avif;webp;jpg&as=picture";
+import smartGps from "@/assets/tech&saftey.png?w=500;800;1100&format=avif;webp;jpg&as=picture";
 import { Shield, MapPin, Bell, Smartphone, Lock, Eye, Zap, Wifi } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 
@@ -77,7 +78,7 @@ const SafeSmartPage = () => {
             </div>
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src={smartHelmet} alt="Smart helmet" className="w-full h-full object-cover" loading="lazy" />
+            <ResponsiveImage image={smartHelmet} alt="Smart helmet" className="w-full h-full object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
           </div>
         </div>
       </div>
@@ -88,7 +89,7 @@ const SafeSmartPage = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="aspect-square overflow-hidden md:order-1 flex items-center justify-center">
-            <img src={smartGps} alt="GPS navigation on bike" className="w-full h-full object-contain" loading="lazy" />
+            <ResponsiveImage image={smartGps} alt="GPS navigation on bike" className="w-full h-full object-contain" sizes="(min-width: 768px) 50vw, 100vw" />
           </div>
           <div className="md:order-2">
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">

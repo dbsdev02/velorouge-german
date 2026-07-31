@@ -1,15 +1,18 @@
 import { useTranslation } from "react-i18next";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.jpg?w=640;960;1280;1920&format=avif;webp;jpg&as=picture";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const Hero = () => {
   const { t } = useTranslation();
-  
+
   return (
   <section className="relative min-h-screen flex items-center justify-center bg-dark overflow-hidden">
-    <img
-      src={heroBg}
+    <ResponsiveImage
+      image={heroBg}
       alt="Strasbourg"
       className="absolute inset-0 w-full h-full object-cover opacity-40"
+      sizes="100vw"
+      priority
     />
     <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent" />
 

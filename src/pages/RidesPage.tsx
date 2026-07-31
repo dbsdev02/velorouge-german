@@ -1,10 +1,11 @@
 import Navbar from "@/components/Navbar";
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
-import rideRiver from "@/assets/Forêt de Robertsau & Rhin.png";
-import abt1 from "@/assets/abt1.jpeg";
-import rideSundowner from "@/assets/Circuit Culturel.png";
-import rideLocal from "@/assets/Découverte Campagnarde.png";
+import ResponsiveImage from "@/components/ResponsiveImage";
+import rideRiver from "@/assets/Forêt de Robertsau & Rhin.png?w=500;800;1100&format=avif;webp;jpg&as=picture";
+import abt1 from "@/assets/abt1.jpeg?w=500;800;1100&format=avif;webp;jpg&as=picture";
+import rideSundowner from "@/assets/Circuit Culturel.png?w=500;800;1100&format=avif;webp;jpg&as=picture";
+import rideLocal from "@/assets/Découverte Campagnarde.png?w=500;800;1100&format=avif;webp;jpg&as=picture";
 import { useTranslation } from "react-i18next";
 
 const RidesPage = () => {
@@ -91,7 +92,13 @@ const RidesPage = () => {
           {rides.map((r, i) => (
             <div key={r.title} className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "md:direction-rtl" : ""}`}>
               <div className={`aspect-[4/3] overflow-hidden ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                <img src={r.img} alt={r.title} className={`w-full h-full object-cover ${r.objPos} hover:scale-105 transition-transform duration-500`} loading="lazy" />
+                <ResponsiveImage
+                  image={r.img}
+                  alt={r.title}
+                  className={`w-full h-full object-cover ${r.objPos} hover:scale-105 transition-transform duration-500`}
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  priority={i === 0}
+                />
               </div>
               <div className={i % 2 === 1 ? "md:order-1" : ""}>
                 {r.tag && (

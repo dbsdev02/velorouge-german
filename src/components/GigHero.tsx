@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import gigimage from "@/assets/cycle2.png";
+import gigimage from "@/assets/cycle2.png?w=400;700;928&format=avif;webp;jpg&as=picture";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const GigHero = () => {
   const { t } = useTranslation();
@@ -39,10 +40,11 @@ const GigHero = () => {
       </div>
       
       <div className="bg-[#C8102E] relative overflow-hidden flex items-center justify-center min-h-[400px] md:min-h-0">
-        <img 
-          src={gigimage} 
+        <ResponsiveImage
+          image={gigimage}
           alt="Minimalist white fixed-gear bicycle"
           className="max-w-[80%] max-h-[80%] object-contain"
+          sizes="(min-width: 768px) 50vw, 100vw"
         />
       </div>
     </section>

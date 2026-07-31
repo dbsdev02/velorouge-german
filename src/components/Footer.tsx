@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.png?w=160;320&format=avif;webp;png&as=picture";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { Instagram } from "lucide-react";
 import { Music2 } from "lucide-react";
 import { useState, type FormEvent } from "react";
@@ -32,7 +33,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between items-start gap-8">
         <div>
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="VeloRouge" className="h-10" />
+            <ResponsiveImage image={logo} alt="VeloRouge" className="h-10 w-auto" sizes="160px" />
           </Link>
           <p className="mt-2 text-base max-w-xs">{t('footer.tagline')}</p>
           

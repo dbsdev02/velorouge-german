@@ -3,16 +3,17 @@ import { Calendar, User, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import heroBg from "@/assets/hero-bg.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
+import heroBg from "@/assets/hero-bg.jpg?w=640;960;1280;1920&format=avif;webp;jpg&as=picture";
 import { useLanguage } from "@/hooks/useLanguage";
-import imgEbike from "@/assets/Strasbourg on an E-Bike.png";
-import imgKids from "@/assets/Strasbourg with Kids.png";
-import imgWine from "@/assets/The Alsace Wine Route by E-Bike.png";
-import imgGermany from "@/assets/Ride Into Germany.png";
-import imgPortOfCall from "@/assets/blogs/Strasbourg Port of Call See the Essentials in Half a Day by E-Bike.webp";
-import imgChristmasMarket from "@/assets/blogs/Strasbourg's Christmas Market by E-Bike The Practical Guide generate image.webp";
-import imgSegway from "@/assets/blogs/E-Bike or Segway in Strasbourg Which Should You Choose generate image.webp";
-import imgConnected from "@/assets/blogs/Connected E-Bikes How VéloRouge Keeps Every Ride in Strasbourg Safe.webp";
+import imgEbike from "@/assets/Strasbourg on an E-Bike.png?w=500;900;1400&format=avif;webp;jpg&as=picture";
+import imgKids from "@/assets/Strasbourg with Kids.png?w=500;900;1400&format=avif;webp;jpg&as=picture";
+import imgWine from "@/assets/The Alsace Wine Route by E-Bike.png?w=500;900;1400&format=avif;webp;jpg&as=picture";
+import imgGermany from "@/assets/Ride Into Germany.png?w=500;900;1400&format=avif;webp;jpg&as=picture";
+import imgPortOfCall from "@/assets/blogs/Strasbourg Port of Call See the Essentials in Half a Day by E-Bike.webp?w=500;900;1400&format=avif;webp&as=picture";
+import imgChristmasMarket from "@/assets/blogs/Strasbourg's Christmas Market by E-Bike The Practical Guide generate image.webp?w=500;900;1400&format=avif;webp&as=picture";
+import imgSegway from "@/assets/blogs/E-Bike or Segway in Strasbourg Which Should You Choose generate image.webp?w=500;900;1400&format=avif;webp&as=picture";
+import imgConnected from "@/assets/blogs/Connected E-Bikes How VéloRouge Keeps Every Ride in Strasbourg Safe.webp?w=500;900;1400&format=avif;webp&as=picture";
 
 const categoryStyles: Record<string, string> = {
   "City Guide":    "bg-blue-900/60 text-blue-300 border border-blue-700/50",
@@ -618,7 +619,7 @@ const BlogPage = () => {
 
       {/* ── Hero Banner ── */}
       <section className="relative min-h-[55vh] flex items-end pb-16 bg-dark overflow-hidden pt-24">
-        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
+        <ResponsiveImage image={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" sizes="100vw" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-transparent" />
         <div className="container relative z-10 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <div>
@@ -650,10 +651,11 @@ const BlogPage = () => {
             </p>
             <Link to={`/blog/${featured.slug}`} className="group grid md:grid-cols-2 gap-0 items-stretch">
               <div className="aspect-[4/3] md:aspect-auto overflow-hidden bg-muted relative">
-                <img
-                  src={featured.image}
+                <ResponsiveImage
+                  image={featured.image}
                   alt={featured.title[lang]}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  sizes="(min-width: 768px) 50vw, 100vw"
                 />
                 <div className="absolute top-4 left-4">
                   <CategoryTag category={featured.category} />
@@ -694,10 +696,11 @@ const BlogPage = () => {
               {rest.map((post) => (
                 <Link key={post.slug} to={`/blog/${post.slug}`} className="group block">
                   <div className="aspect-[3/2] overflow-hidden bg-muted mb-5 relative">
-                    <img
-                      src={post.image}
+                    <ResponsiveImage
+                      image={post.image}
                       alt={post.title[lang]}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                     />
                     <div className="absolute top-3 left-3">
                       <CategoryTag category={post.category} />

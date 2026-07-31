@@ -1,5 +1,6 @@
-import reliableImg from "@/assets/8.png";
+import reliableImg from "@/assets/8.png?w=400;700;1000&format=avif;webp;jpg&as=picture";
 import { useTranslation } from "react-i18next";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const ReliableSection = () => {
   const { t } = useTranslation();
@@ -24,11 +25,11 @@ const ReliableSection = () => {
             </p>
           </div>
           <div className="aspect-[4/5] overflow-hidden">
-            <img
-              src={reliableImg}
+            <ResponsiveImage
+              image={reliableImg}
               alt="Cyclist riding through Strasbourg"
               className="w-full h-full object-cover"
-              loading="lazy"
+              sizes="(min-width: 768px) 50vw, 100vw"
             />
           </div>
         </div>

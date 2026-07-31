@@ -1,13 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import ctaBg from "@/assets/homebg.jpg";
+import ctaBg from "@/assets/homebg.jpg?w=640;1000&format=avif;webp;jpg&as=picture";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const CTA = () => {
   const { t } = useTranslation();
   
   return (
   <section className="relative py-32 text-dark-foreground text-center overflow-hidden">
-    <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+    <ResponsiveImage image={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" sizes="100vw" />
     <div className="absolute inset-0 bg-dark/80" />
     <div className="container max-w-2xl relative z-10">
       <h2 className="font-display text-4xl md:text-6xl font-black leading-tight">

@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
-import sundowner from "@/assets/petite-france.jpg";
-import cathedrale from "@/assets/cathedral.jpg";
-import neustadt from "@/assets/Neustadt.jpeg";
-import marcheNoel from "@/assets/marché-de-noël1.jpg";
-import barrageVauban from "@/assets/barrage-vauban.jpg";
-import rhineBorder from "@/assets/rhine1.jpeg";
+import sundowner from "@/assets/petite-france.jpg?w=400;600;900&format=avif;webp;jpg&as=picture";
+import cathedrale from "@/assets/cathedral.jpg?w=400;600;900&format=avif;webp;jpg&as=picture";
+import neustadt from "@/assets/Neustadt.jpeg?w=400;600;900&format=avif;webp;jpg&as=picture";
+import marcheNoel from "@/assets/marché-de-noël1.jpg?w=400;600;900&format=avif;webp;jpg&as=picture";
+import barrageVauban from "@/assets/barrage-vauban.jpg?w=400;600;900&format=avif;webp;jpg&as=picture";
+import rhineBorder from "@/assets/rhine1.jpeg?w=400;600;900&format=avif;webp;jpg&as=picture";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const Showcase = () => {
   const { t } = useTranslation();
@@ -28,10 +29,11 @@ const Showcase = () => {
           {locations.map((location, index) => (
             <div key={index} className="border-2 border-border rounded-lg overflow-hidden hover:border-primary transition-colors">
               <div className="h-64 overflow-hidden">
-                <img 
-                  src={location.image} 
+                <ResponsiveImage
+                  image={location.image}
                   alt={t(location.titleKey)}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  sizes="(min-width: 768px) 33vw, 100vw"
                 />
               </div>
               <div className="p-6 text-center">

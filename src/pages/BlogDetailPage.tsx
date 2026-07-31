@@ -3,6 +3,7 @@ import { Calendar, ArrowLeft, User } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { useLanguage } from "@/hooks/useLanguage";
 import { blogPosts, CategoryTag } from "./BlogPage";
 
@@ -93,7 +94,7 @@ const BlogDetailPage = () => {
           </div>
         </div>
         <div className="aspect-[21/9] overflow-hidden">
-          <img src={post.image} alt={post.title[lang]} className="w-full h-full object-cover opacity-80" />
+          <ResponsiveImage image={post.image} alt={post.title[lang]} className="w-full h-full object-cover opacity-80" sizes="100vw" priority />
         </div>
       </section>
 
@@ -128,10 +129,11 @@ const BlogDetailPage = () => {
               {otherPosts.map((p) => (
                 <Link key={p.slug} to={`/blog/${p.slug}`} className="group block">
                   <div className="aspect-[3/2] overflow-hidden bg-muted mb-4 relative">
-                    <img
-                      src={p.image}
+                    <ResponsiveImage
+                      image={p.image}
                       alt={p.title[lang]}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      sizes="(min-width: 768px) 33vw, 100vw"
                     />
                     <div className="absolute top-3 left-3">
                       <CategoryTag category={p.category} />

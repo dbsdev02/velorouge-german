@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import cycleImg from "@/assets/resident.png";
-import heroBg from "@/assets/hero-bg.jpg";
-import gallery1 from "@/assets/approach.png";
+import ResponsiveImage from "@/components/ResponsiveImage";
+import cycleImg from "@/assets/resident.png?w=500;800;1100;1536&format=avif;webp;jpg&as=picture";
+import heroBgUrl from "@/assets/hero-bg.jpg?w=1920&format=webp&as=url";
+import gallery1 from "@/assets/approach.png?w=500;800;1000&format=avif;webp;jpg&as=picture";
 import { Check, Download, Building2, Users, FileText, Headphones, ChevronDown, TrendingUp } from "lucide-react";
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -50,7 +51,13 @@ const FMDPage = () => {
             </div>
           </div>
           <div className="aspect-square overflow-hidden rounded-lg flex items-center justify-center">
-            <img src={cycleImg} alt="Professional on electric bike" className="w-full h-full object-contain mix-blend-multiply" />
+            <ResponsiveImage
+              image={cycleImg}
+              alt="Professional on electric bike"
+              className="w-full h-full object-contain mix-blend-multiply"
+              sizes="(min-width: 768px) 50vw, 100vw"
+              priority
+            />
           </div>
         </div>
       </div>
@@ -205,7 +212,7 @@ const FMDPage = () => {
             </ul>
           </div>
           <div>
-            <img src={gallery1} alt="Eligible e-bike rental" className="w-full h-auto rounded-lg" />
+            <ResponsiveImage image={gallery1} alt="Eligible e-bike rental" className="w-full h-auto rounded-lg" sizes="(min-width: 768px) 50vw, 100vw" />
           </div>
         </div>
       </div>
@@ -313,7 +320,7 @@ const FMDPage = () => {
 
     {/* Final CTA */}
     <section className="py-32 bg-primary text-primary-foreground text-center relative">
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }}></div>
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBgUrl})` }}></div>
       <div className="absolute inset-0 bg-primary/90"></div>
       <div className="container max-w-3xl relative z-10">
         <h2 className="font-display text-4xl md:text-6xl font-black leading-tight mb-6">

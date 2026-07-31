@@ -6,6 +6,16 @@
     <link rel="apple-touch-icon" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Preload the two fonts needed for first paint (self-hosted, no third-party connection) -->
+    <link rel="preload" as="font" type="font/woff2" href="/src/assets/fonts/cormorant-garamond-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/src/assets/fonts/playfair-display-normal-latin.woff2" crossorigin />
+
+    <!-- DNS prefetch only (no eager connection) for third-party origins loaded later, after idle/interaction -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.clarity.ms" />
+    <link rel="dns-prefetch" href="https://connect.facebook.net" />
+    <link rel="dns-prefetch" href="https://widgets.bokun.io" />
+
     <!-- Primary SEO -->
     <title>VéloRouge – Premium E-Bike & Segway Erlebnisse in Straßburg</title>
     <meta name="description" content="Entdecken Sie Straßburg auf einem Premium-E-Bike oder Segway. Geführte Touren, geheime Routen und nachhaltige Mobilität im Herzen des Elsass. Jetzt buchen!" />
@@ -92,37 +102,78 @@
       }
     }
     </script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KSQ2SH98');</script>
-      <!-- End Google Tag Manager -->
-       
-
-       <script type="text/javascript">
-          (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "wbzm1po9f2");
-        </script>
-
-    <!-- Meta Pixel Code -->
+    <!-- Analytics / tracking (GTM, gtag, Microsoft Clarity, Meta Pixel) are loaded
+         by the deferred bootstrap below: after first user interaction, or after an
+         idle fallback timeout, so they never block first paint / LCP / TBT.
+         No tracking is removed - it only starts a few seconds later, or on first
+         scroll/click/keypress/touch, whichever happens first. -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1235550475226088');
-    fbq('track', 'PageView');
+    (function () {
+      var fired = false;
+
+      function loadThirdPartyScripts() {
+        if (fired) return;
+        fired = true;
+
+        // Google Tag Manager
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KSQ2SH98');
+
+        // Google tag (gtag.js)
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7ED28ZWQ3Y');
+        var gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-7ED28ZWQ3Y';
+        document.head.appendChild(gtagScript);
+
+        // Microsoft Clarity
+        (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wbzm1po9f2");
+
+        // Meta Pixel
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1235550475226088');
+        fbq('track', 'PageView');
+      }
+
+      var interactionEvents = ['scroll', 'keydown', 'mousemove', 'pointerdown', 'touchstart'];
+      function onInteract() {
+        cleanup();
+        loadThirdPartyScripts();
+      }
+      function cleanup() {
+        interactionEvents.forEach(function (evt) {
+          window.removeEventListener(evt, onInteract);
+        });
+        clearTimeout(idleTimer);
+      }
+      interactionEvents.forEach(function (evt) {
+        window.addEventListener(evt, onInteract, { once: true, passive: true });
+      });
+
+      // Fallback so pageview/tracking still fires for visitors who never interact.
+      var idleTimer = setTimeout(function () {
+        cleanup();
+        loadThirdPartyScripts();
+      }, 4000);
+    })();
     </script>
-    <!-- End Meta Pixel Code -->
   </head>
 
   <body>
@@ -137,14 +188,5 @@
     <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ED28ZWQ3Y"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-7ED28ZWQ3Y');
-    </script>
   </body>
 </html>

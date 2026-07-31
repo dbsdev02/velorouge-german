@@ -1,19 +1,67 @@
 import { useTranslation } from "react-i18next";
 import { Check } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const BOKUN_CHANNEL = "79fde21a-45fd-4202-b90d-bfd9333501fd";
+let bokunLoaderPromise: Promise<void> | null = null;
+
+/** Injects the Bokun widget loader script at most once, on demand. */
+function loadBokunWidgets(): Promise<void> {
+  if (!bokunLoaderPromise) {
+    bokunLoaderPromise = new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = `https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=${BOKUN_CHANNEL}`;
+      script.async = true;
+      script.onload = () => resolve();
+      document.body.appendChild(script);
+    });
+  }
+  return bokunLoaderPromise;
+}
 
 const Pricing = () => {
   const { t } = useTranslation();
+  const sectionRef = useRef<HTMLElement>(null);
+  const [widgetReady, setWidgetReady] = useState(false);
 
+  // Defer fetching/parsing the (heavy) Bokun booking script until the pricing
+  // section is about to enter the viewport, so it never blocks first paint,
+  // FCP, LCP or TBT on initial load — it only loads "when needed".
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = `https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=${BOKUN_CHANNEL}`;
-    script.async = true;
-    document.body.appendChild(script);
-    return () => { document.body.removeChild(script); };
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const load = () => {
+      loadBokunWidgets().then(() => setWidgetReady(true));
+    };
+
+    if (!("IntersectionObserver" in window)) {
+      load();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          load();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "600px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
+
+  // Fallback: if the user interacts with the page (scroll/touch/click) before
+  // the observer fires (e.g. very fast scroll), make sure the widget loads.
+  useEffect(() => {
+    if (widgetReady) return;
+    const events: Array<keyof WindowEventMap> = ["scroll", "pointerdown", "keydown", "touchstart"];
+    const onInteract = () => loadBokunWidgets().then(() => setWidgetReady(true));
+    events.forEach((evt) => window.addEventListener(evt, onInteract, { once: true, passive: true }));
+    return () => events.forEach((evt) => window.removeEventListener(evt, onInteract));
+  }, [widgetReady]);
 
   const plans = [
     {
@@ -87,7 +135,7 @@ const Pricing = () => {
   };
 
   return (
-    <section id="pricing" className="py-24 bg-dark text-dark-foreground">
+    <section id="pricing" ref={sectionRef} className="py-24 bg-dark text-dark-foreground">
       <div className="container">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">
           {t('pricing.title')}

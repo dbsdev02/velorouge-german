@@ -3,7 +3,8 @@ import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/hooks/useLanguage";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.png?w=160;320&format=avif;webp;png&as=picture";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -25,7 +26,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-dark/90 backdrop-blur-sm">
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="VeloRouge" className="h-10" />
+          <ResponsiveImage image={logo} alt="VeloRouge" className="h-10 w-auto" eager sizes="160px" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">

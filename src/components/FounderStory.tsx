@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
-import founderImg from "@/assets/founder2.png";
+import founderImg from "@/assets/founder2.png?w=400;576&format=avif;webp;jpg&as=picture";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const FounderStory = () => {
   const { t } = useTranslation();
@@ -12,11 +13,11 @@ const FounderStory = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="aspect-[4/5] overflow-hidden rounded-lg">
-            <img 
-              src={founderImg} 
+            <ResponsiveImage
+              image={founderImg}
               alt="Founder of VéloRouge"
               className="w-full h-full object-cover"
-              loading="lazy"
+              sizes="(min-width: 768px) 50vw, 100vw"
             />
           </div>
           <div className="space-y-5">

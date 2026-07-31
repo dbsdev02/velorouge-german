@@ -1,6 +1,7 @@
-import deliverBike from "@/assets/deliver-bike.jpg";
+import deliverBike from "@/assets/deliver-bike.jpg?w=400;640&format=avif;webp;jpg&as=picture";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const DeliverSection = () => {
   const { t } = useTranslation();
@@ -38,7 +39,7 @@ const DeliverSection = () => {
             </Link>
           </div>
           <div className="aspect-square overflow-hidden rounded-full">
-            <img src={deliverBike} alt="Cyclist in city" className="w-full h-full object-cover" loading="lazy" />
+            <ResponsiveImage image={deliverBike} alt="Cyclist in city" className="w-full h-full object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
           </div>
         </div>
       </div>

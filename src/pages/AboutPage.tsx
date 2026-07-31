@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import aboutHero from "@/assets/about-hero.jpg";
-import teamPhoto from "@/assets/7.png";
-import travelersPhoto from "@/assets/deliver-bike.jpg";
-import ctaBg from "@/assets/hero-bg.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
+import aboutHero from "@/assets/about-hero.jpg?w=640;960;1280;1920&format=avif;webp;jpg&as=picture";
+import teamPhoto from "@/assets/7.png?w=500;800;1100&format=avif;webp;jpg&as=picture";
+import travelersPhoto from "@/assets/deliver-bike.jpg?w=400;640&format=avif;webp;jpg&as=picture";
+import ctaBg from "@/assets/hero-bg.jpg?w=640;960;1280;1920&format=avif;webp;jpg&as=picture";
 import { Bike, Heart, Users, Globe, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
@@ -38,7 +39,7 @@ const AboutPage = () => {
 
     {/* Hero */}
     <section className="relative min-h-[60vh] flex items-end pb-20 bg-dark overflow-hidden pt-20">
-      <img src={aboutHero} alt="Strasbourg aerial view" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+      <ResponsiveImage image={aboutHero} alt="Strasbourg aerial view" className="absolute inset-0 w-full h-full object-cover opacity-30" sizes="100vw" priority />
       <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent" />
       <div className="container relative z-10">
         <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">{t('aboutPage.tag')}</p>
@@ -76,7 +77,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="aspect-video overflow-hidden">
-            <img src={teamPhoto} alt="VeloRouge team" className="w-full h-full object-cover" loading="lazy" />
+            <ResponsiveImage image={teamPhoto} alt="VeloRouge team" className="w-full h-full object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
           </div>
         </div>
       </div>
@@ -87,7 +88,7 @@ const AboutPage = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="aspect-[4/5] overflow-hidden">
-            <img src={travelersPhoto} alt="Travelers exploring Strasbourg" className="w-full h-full object-cover" loading="lazy" />
+            <ResponsiveImage image={travelersPhoto} alt="Travelers exploring Strasbourg" className="w-full h-full object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
           </div>
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-black leading-tight mb-8">
@@ -205,7 +206,7 @@ const AboutPage = () => {
 
     {/* Tourist CTA */}
     <section className="relative py-24 text-dark-foreground text-center overflow-hidden">
-      <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <ResponsiveImage image={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" sizes="100vw" />
       <div className="absolute inset-0 bg-dark/80" />
       <div className="container max-w-2xl relative z-10">
         <h2 className="font-display text-4xl md:text-5xl font-black leading-tight">

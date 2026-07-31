@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { blogPosts, CategoryTag } from "@/pages/BlogPage";
 import { useLanguage } from "@/hooks/useLanguage";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const Gallery = () => {
   const { t } = useTranslation();
@@ -35,11 +36,11 @@ const Gallery = () => {
                 className="group flex flex-col border border-border hover:border-primary transition-colors overflow-hidden"
               >
                 <div className="aspect-[16/9] overflow-hidden">
-                  <img
-                    src={post.image}
+                  <ResponsiveImage
+                    image={post.image}
                     alt={post.title[lang] ?? post.title.en}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
+                    sizes="(min-width: 768px) 33vw, 100vw"
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
