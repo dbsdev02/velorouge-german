@@ -29,7 +29,7 @@ interface ComparisonRow {
   competitors: string[];
 }
 
-const COMPETITOR_NAMES = ["Douze V3", "Douze Héra", "Gaya Original Long", "Gaya Incroyable Long", "Urban Arrow Family", "Babboe City"];
+const COMPETITOR_NAMES = ["Urban Arrow Family", "Babboe City"];
 
 function getComparisonRows(lang: Lang): ComparisonRow[] {
   const t = (en: string, de: string) => (lang === "de" ? de : en);
@@ -37,16 +37,12 @@ function getComparisonRows(lang: Lang): ComparisonRow[] {
     {
       labelKey: "tablePrice",
       minica: "€3,999",
-      competitors: ["≈ €4,900–6,000", "≈ €5,000–7,300", "≈ €5,800", "≈ €5,400", "≈ €5,900–8,900", "≈ €3,300+"],
+      competitors: ["≈ €5,900–8,900", "≈ €3,300+"],
     },
     {
       labelKey: "tableType",
       minica: t("Front-box tricycle", "Frontbox-Dreirad"),
       competitors: [
-        t("Front-box bike (2-wheel)", "Frontbox-Lastenrad (2-Rad)"),
-        t("Front-box bike (2-wheel)", "Frontbox-Lastenrad (2-Rad)"),
-        t("Longtail", "Longtail"),
-        t("Longtail", "Longtail"),
         t("Front-box bike (2-wheel)", "Frontbox-Lastenrad (2-Rad)"),
         t("Front-box tricycle", "Frontbox-Dreirad"),
       ],
@@ -55,10 +51,6 @@ function getComparisonRows(lang: Lang): ComparisonRow[] {
       labelKey: "tableMotor",
       minica: "80–100 N·m",
       competitors: [
-        "Shimano EP8, 85 N·m",
-        "Shimano EP8/EP801, 85 N·m",
-        t("Rear hub, ~40 N·m", "Heckmotor, ~40 N·m"),
-        t("Rear hub, ~40 N·m", "Heckmotor, ~40 N·m"),
         t("Bosch, 75–85 N·m (optional)", "Bosch, 75–85 N·m (optional)"),
         t("Rear hub, ~40 N·m", "Heckmotor, ~40 N·m"),
       ],
@@ -66,65 +58,37 @@ function getComparisonRows(lang: Lang): ComparisonRow[] {
     {
       labelKey: "tableBattery",
       minica: "800 Wh",
-      competitors: ["504 Wh", "504–630 Wh", "461 Wh", t("461–715 Wh (optional)", "461–715 Wh (optional)"), "400–500 Wh", "≈ 500 Wh"],
+      competitors: ["400–500 Wh", "≈ 500 Wh"],
     },
     {
       labelKey: "tableRange",
       minica: "60–80 km",
-      competitors: ["≈ 60 km", "≈ 60 km", "40–60 km", "40–70 km", "40–60 km", "≈ 50 km"],
+      competitors: ["40–60 km", "≈ 50 km"],
     },
     {
       labelKey: "tableLoad",
       minica: "300 kg",
-      competitors: ["≈ 180 kg", "≈ 200 kg", "175 kg", "180 kg", "225–275 kg", "≈ 175 kg"],
+      competitors: ["225–275 kg", "≈ 175 kg"],
     },
     {
       labelKey: "tableTransmission",
       minica: t("Automatic, 2-speed", "Automatik, 2-Gang"),
-      competitors: [
-        t("Derailleur / Enviolo (optional)", "Kettenschaltung / Enviolo (optional)"),
-        t("Derailleur / Enviolo (optional)", "Kettenschaltung / Enviolo (optional)"),
-        t("7-speed derailleur", "7-Gang-Kettenschaltung"),
-        t("7-speed derailleur", "7-Gang-Kettenschaltung"),
-        "Enviolo CVT",
-        t("7-speed derailleur", "7-Gang-Kettenschaltung"),
-      ],
+      competitors: ["Enviolo CVT", t("7-speed derailleur", "7-Gang-Kettenschaltung")],
     },
     {
       labelKey: "tableFrame",
       minica: t("Aluminum", "Aluminium"),
-      competitors: [
-        t("Aluminum", "Aluminium"),
-        t("Aluminum", "Aluminium"),
-        t("Aluminum", "Aluminium"),
-        t("Aluminum", "Aluminium"),
-        t("Aluminum", "Aluminium"),
-        t("Steel", "Stahl"),
-      ],
+      competitors: [t("Aluminum", "Aluminium"), t("Steel", "Stahl")],
     },
     {
       labelKey: "tableWheels",
       minica: `20 ${t("in", "Zoll")}`,
-      competitors: [
-        `20 / 26 ${t("in", "Zoll")}`,
-        `20 / 26 ${t("in", "Zoll")}`,
-        `20 ${t("in", "Zoll")}`,
-        `20 ${t("in", "Zoll")}`,
-        `20 / 26 ${t("in", "Zoll")}`,
-        `20 ${t("in", "Zoll")}`,
-      ],
+      competitors: [`20 / 26 ${t("in", "Zoll")}`, `20 ${t("in", "Zoll")}`],
     },
     {
       labelKey: "tableFamily",
       minica: t("2 children, or 1 child + 1 pet", "2 Kinder, oder 1 Kind + 1 Haustier"),
-      competitors: [
-        t("1–2 children", "1–2 Kinder"),
-        t("up to 4 children", "bis zu 4 Kinder"),
-        t("1–2 children", "1–2 Kinder"),
-        t("1–2 children", "1–2 Kinder"),
-        t("up to 3 children", "bis zu 3 Kinder"),
-        t("2 children", "2 Kinder"),
-      ],
+      competitors: [t("up to 3 children", "bis zu 3 Kinder"), t("2 children", "2 Kinder")],
     },
   ];
 }
