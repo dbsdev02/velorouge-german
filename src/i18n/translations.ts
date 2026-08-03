@@ -577,11 +577,16 @@ export const translations = {
       },
       founderStory: {
         title: "Founder Story",
-        quote: "My name is Prashant. I discovered Strasbourg on an electric bike two years ago — and I never wanted to see it any other way again. VéloRouge was born from this belief: the best way to discover a city is at your own pace, guided by curiosity. Not by a guide.",
-        para2: "Before launching VéloRouge, I spent two years testing every way to explore Strasbourg — on foot, by bus, by boat, on a regular bike. Nothing came close to the electric bike for that balance of freedom and discovery.",
-        para3: "We built our routes around the moments that most tour operators skip — the canal at 7:30 PM when the light turns gold, the winstub on a side street that hasn't changed since 1882, the pedestrian bridge where you cross from France into Germany without noticing the border.",
-        para4: "VéloRouge is not a rental company. It is a way of seeing a city.",
-        signature: "— PK, Founder"
+        quote: "I am Prashant Kothari, the founder of TourDeWheel, a Strasbourg-based mobility company born from a simple conviction: the right bike, backed by the right support, can transform the way people get around—and the way they earn a living.",
+        intro: "At TourDeWheel (VéloRouge), we serve three distinct communities with the same level of care:",
+        service1: "Organized tours for visitors wishing to discover Strasbourg from a new perspective",
+        service2: "Daily and short-term rentals for locals and students in need of reliable, flexible mobility",
+        service3: "Long-term rentals for delivery riders who rely on their bikes for their livelihood",
+        para2: "While visitors and businesses drive our day-to-day operations, the moments that matter most to me are the quieter ones. They are the moments when a delivery rider returns month after month, begins discussing a longer-term commitment, considers purchasing the bike, and relies on our maintenance guarantee to avoid unexpected downtime or hidden costs.",
+        para3: "This shift—from a simple trial run to complete trust in a vital work tool—lies at the heart of what we do. We remove obstacles so that delivery riders can focus on their job, protect their income, and keep riding without interruption.",
+        para4: "TourDeWheel is more than just a rental company. It is a practical, human-centered response to the real needs of the people who live, study, work, and make deliveries in Strasbourg every day.",
+        closing: "Welcome. We are delighted to have you here.",
+        signature: "— Prashant Kothari, Founder"
       },
       cityStats: {
         stat1: "Visitors per year",
@@ -1064,11 +1069,16 @@ export const translations = {
       },
       founderStory: {
         title: "Histoire du fondateur",
-        quote: "Je m'appelle Prashant. J'ai découvert Strasbourg sur un vélo électrique il y a deux ans — et je n'ai plus jamais voulu la voir autrement. VéloRouge est né de cette conviction : la plus belle façon de découvrir une ville, c'est à votre propre rythme, guidé par la curiosité. Pas par un guide.",
-        para2: "Avant de lancer VéloRouge, j'ai passé deux ans à tester toutes les façons d'explorer Strasbourg — à pied, en bus, en bateau, en vélo classique. Rien n'égale le vélo électrique pour cet équilibre entre liberté et découverte.",
-        para3: "Nos itinéraires sont construits autour des moments que la plupart des opérateurs ignorent — le canal à 19h30 quand la lumière devient dorée, la winstub dans une ruelle qui n'a pas changé depuis 1882, la passerelle piétonne où l'on passe de France en Allemagne sans s'en rendre compte.",
-        para4: "VéloRouge n'est pas une entreprise de location. C'est une façon de voir une ville.",
-        signature: "— PK, fondateur"
+        quote: "Je m'appelle Prashant Kothari, fondateur de TourDeWheel, une entreprise de mobilité basée à Strasbourg, née d'une conviction simple : le bon vélo, associé au bon accompagnement, peut transformer la façon dont les gens se déplacent — et la façon dont ils gagnent leur vie.",
+        intro: "Chez TourDeWheel (VéloRouge), nous servons trois communautés distinctes avec le même niveau d'attention :",
+        service1: "Des visites organisées pour les visiteurs souhaitant découvrir Strasbourg sous un nouvel angle",
+        service2: "Des locations à la journée et de courte durée pour les habitants et étudiants ayant besoin d'une mobilité fiable et flexible",
+        service3: "Des locations longue durée pour les livreurs qui dépendent de leur vélo pour gagner leur vie",
+        para2: "Si les visiteurs et les entreprises animent notre activité quotidienne, ce sont les moments les plus discrets qui comptent le plus pour moi. Ce sont ces moments où un livreur revient mois après mois, commence à envisager un engagement à plus long terme, songe à acheter son vélo, et compte sur notre garantie d'entretien pour éviter les arrêts imprévus ou les coûts cachés.",
+        para3: "Ce changement — d'un simple essai à une confiance totale envers un outil de travail essentiel — est au cœur de ce que nous faisons. Nous levons les obstacles afin que les livreurs puissent se concentrer sur leur travail, protéger leurs revenus et continuer à rouler sans interruption.",
+        para4: "TourDeWheel n'est pas qu'une simple entreprise de location. C'est une réponse concrète et humaine aux besoins réels des personnes qui vivent, étudient, travaillent et effectuent des livraisons à Strasbourg chaque jour.",
+        closing: "Bienvenue. Nous sommes ravis de vous compter parmi nous.",
+        signature: "— Prashant Kothari, Fondateur"
       },
       cityStats: {
         stat1: "Visiteurs par an",
@@ -1357,11 +1367,16 @@ export const translations = {
       },
       founderStory: {
         title: "Gründergeschichte",
-        quote: "Mein Name ist Prashant. Vor zwei Jahren entdeckte ich Straßburg auf einem E-Bike – und wollte die Stadt nie wieder anders erleben. Aus dieser Überzeugung entstand VéloRouge: Eine Stadt erkundet man am besten im eigenen Tempo, geleitet von Neugier. Nicht mit einem Stadtführer.",
-        para2: "Bevor ich VéloRouge gründete, verbrachte ich zwei Jahre damit, jeden möglichen Weg zu testen, Straßburg zu erkunden – zu Fuß, mit dem Bus, per Boot, mit dem normalen Fahrrad. Nichts kam dem E-Bike nahe, wenn es um diese Balance aus Freiheit und Entdeckung geht.",
-        para3: "Unsere Routen entstanden rund um Momente, die die meisten Anbieter übersehen – den Kanal um 19:30 Uhr, wenn das Licht golden wird, die Winstub in einer Seitenstraße, die sich seit 1882 kaum verändert hat, die Fußgängerbrücke, auf der man von Frankreich nach Deutschland überquert, ohne die Grenze zu bemerken.",
-        para4: "VéloRouge ist kein Verleihunternehmen. Es ist eine Art, eine Stadt zu sehen.",
-        signature: "— PK, Gründer"
+        quote: "Ich bin Prashant Kothari, Gründer von TourDeWheel, einem in Straßburg ansässigen Mobilitätsunternehmen, das aus einer einfachen Überzeugung entstanden ist: Das richtige Fahrrad, unterstützt durch den richtigen Service, kann verändern, wie Menschen sich fortbewegen – und wie sie ihren Lebensunterhalt verdienen.",
+        intro: "Bei TourDeWheel (VéloRouge) betreuen wir drei unterschiedliche Zielgruppen mit dem gleichen Maß an Sorgfalt:",
+        service1: "Geführte Touren für Besucher, die Straßburg aus einer neuen Perspektive entdecken möchten",
+        service2: "Tages- und Kurzzeitmieten für Einheimische und Studierende, die zuverlässige, flexible Mobilität brauchen",
+        service3: "Langzeitmieten für Lieferfahrer, die für ihren Lebensunterhalt auf ihre Fahrräder angewiesen sind",
+        para2: "Während Besucher und Unternehmen unser Tagesgeschäft prägen, sind es die leiseren Momente, die mir am meisten bedeuten. Es sind die Momente, in denen ein Lieferfahrer Monat für Monat zurückkehrt, über ein langfristiges Engagement nachzudenken beginnt, einen Kauf des Fahrrads in Erwägung zieht und sich auf unsere Wartungsgarantie verlässt, um unerwartete Ausfallzeiten oder versteckte Kosten zu vermeiden.",
+        para3: "Dieser Wandel – von einem einfachen Testlauf zu vollem Vertrauen in ein unverzichtbares Arbeitsmittel – steht im Zentrum dessen, was wir tun. Wir beseitigen Hindernisse, damit Lieferfahrer sich auf ihre Arbeit konzentrieren, ihr Einkommen schützen und ohne Unterbrechung weiterfahren können.",
+        para4: "TourDeWheel ist mehr als nur ein Verleihunternehmen. Es ist eine praktische, menschzentrierte Antwort auf die realen Bedürfnisse der Menschen, die in Straßburg jeden Tag leben, studieren, arbeiten und Lieferungen ausführen.",
+        closing: "Willkommen. Wir freuen uns sehr, Sie hier zu haben.",
+        signature: "— Prashant Kothari, Gründer"
       },
       cityStats: {
         stat1: "Besucher pro Jahr",

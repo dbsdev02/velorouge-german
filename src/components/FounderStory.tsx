@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import founderImg from "@/assets/founder2.png?w=400;576&format=avif;webp;jpg&as=picture";
+import founderImg from "@/assets/founder2.webp?w=400;700;900&format=avif;webp&as=picture";
 import ResponsiveImage from "@/components/ResponsiveImage";
 
 const FounderStory = () => {
@@ -15,7 +15,7 @@ const FounderStory = () => {
           <div className="aspect-[4/5] overflow-hidden rounded-lg">
             <ResponsiveImage
               image={founderImg}
-              alt="Founder of VéloRouge"
+              alt="Prashant Kothari, Founder of TourDeWheel (VéloRouge)"
               className="w-full h-full object-cover"
               sizes="(min-width: 768px) 50vw, 100vw"
             />
@@ -25,6 +25,14 @@ const FounderStory = () => {
               "{t('founderStory.quote')}"
             </p>
             <p className="text-base md:text-lg leading-relaxed text-foreground">
+              {t('founderStory.intro')}
+            </p>
+            <ul className="space-y-2 text-base md:text-lg leading-relaxed text-foreground list-disc pl-5">
+              <li>{t('founderStory.service1')}</li>
+              <li>{t('founderStory.service2')}</li>
+              <li>{t('founderStory.service3')}</li>
+            </ul>
+            <p className="text-base md:text-lg leading-relaxed text-foreground">
               {t('founderStory.para2')}
             </p>
             <p className="text-base md:text-lg leading-relaxed text-foreground">
@@ -32,6 +40,9 @@ const FounderStory = () => {
             </p>
             <p className="text-base md:text-lg leading-relaxed text-foreground">
               {t('founderStory.para4')}
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-foreground">
+              {t('founderStory.closing')}
             </p>
             <p className="pt-2 text-base font-semibold text-primary">
               {t('founderStory.signature')}

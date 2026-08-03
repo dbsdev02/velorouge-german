@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import rideSundowner from "@/assets/Circuit Culturel.png?w=320;480;720&format=avif;webp;jpg&as=picture";
-import rideMarket from "@/assets/Boucle des Canaux.png?w=320;480;720&format=avif;webp;jpg&as=picture";
+import rideMarket from "@/assets/minica-home.webp?w=320;480;720&format=avif;webp&as=picture";
 import rideRiver from "@/assets/Forêt de Robertsau & Rhin.png?w=320;480;720&format=avif;webp;jpg&as=picture";
 import rideLocal from "@/assets/Découverte Campagnarde.png?w=320;480;720&format=avif;webp;jpg&as=picture";
 import ResponsiveImage from "@/components/ResponsiveImage";

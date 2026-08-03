@@ -3,7 +3,7 @@ import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import ResponsiveImage from "@/components/ResponsiveImage";
 import rideRiver from "@/assets/Forêt de Robertsau & Rhin.png?w=500;800;1100&format=avif;webp;jpg&as=picture";
-import abt1 from "@/assets/abt1.jpeg?w=500;800;1100&format=avif;webp;jpg&as=picture";
+import abt1 from "@/assets/minica-home.webp?w=500;800;1100&format=avif;webp&as=picture";
 import rideSundowner from "@/assets/Circuit Culturel.png?w=500;800;1100&format=avif;webp;jpg&as=picture";
 import rideLocal from "@/assets/Découverte Campagnarde.png?w=500;800;1100&format=avif;webp;jpg&as=picture";
 import { useTranslation } from "react-i18next";

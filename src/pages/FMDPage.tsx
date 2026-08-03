@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ResponsiveImage from "@/components/ResponsiveImage";
-import cycleImg from "@/assets/resident.png?w=500;800;1100;1536&format=avif;webp;jpg&as=picture";
+import cycleImg from "@/assets/resident.webp?w=500;800;928&format=avif;webp&as=picture";
 import heroBgUrl from "@/assets/hero-bg.jpg?w=1920&format=webp&as=url";
 import gallery1 from "@/assets/approach.png?w=500;800;1000&format=avif;webp;jpg&as=picture";
 import { Check, Download, Building2, Users, FileText, Headphones, ChevronDown, TrendingUp } from "lucide-react";
