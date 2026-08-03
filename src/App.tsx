@@ -14,6 +14,7 @@ import Index from "./pages/Index";
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const RidesPage = lazy(() => import("./pages/RidesPage"));
 const SafeSmartPage = lazy(() => import("./pages/SafeSmartPage"));
+const MinicaPage = lazy(() => import("./pages/MinicaPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const FMDPage = lazy(() => import("./pages/FMDPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -47,6 +48,7 @@ const App = () => (
               <Route path="/residents" element={<FMDPage />} />
               <Route path="/fmd" element={<FMDPage />} />
               <Route path="/safe-smart" element={<SafeSmartPage />} />
+              <Route path="/minica" element={<MinicaPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<BlogDetailPage />} />
